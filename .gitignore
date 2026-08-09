@@ -1,6 +1,9 @@
 __pycache__/
 *.pyc
 
+# Claude Code 로컬 설정 (공개 저장소에 올리지 않음)
+.claude/
+
 # 로컬 hwpx 작업공간 — 생성물/의존성/키는 제외, 핵심 소스만 추적
 weekly_report/*
 !weekly_report/build_report_docx.js
