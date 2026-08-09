@@ -1,0 +1,46 @@
+name: Weekly Policy Report
+
+on:
+  schedule:
+    # 매주 월요일 08:00 KST (일요일 23:00 UTC) — 지난주(월~일) 보고서 생성
+    - cron: '0 23 * * 0'
+  workflow_dispatch:
+    inputs:
+      start:
+        description: '시작일 (YYYY-MM-DD, 비우면 지난주 월요일)'
+        required: false
+      end:
+        description: '종료일 (YYYY-MM-DD, 비우면 지난주 일요일)'
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build weekly report
+        env:
+          HASA_API_KEY: ${{ secrets.HASA_API_KEY }}
+          HASA_MODEL: ${{ vars.HASA_MODEL }}
+        run: |
+          if [ -n "${{ inputs.start }}" ] && [ -n "${{ inputs.end }}" ]; then
+            python scripts/build_weekly_report.py --start "${{ inputs.start }}" --end "${{ inputs.end }}"
+          else
+            python scripts/build_weekly_report.py
+          fi
+
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/weekly/
+          git diff --cached --quiet || git commit -m "data: weekly policy report [skip ci]"
+          git push

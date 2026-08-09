@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주간 정책동향 보고서 생성</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        @media print {
+            body * { visibility: hidden; }
+            #report-area, #report-area * { visibility: visible; }
+            #report-area { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none !important; border: none !important; padding: 0 !important; }
+            @page { margin: 18mm 15mm; }
+        }
+        /* ── 양식(정책 동향 양식.hwp) 반영: 종이 문서처럼 항상 흰 배경 ── */
+        #report-area { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #fff; color: #000; line-height: 1.55; }
+        .rpt-head { text-align: center; font-weight: 700; font-size: 0.95rem; margin-bottom: 2px; }
+        .rpt-title { text-align: center; font-weight: 800; font-size: 1.55rem; letter-spacing: -0.5px; margin: 0 0 14px; }
+        .rpt-title .date { font-size: 1.05rem; font-weight: 700; }
+        .rpt-kwbox { border: 1px solid #000; padding: 12px 16px; margin-bottom: 8px; }
+        .rpt-kw { font-size: 0.9rem; margin: 3px 0; padding-left: 1.15em; text-indent: -1.15em; }
+        .rpt-src { font-size: 0.78rem; color: #333; margin: 0 0 18px; text-align: right; }
+        .rpt-dept { display: flex; align-items: center; gap: 7px; margin: 22px 0 8px; font-weight: 800; font-size: 1.18rem; }
+        .rpt-marker { width: 15px; height: 15px; border: 1.8px solid #1a1a1a; background: linear-gradient(135deg, #fff 48%, #1a1a1a 48%); flex: none; }
+        .rpt-cnt { font-weight: 400; font-size: 0.72rem; color: #999; }
+        .rpt-o { font-size: 0.95rem; font-weight: 700; margin: 10px 0 2px; padding-left: 1.35em; text-indent: -1.35em; }
+        .rpt-o .meta { font-weight: 400; font-size: 0.78rem; color: #888; }
+        .rpt-dash { font-size: 0.87rem; margin: 2px 0 2px 1.6em; padding-left: 0.95em; text-indent: -0.95em; }
+        .rpt-bul { font-size: 0.85rem; margin: 2px 0 2px 3.0em; padding-left: 1em; text-indent: -1em; }
+        .rpt-dot { font-size: 0.86rem; margin: 4px 0 6px 1.6em; padding-left: 0.95em; text-indent: -0.95em; font-weight: 700; background: #f3f6fc; border-left: 3px solid #1F3864; padding: 3px 8px 3px 10px; }
+        .rpt-tbl { width: calc(100% - 1.6em); margin: 5px 0 8px 1.6em; border-collapse: collapse; }
+        .rpt-tbl th { border: 1px solid #333; background: #dfe6f2; font-weight: 700; font-size: 0.82rem; padding: 4px 8px; text-align: center; }
+        .rpt-tbl td { border: 1px solid #333; font-size: 0.82rem; padding: 4px 8px; vertical-align: top; }
+        .rpt-tbl td.c0 { font-weight: 600; text-align: center; white-space: nowrap; background: #f5f7fb; width: 22%; }
+        .rpt-tbl td .ci { display: block; padding-left: 0.9em; text-indent: -0.9em; margin: 1px 0; }
+        .rpt-cat { display: inline-block; font-size: 0.62rem; padding: 0 6px; border-radius: 9999px; background: #eef2ff; color: #4338ca; margin-left: 3px; vertical-align: 1px; font-weight: 500; }
+        .rpt-others { width: 100%; border-collapse: collapse; margin-top: 6px; }
+        .rpt-others td { border: 1px solid #333; padding: 5px 8px; font-size: 0.82rem; vertical-align: top; }
+        .rpt-others .dept { font-weight: 700; white-space: nowrap; width: 130px; background: #f5f5f5; }
+        #report-area a { color: #1d4ed8; }
+        #report-area details > summary { cursor: pointer; font-size: 0.8rem; color: #777; margin: 3px 0 3px 1.6em; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Header -->
+        <header class="mb-6 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-7 h-7 text-blue-600 dark:text-blue-400"></i>
+                        주간 정책동향 보고서
+                    </h1>
+                    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">아카이브 데이터로 기간별 정부정책 발표 보고서를 생성합니다.</p>
+                </div>
+                <a href="index.html" class="flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors self-start">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> 아카이브로
+                </a>
+            </div>
+
+            <!-- Controls -->
+            <div class="mt-5 flex flex-wrap items-end gap-3">
+                <div>
+                    <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">시작일</label>
+                    <input type="date" id="start-date" class="p-2 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">종료일</label>
+                    <input type="date" id="end-date" class="p-2 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
+                </div>
+                <button id="btn-generate" class="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition-colors">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> 보고서 생성
+                </button>
+                <select id="weekly-list" class="p-2 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white hidden">
+                    <option value="">📁 저장된 주간 보고서…</option>
+                </select>
+                <div class="flex-1"></div>
+                <button id="btn-ai" class="flex items-center gap-2 px-3 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+                    <i data-lucide="bot" class="w-4 h-4"></i> AI 요약
+                </button>
+                <button id="btn-word" class="flex items-center gap-2 px-3 py-2 bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+                    <i data-lucide="download" class="w-4 h-4"></i> Word 저장
+                </button>
+                <button id="btn-print" class="flex items-center gap-2 px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+                    <i data-lucide="printer" class="w-4 h-4"></i> 인쇄/PDF
+                </button>
+            </div>
+
+            <!-- AI settings -->
+            <div id="ai-settings" class="mt-4 hidden p-4 bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 rounded-xl">
+                <p class="text-xs text-violet-700 dark:text-violet-300 mb-2 font-medium">
+                    open.hasa.re.kr API 설정 (키는 브라우저에만 저장됩니다)
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <input type="password" id="hasa-key" placeholder="개발자 API Key" class="flex-1 min-w-[200px] p-2 bg-white dark:bg-gray-700 border border-violet-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
+                    <input type="text" id="hasa-model" placeholder="모델명 (비우면 자동 선택)" class="w-56 p-2 bg-white dark:bg-gray-700 border border-violet-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
+                    <button id="btn-ai-run" class="px-4 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-lg text-sm font-semibold">요약 실행</button>
+                </div>
+                <p id="ai-status" class="text-xs text-gray-500 dark:text-gray-400 mt-2"></p>
+            </div>
+        </header>
+
+        <!-- Report -->
+        <div id="report-area" class="hidden bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 md:p-10"></div>
+
+        <div id="empty-hint" class="text-center py-16 text-gray-400 dark:text-gray-500 text-sm">
+            기간을 지정하고 <b>보고서 생성</b>을 누르세요. 기본값은 지난주(월~일)입니다.
+        </div>
+
+        <footer class="mt-10 text-center text-xs text-gray-400 dark:text-gray-500 py-6">
+            본 보고서는 KDI 경제정보센터 RSS 수집 데이터를 자동 정리한 것입니다. 원문 저작권은 각 발행기관에 있습니다.
+        </footer>
+    </div>
+
+<script>
+// ───────────────────────── 설정 ─────────────────────────
+const HASA_BASE = "https://open.hasa.re.kr/v1";
+const CORE_DEPTS = ["재정경제부", "기획예산처", "산업통상부", "중소벤처기업부", "과학기술정보통신부", "기후에너지환경부"];
+const DEPT_PATTERNS = [
+    ["재정경제부", ["재정경제부", "재경부"]],
+    ["기획예산처", ["기획예산처"]],
+    ["산업통상부", ["산업통상부", "산업부"]],
+    ["중소벤처기업부", ["중소벤처기업부", "중기부"]],
+    ["과학기술정보통신부", ["과학기술정보통신부", "과기정통부", "과기부"]],
+    ["기후에너지환경부", ["기후에너지환경부", "기후부"]],
+    ["금융위원회", ["금융위원회", "금융위"]],
+    ["국세청", ["국세청"]],
+    ["농림축산식품부", ["농림축산식품부", "농식품부"]],
+    ["국토교통부", ["국토교통부", "국토부"]],
+    ["고용노동부", ["고용노동부", "노동부"]],
+    ["보건복지부", ["보건복지부", "복지부"]],
+    ["행정안전부", ["행정안전부", "행안부"]],
+    ["해양수산부", ["해양수산부", "해수부"]],
+    ["교육부", ["교육부"]], ["국방부", ["국방부"]], ["외교부", ["외교부"]], ["법무부", ["법무부"]],
+    ["통일부", ["통일부"]], ["공정거래위원회", ["공정거래위원회", "공정위"]],
+    ["국가데이터처", ["국가데이터처"]], ["지식재산처", ["지식재산처"]], ["기상청", ["기상청"]],
+    ["관세청", ["관세청"]], ["조달청", ["조달청"]], ["질병관리청", ["질병관리청"]], ["소방청", ["소방청"]],
+    ["식품의약품안전처", ["식품의약품안전처", "식약처"]], ["산림청", ["산림청"]], ["경찰청", ["경찰청"]],
+];
+
+let archive = null, categories = {}, current = null;
+
+// ───────────────────────── 유틸 ─────────────────────────
+const $ = id => document.getElementById(id);
+const esc = s => (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const fmtD = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+const shortD = s => { const [y, m, d] = s.split("-"); return `${y.slice(2)}.${+m}.${+d}.`; };
+
+function detectDept(item) {
+    const hay = (item.title || "") + "|" + (item.description || "").slice(0, 300);
+    for (const [name, pats] of DEPT_PATTERNS)
+        for (const p of pats) if (hay.includes(p)) return name;
+    return "기타";
+}
+
+function bullets(desc) {
+    if (!desc) return [];
+    const lines = desc.split(/\n+/).map(l => l.trim()).filter(Boolean);
+    let out = lines.filter(l => /^[-ㆍ·•]/.test(l)).map(l => l.replace(/^[-ㆍ·•]\s*/, ""));
+    if (!out.length) out = lines.slice(0, 2);
+    out = out.filter(l => !/^[<(\[]?(참고|붙임|별첨)/.test(l));
+    return out.slice(0, 3).map(l => l.length > 130 ? l.slice(0, 128) + "…" : l);
+}
+
+function titleFor(start, end) {
+    const s = new Date(start), wk = Math.floor((s.getDate() - 1) / 7) + 1;
+    return { label: `${s.getMonth() + 1}월 ${wk}주차`, period: `${shortD(start)}~${shortD(end).slice(3)}` };
+}
+
+// ───────────────────────── 보고서 생성 ─────────────────────────
+function buildReport(start, end) {
+    const items = (archive.items || archive).filter(it => {
+        const d = (it.collected_at || "").slice(0, 10);
+        return d >= start && d <= end;
+    });
+    const byDept = {};
+    for (const it of items) {
+        const dept = detectDept(it);
+        (byDept[dept] = byDept[dept] || []).push({
+            title: it.title, link: it.link,
+            date: (it.collected_at || "").slice(0, 10),
+            categories: it.matched_categories || [],
+            bullets: bullets(it.description),
+            desc: (it.description || "").slice(0, 900),
+        });
+    }
+    for (const k in byDept) byDept[k].sort((a, b) => b.date.localeCompare(a.date));
+    const groups = CORE_DEPTS.filter(d => byDept[d]).map(d => ({ dept: d, items: byDept[d] }));
+    const others = Object.keys(byDept).filter(d => !CORE_DEPTS.includes(d)).sort()
+        .map(d => ({ dept: d, items: byDept[d] }));
+    const t = titleFor(start, end);
+    return { start, end, weekLabel: t.label, period: t.period, total: items.length, groups, others, ai: null };
+}
+
+// ───────────────────────── 렌더링 (정책 동향 양식.hwp 반영) ─────────────────────────
+function catChips(cats) {
+    return (cats || []).map(c => `<span class="rpt-cat">${esc(categories[c] || c)}</span>`).join("");
+}
+const cut = (s, n) => (s || "").length > n ? s.slice(0, n - 1) + "…" : (s || "");
+
+// 분야|주요내용 표 (양식 반영)
+function rptTable(t) {
+    if (!t || !t.rows?.length) return "";
+    const cols = t.cols || ["분야", "주요내용"];
+    return `<table class="rpt-tbl"><thead><tr>${cols.map(c => `<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${t.rows.map(row => {
+        const field = row.field ?? row[0] ?? "";
+        const content = row.content ?? row[1] ?? [];
+        const cells = (Array.isArray(content) ? content : [content])
+            .map(c => `<span class="ci">• ${esc(c)}</span>`).join("");
+        return `<tr><td class="c0">${esc(field)}</td><td>${cells}</td></tr>`;
+    }).join("")}</tbody></table>`;
+}
+
+// AI 구조화 항목: ○ 제목 → - 포인트 → • (목적)/(내용) → 표
+function richItem(base, rep) {
+    let h = `<p class="rpt-o">○ ${esc(base.title)} <span class="meta">(${shortD(base.date)})</span> <a href="${esc(base.link)}" target="_blank">[원문]</a>${catChips(base.categories)}</p>`;
+    if (rep.lead) h += `<p class="rpt-dash">- ${esc(rep.lead)}</p>`;
+    for (const p of (rep.points || [])) {
+        if (typeof p === "string") { h += `<p class="rpt-dash">- ${esc(p)}</p>`; continue; }
+        if (p.table) { h += rptTable(p.table); continue; }
+        if (p.h || p.header) {
+            h += `<p class="rpt-dash">- ${esc(p.h || p.header)}</p>`;
+            for (const s of (p.items || p.sub || [])) h += `<p class="rpt-bul">• ${esc(s)}</p>`;
+        }
+    }
+    if (rep.insight) h += `<p class="rpt-dot">· ${esc(rep.insight)}</p>`;
+    return h;
+}
+
+function render(r) {
+    current = r;
+    // [부처별 핵심 키워드] — 양식의 ○ 불릿
+    const kwLines = r.ai?.keywords
+        ? Object.entries(r.ai.keywords).map(([d, kws]) => `<p class="rpt-kw">○ <b>${esc(d)}</b> : ${esc(Array.isArray(kws) ? kws.join(", ") : kws)}</p>`).join("")
+        : r.groups.map(g => `<p class="rpt-kw">○ <b>${esc(g.dept)}</b> : ${g.items.slice(0, 3).map(i => esc(cut(i.title, 34))).join(" / ")}</p>`).join("");
+
+    // ▧ 부처 → ○ 제목 → - 요약 → • 세부 → 표 → · 시사점
+    const sec = g => {
+        const head = `<div class="rpt-dept"><span class="rpt-marker"></span>${esc(g.dept)} <span class="rpt-cnt">(${g.items.length}건)</span></div>`;
+        const reports = r.ai?.reports?.[g.dept];
+        if (reports?.length) {
+            // AI가 구조화한 항목(idx로 원문 매칭) + 나머지는 접기
+            const used = new Set();
+            const rich = reports.map(rep => {
+                const base = g.items[rep.idx] || g.items.find(i => i.title === rep.title);
+                if (!base) return "";
+                used.add(base.title);
+                return richItem(base, rep);
+            }).join("");
+            const rest = g.items.filter(i => !used.has(i.title));
+            return head + rich + (rest.length ? `<details><summary>그 외 ${rest.length}건 보기</summary>
+                ${rest.map(i => `<p class="rpt-dash">· <a href="${esc(i.link)}" target="_blank">${esc(i.title)}</a> <span class="meta">(${shortD(i.date)})</span></p>`).join("")}</details>` : "");
+        }
+        // AI 미적용 — 자동 추출(○ 제목 / - 요약)
+        const cap = 6, main = g.items.slice(0, cap), rest = g.items.slice(cap);
+        return head + main.map(i => `
+            <p class="rpt-o">○ ${esc(i.title)} <span class="meta">(${shortD(i.date)})</span> <a href="${esc(i.link)}" target="_blank">[원문]</a>${catChips(i.categories)}</p>
+            ${i.bullets.map(b => `<p class="rpt-dash">- ${esc(b)}</p>`).join("")}`).join("")
+            + (rest.length ? `<details><summary>그 외 ${rest.length}건 보기</summary>
+                ${rest.map(i => `<p class="rpt-dash">· <a href="${esc(i.link)}" target="_blank">${esc(i.title)}</a> <span class="meta">(${shortD(i.date)})</span></p>`).join("")}</details>` : "");
+    };
+
+    const othersHtml = r.others.length ? `<div class="rpt-dept"><span class="rpt-marker"></span>기타 부처</div>
+        <table class="rpt-others"><tbody>
+        ${r.others.map(g => `<tr>
+            <td class="dept">${esc(g.dept)} <span class="rpt-cnt">(${g.items.length})</span></td>
+            <td>${g.items.slice(0, 4).map(i => `<a href="${esc(i.link)}" target="_blank">${esc(i.title)}</a> <span class="meta" style="color:#999">(${shortD(i.date)})</span>`).join("<br>")}
+            ${g.items.length > 4 ? `<span style="color:#999"> 외 ${g.items.length - 4}건</span>` : ""}</td></tr>`).join("")}
+        </tbody></table>` : "";
+
+    $("report-area").innerHTML = `
+        <p class="rpt-head">2026 포항테크노파크 미래전략팀</p>
+        <h2 class="rpt-title">${esc(r.weekLabel)} 정부정책 발표 주요 내용 <span class="date">(${esc(r.period)})</span></h2>
+        <div class="rpt-kwbox">
+            ${kwLines || '<p class="rpt-kw">○ 해당 기간 주요 부처 발표가 없습니다.</p>'}
+        </div>
+        <p class="rpt-src">(출처 : 대한민국 정책브리핑 · KDI 경제정보센터 수집자료 ${r.total}건, ${esc(r.start)}~${esc(r.end)}${r.ai ? " / AI 요약 적용" : ""})</p>
+        ${r.groups.map(sec).join("")}
+        ${othersHtml}`;
+    $("report-area").classList.remove("hidden");
+    $("empty-hint").classList.add("hidden");
+    ["btn-word", "btn-print", "btn-ai"].forEach(id => $(id).disabled = false);
+}
+
+// ───────────────────────── AI 요약 (open.hasa.re.kr) ─────────────────────────
+async function runAI() {
+    if (!current) return;
+    const key = $("hasa-key").value.trim();
+    if (!key) { $("ai-status").textContent = "API Key를 입력하세요."; return; }
+    localStorage.setItem("hasa_key", key);
+    localStorage.setItem("hasa_model", $("hasa-model").value.trim());
+    $("ai-status").textContent = "모델 확인 중…";
+    try {
+        let model = $("hasa-model").value.trim();
+        if (!model) {
+            const mr = await fetch(`${HASA_BASE}/models`, { headers: { Authorization: `Bearer ${key}` } });
+            if (!mr.ok) throw new Error(`/models ${mr.status}`);
+            const ms = await mr.json();
+            model = (ms.data || [])[0]?.id;
+            if (!model) throw new Error("사용 가능한 모델이 없습니다");
+            $("hasa-model").value = model;
+        }
+        $("ai-status").textContent = `요약 생성 중… (${model})`;
+        // 부처별 번호매김 자료(제목+본문요약) 전달 → idx로 원문 매칭
+        const digest = current.groups.map(g =>
+            `## ${g.dept}\n` + g.items.slice(0, 15).map((i, idx) =>
+                `[${idx}] ${i.title}\n${(i.desc || i.bullets.join(" ")).replace(/\n/g, " ").slice(0, 600)}`
+            ).join("\n")
+        ).join("\n\n");
+        const sys = "너는 포항테크노파크 미래전략팀의 정책분석가다. 정부 보도자료를 팀 내부 보고서 양식에 맞춰 구조화한다. 반드시 유효한 JSON만 출력하고 다른 말은 하지 않는다.";
+        const usr =
+`아래는 ${current.period} 기간 부처별 발표자료다(각 항목 앞 [번호]는 그 부처 내 인덱스).
+각 부처에서 포항·경북 산업(이차전지·철강·수소·소재부품장비·AI·바이오)과 관련성이 높거나 중요한 발표를 최대 4건 골라, 아래 보고서 양식으로 구조화하라.
+
+출력 JSON 형식:
+{
+ "keywords": {"부처명": "핵심 키워드를 쉼표로 나열한 한 줄"},
+ "reports": {
+   "부처명": [
+     {
+       "idx": 0,                         // 위 [번호] 그대로
+       "lead": "한 줄 핵심요약(선택)",
+       "points": [
+         "일반 요약 문장",                 // 문자열 → '-' 항목
+         {"h": "소제목", "items": ["(목적) ...", "(내용) ..."]},   // '-' 소제목 + '•' 세부
+         {"table": {"cols": ["분야","주요내용"],
+                    "rows": [{"field":"분야명","content":["• 내용1","• 내용2"]}]}}  // 표(선택)
+       ],
+       "insight": "포항·경북 관점 시사점 한 문장(선택)"
+     }
+   ]
+ }
+}
+
+규칙:
+- points는 보도자료 성격에 맞게 구성. 단순 발표면 문자열 2~3개, 회의·대책·계획이면 소제목+세부(•)나 표를 활용.
+- 표는 '분야별 주요내용'이 뚜렷할 때만 사용. 억지로 만들지 말 것.
+- 제목은 바꾸지 말고, idx로만 지정. 중요도 낮은 부처·항목은 생략 가능.
+- 반드시 위 JSON만 출력.
+
+${digest}`;
+        const res = await fetch(`${HASA_BASE}/chat/completions`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+            body: JSON.stringify({
+                model, temperature: 0.2, max_tokens: 4000,
+                messages: [{ role: "system", content: sys }, { role: "user", content: usr }],
+            }),
+        });
+        if (!res.ok) throw new Error(`API ${res.status}`);
+        const out = await res.json();
+        let txt = out.choices?.[0]?.message?.content || "";
+        txt = txt.replace(/^```json?\s*/i, "").replace(/```\s*$/, "").trim();
+        const ai = JSON.parse(txt);
+        current.ai = ai;
+        render(current);
+        $("ai-status").textContent = "AI 요약 적용 완료 ✓ (Word 저장·인쇄 가능)";
+    } catch (e) {
+        $("ai-status").textContent = `실패: ${e.message} — 키·네트워크(CORS)를 확인하세요. GitHub Actions 방식(주간 자동)은 CORS 영향이 없습니다.`;
+    }
+}
+
+// ───────────────────────── Word 저장 ─────────────────────────
+function saveWord() {
+    if (!current) return;
+    const body = $("report-area").innerHTML;
+    const html = `<html xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8">
+        <style>
+        body{font-family:'Malgun Gothic',sans-serif;font-size:10pt;line-height:1.5;color:#000;}
+        .rpt-head{text-align:center;font-weight:bold;font-size:11pt;margin-bottom:1pt;}
+        .rpt-title{text-align:center;font-weight:bold;font-size:18pt;margin:0 0 10pt;}
+        .rpt-title .date{font-size:12pt;}
+        .rpt-kwbox{border:1px solid #000;padding:8pt 11pt;margin-bottom:4pt;}
+        .rpt-kw{font-size:10pt;margin:2pt 0;}
+        .rpt-src{font-size:8.5pt;color:#333;text-align:right;margin:0 0 12pt;}
+        .rpt-dept{font-weight:bold;font-size:13pt;margin:14pt 0 6pt;}
+        .rpt-marker{display:none;}
+        .rpt-cnt{font-weight:normal;font-size:8pt;color:#888;}
+        .rpt-o{font-weight:bold;font-size:10.5pt;margin:8pt 0 2pt;}
+        .rpt-o .meta{font-weight:normal;font-size:8.5pt;color:#888;}
+        .rpt-dash{font-size:9.5pt;margin:2pt 0 2pt 14pt;}
+        .rpt-bul{font-size:9.5pt;margin:2pt 0 2pt 28pt;}
+        .rpt-dot{font-size:9.5pt;font-weight:bold;margin:3pt 0 5pt 14pt;background:#f0f4fa;padding:2pt 6pt;}
+        .rpt-cat{font-size:7.5pt;color:#4338CA;}
+        .rpt-tbl{border-collapse:collapse;margin:4pt 0 6pt 14pt;width:92%;}
+        .rpt-tbl th{border:1px solid #333;background:#dfe6f2;font-weight:bold;font-size:9pt;padding:3pt 6pt;text-align:center;}
+        .rpt-tbl td{border:1px solid #333;font-size:9pt;padding:3pt 6pt;vertical-align:top;}
+        .rpt-tbl td.c0{font-weight:bold;text-align:center;background:#f5f7fb;}
+        .rpt-tbl td .ci{display:block;}
+        .rpt-others{border-collapse:collapse;width:100%;} .rpt-others td{border:1px solid #333;padding:3pt 6pt;font-size:9pt;vertical-align:top;} .rpt-others .dept{font-weight:bold;background:#f5f5f5;}
+        details>summary{display:none;} details>*{margin-left:14pt;} a{color:#000;text-decoration:none;}
+        </style></head><body>${body.replace(/<span class="rpt-marker"><\/span>/g, "▪ ")}</body></html>`;
+    const blob = new Blob(["﻿" + html], { type: "application/msword" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `${current.weekLabel} 정부정책 발표 주요 내용(${current.start}~${current.end}).doc`;
+    a.click();
+}
+
+// ───────────────────────── 초기화 ─────────────────────────
+async function init() {
+    const [aRes, cRes] = await Promise.all([
+        fetch("data/archive.json"), fetch("data/categories.json").catch(() => null),
+    ]);
+    archive = await aRes.json();
+    try {
+        const cj = await cRes.json();
+        (cj.categories || cj || []).forEach(c => categories[c.id] = c.label);
+    } catch (e) { }
+
+    // 저장된 주간 보고서 목록
+    try {
+        const wr = await fetch("data/weekly/index.json");
+        if (wr.ok) {
+            const list = await wr.json();
+            const sel = $("weekly-list");
+            list.slice().reverse().forEach(w => {
+                const o = document.createElement("option");
+                o.value = w.file; o.textContent = `${w.title}${w.ai ? " 🤖" : ""}`;
+                sel.appendChild(o);
+            });
+            if (list.length) sel.classList.remove("hidden");
+            sel.onchange = async () => {
+                if (!sel.value) return;
+                const r = await (await fetch(`data/weekly/${sel.value}`)).json();
+                render(r);
+            };
+        }
+    } catch (e) { }
+
+    // 기본 기간: 지난주 월~일
+    const now = new Date();
+    const mon = new Date(now); mon.setDate(now.getDate() - ((now.getDay() + 6) % 7) - 7);
+    const sun = new Date(mon); sun.setDate(mon.getDate() + 6);
+    $("start-date").value = fmtD(mon);
+    $("end-date").value = fmtD(sun);
+
+    const p = new URLSearchParams(location.search);
+    if (p.get("start") && p.get("end")) {
+        $("start-date").value = p.get("start"); $("end-date").value = p.get("end");
+        render(buildReport(p.get("start"), p.get("end")));
+    } else if (p.get("week")) {
+        try { render(await (await fetch(`data/weekly/${p.get("week")}`)).json()); } catch (e) { }
+    }
+
+    $("hasa-key").value = localStorage.getItem("hasa_key") || "";
+    $("hasa-model").value = localStorage.getItem("hasa_model") || "";
+
+    $("btn-generate").onclick = () => {
+        const s = $("start-date").value, e = $("end-date").value;
+        if (!s || !e || s > e) return alert("기간을 확인하세요.");
+        history.replaceState(null, "", `?start=${s}&end=${e}`);
+        render(buildReport(s, e));
+    };
+    $("btn-print").onclick = () => window.print();
+    $("btn-word").onclick = saveWord;
+    $("btn-ai").onclick = () => $("ai-settings").classList.toggle("hidden");
+    $("btn-ai-run").onclick = runAI;
+}
+init().then(() => lucide.createIcons());
+</script>
+</body>
+</html>
