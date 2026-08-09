@@ -12,6 +12,7 @@ report.html 의 'HWPX 저장' 버튼이 현재 보고서 JSON을 POST /api/hwpx 
 import http.server
 import json
 import os
+import socket
 import socketserver
 import subprocess
 import sys
@@ -132,10 +133,25 @@ def _urlq(s):
 
 
 class Server(socketserver.ThreadingMixIn, http.server.HTTPServer):
+    """IPv6+IPv4 겸용(dualstack) — 브라우저의 localhost(::1) 접속도 처리."""
     daemon_threads = True
+    address_family = socket.AF_INET6
+
+    def server_bind(self):
+        try:
+            self.socket.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 0)
+        except OSError:
+            pass
+        super().server_bind()
 
 
 if __name__ == "__main__":
     print(f"보고서 서버 실행: http://localhost:{PORT}/report.html")
     print("HWPX 저장 버튼 사용 가능(한글 필요). Ctrl+C로 종료.")
-    Server(("127.0.0.1", PORT), Handler).serve_forever()
+    try:
+        srv = Server(("::", PORT), Handler)      # IPv6+IPv4 동시 수신
+    except OSError:
+        class V4(socketserver.ThreadingMixIn, http.server.HTTPServer):
+            daemon_threads = True
+        srv = V4(("0.0.0.0", PORT), Handler)     # IPv6 미지원 환경 폴백
+    srv.serve_forever()

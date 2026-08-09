@@ -450,18 +450,26 @@ async function init() {
     $("btn-hwpx").onclick = saveHwpx;
 
     // 로컬 서버(report_server.py) 감지 → HWPX 버튼 + 서버 경유 AI 활성화
-    try {
-        const pj = await (await fetch("/api/ping", { cache: "no-store" })).json();
-        if (pj.ok) {
-            window.__LOCAL = true;
-            const hb = $("btn-hwpx");
-            hb.classList.remove("hidden"); hb.classList.add("flex");
-            const info = document.querySelector("#ai-settings p");
-            if (info) info.textContent = pj.ai
-                ? "로컬 서버 감지됨 — 서버가 키로 AI 요약을 호출합니다(브라우저에 키 입력 불필요)."
-                : "로컬 서버 감지됨(단, HASA 키 없음 — weekly_report/hasa_key.txt 확인).";
+    // 서버가 페이지보다 늦게 뜨는 경우 대비, 1.5초 간격 최대 8회 재시도
+    (async function detectLocal() {
+        for (let i = 0; i < 8 && !window.__LOCAL; i++) {
+            try {
+                const pj = await (await fetch("/api/ping", { cache: "no-store" })).json();
+                if (pj.ok) {
+                    window.__LOCAL = true;
+                    const hb = $("btn-hwpx");
+                    hb.classList.remove("hidden"); hb.classList.add("flex");
+                    const info = document.querySelector("#ai-settings p");
+                    if (info) info.textContent = pj.ai
+                        ? "로컬 서버 감지됨 — 서버가 키로 AI 요약을 호출합니다(브라우저에 키 입력 불필요)."
+                        : "로컬 서버 감지됨(단, HASA 키 없음 — weekly_report/hasa_key.txt 확인).";
+                    if (/브라우저에서는 직접/.test($("ai-status").textContent)) $("ai-status").textContent = "";
+                    return;
+                }
+            } catch (e) { /* 정적 호스팅(GitHub Pages)이거나 서버 시작 전 → 재시도 */ }
+            await new Promise(r => setTimeout(r, 1500));
         }
-    } catch (e) { /* 정적 호스팅(GitHub Pages): HWPX·서버AI 미지원, 저장된 보고서만 열람 */ }
+    })();
 }
 init().then(() => lucide.createIcons());
 </script>
