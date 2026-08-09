@@ -29,24 +29,29 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <!-- Header -->
-        <header class="mb-8 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-                <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-                    <i data-lucide="layout-dashboard" class="w-8 h-8 text-blue-600 dark:text-blue-400"></i>
-                    정책 대시보드
-                </h1>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">오늘 봐야 할 것 — 브리핑 · 관련도 상위 · 키워드 흐름 <span id="asof" class="text-xs"></span></p>
-            </div>
-            <div class="flex items-center gap-3 flex-wrap">
-                <a href="index.html" class="flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors">
-                    <i data-lucide="library" class="w-4 h-4"></i> 아카이브
-                </a>
-                <a href="report.html" class="flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">
-                    <i data-lucide="file-text" class="w-4 h-4"></i> 주간 보고서
-                </a>
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+        <header class="mb-8 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+            <div class="flex items-start justify-between gap-4">
+                <div class="min-w-0">
+                    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2 break-keep">
+                        <i data-lucide="layout-dashboard" class="w-8 h-8 text-blue-600 dark:text-blue-400 flex-none"></i>
+                        정책 대시보드
+                    </h1>
+                    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">오늘 봐야 할 것 — 브리핑 · 관련도 상위 · 키워드 흐름 <span id="asof" class="text-xs"></span></p>
+                </div>
+                <button id="theme-toggle" title="화면 모드 전환" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-none">
                     <i data-lucide="moon" class="w-5 h-5 text-gray-600 dark:text-gray-300"></i>
                 </button>
+            </div>
+            <div class="flex items-center gap-2 flex-wrap mt-4">
+                <a href="index.html" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors">
+                    <i data-lucide="library" class="w-4 h-4 flex-none"></i> 아카이브
+                </a>
+                <a href="calendar.html" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors">
+                    <i data-lucide="calendar-days" class="w-4 h-4 flex-none"></i> 정책 캘린더
+                </a>
+                <a href="report.html" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">
+                    <i data-lucide="file-text" class="w-4 h-4 flex-none"></i> 주간 보고서
+                </a>
             </div>
         </header>
 
@@ -78,6 +83,21 @@
                 <p class="text-[11px] font-bold tracking-wider text-gray-400">최신 주간보고서</p>
                 <p id="kpi-report-title" class="text-sm font-semibold mt-2 line-clamp-2 text-blue-600 dark:text-blue-400">보고서 생성하기 →</p>
             </a>
+        </div>
+
+        <!-- 다가오는 일정 + 정책 스레드 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <div class="flex items-center justify-between mb-3">
+                    <h2 class="text-lg font-semibold">다가오는 일정 <span class="text-xs font-normal text-gray-400">본문에서 자동 추출</span></h2>
+                    <a href="calendar.html" class="text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline whitespace-nowrap">전체 캘린더 →</a>
+                </div>
+                <div id="deadlines" class="divide-y divide-gray-100 dark:divide-gray-700"></div>
+            </div>
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <h2 class="text-lg font-semibold mb-3">진행 중인 정책 스레드 <span class="text-xs font-normal text-gray-400">「정책명」 기준 발표 묶음</span></h2>
+                <div id="threads" class="space-y-1"></div>
+            </div>
         </div>
 
         <!-- 트렌드 + 급상승 -->
@@ -173,21 +193,73 @@ function mondayOf(dstr) {
 })();
 
 async function init() {
-    const [archive, briefing, weekly] = await Promise.all([
+    const [archive, briefing, weekly, deadlines, threads] = await Promise.all([
         fetch('data/archive.json').then(r => r.json()),
         fetch('data/briefing.json').then(r => r.ok ? r.json() : null).catch(() => null),
         fetch('data/weekly/index.json').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('data/deadlines.json').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('data/threads.json').then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
     items = (archive.items || []).filter(it => !it.dup_of);
     $('asof').textContent = archive.last_updated ? `· 업데이트 ${new Date(archive.last_updated).toLocaleString()}` : '';
 
     renderBriefing(briefing);
     renderKPI(weekly);
+    renderDeadlines(deadlines);
+    renderThreads(threads);
     computeTrend(); renderTrend();
     renderSurge();
     renderTop();
     renderHeatmap();
     lucide.createIcons();
+}
+
+// ── 다가오는 일정 ──
+function renderDeadlines(dl) {
+    const box = $('deadlines');
+    const today = daysAgo(0);
+    const up = ((dl && dl.events) || []).filter(e => e.date >= today);
+    // 같은 자료는 가장 가까운 일정 1건만
+    const seen = new Set(), list = [];
+    for (const e of up) {
+        if (seen.has(e.link)) continue;
+        seen.add(e.link); list.push(e);
+        if (list.length >= 6) break;
+    }
+    if (!list.length) { box.innerHTML = '<p class="text-sm text-gray-400 py-4">추출된 예정 일정이 없습니다.</p>'; return; }
+    box.innerHTML = list.map(e => {
+        const dd = Math.round((new Date(e.date) - new Date(today)) / 86400000);
+        const badge = dd <= 7
+            ? 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300'
+            : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300';
+        return `<a href="${esc(e.link)}" target="_blank" title="근거: ${esc(e.source)}"
+            class="flex items-center gap-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-700/40 rounded-lg px-2 -mx-2">
+            <span class="num flex-none inline-flex px-2 py-0.5 rounded-full text-[11px] font-bold ${badge}">D-${dd}</span>
+            <span class="min-w-0">
+                <span class="block text-sm font-medium truncate">${esc(e.title)}</span>
+                <span class="block text-xs text-gray-400">${e.date} · ${esc(e.type)}</span>
+            </span></a>`;
+    }).join('');
+}
+
+// ── 정책 스레드 ──
+function renderThreads(td) {
+    const box = $('threads');
+    const list = ((td && td.threads) || []).slice(0, 6);
+    if (!list.length) { box.innerHTML = '<p class="text-sm text-gray-400 py-4">2건 이상 이어진 정책이 아직 없습니다.</p>'; return; }
+    box.innerHTML = list.map(t => `
+        <details class="group rounded-lg">
+            <summary class="flex items-center gap-2 py-2 px-2 -mx-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700/40 rounded-lg list-none">
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-400 group-open:rotate-90 transition-transform flex-none"></i>
+                <span class="text-sm font-medium truncate">「${esc(t.phrase)}」</span>
+                <span class="num flex-none text-[11px] font-bold px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300">${t.count}건</span>
+                <span class="flex-none text-[11px] text-gray-400 num">${t.first.slice(5)} ~ ${t.last.slice(5)}</span>
+            </summary>
+            <div class="ml-6 border-l-2 border-gray-200 dark:border-gray-600 pl-3 pb-2 space-y-1">
+                ${t.items.map(i => `<a href="${esc(i.link)}" target="_blank" class="block text-xs text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                    <span class="num">${i.date.slice(5)}</span> · ${esc(i.title.length > 42 ? i.title.slice(0, 41) + '…' : i.title)}</a>`).join('')}
+            </div>
+        </details>`).join('');
 }
 
 function renderBriefing(b) {

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정책 캘린더 — KDI 정책자료 아카이브</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>.num{font-variant-numeric:tabular-nums}</style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <header class="mb-8 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+            <div class="flex items-start justify-between gap-4">
+                <div class="min-w-0">
+                    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2 break-keep">
+                        <i data-lucide="calendar-days" class="w-8 h-8 text-blue-600 dark:text-blue-400 flex-none"></i>
+                        정책 캘린더
+                    </h1>
+                    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">보도자료 본문에서 자동 추출한 마감·시행 일정 — 항목에 마우스를 올리면 근거 문장이 보입니다</p>
+                </div>
+                <button id="theme-toggle" title="화면 모드 전환" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-none">
+                    <i data-lucide="moon" class="w-5 h-5 text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+            <div class="flex items-center gap-2 flex-wrap mt-4">
+                <a href="index.html" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors">
+                    <i data-lucide="library" class="w-4 h-4 flex-none"></i> 아카이브
+                </a>
+                <a href="dashboard.html" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-colors">
+                    <i data-lucide="layout-dashboard" class="w-4 h-4 flex-none"></i> 대시보드
+                </a>
+                <a href="report.html" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">
+                    <i data-lucide="file-text" class="w-4 h-4 flex-none"></i> 주간 보고서
+                </a>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- 월 그리드 -->
+            <div class="lg:col-span-2 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 id="cal-title" class="text-lg font-semibold num"></h2>
+                    <div class="flex gap-1">
+                        <button id="prev-month" class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+                        <button id="this-month" class="px-2.5 py-1 rounded-lg text-xs font-medium hover:bg-gray-100 dark:hover:bg-gray-700">오늘</button>
+                        <button id="next-month" class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+                <div>
+                    <table class="w-full" style="border-collapse:separate; border-spacing:3px; table-layout:fixed">
+                        <thead><tr id="cal-head"></tr></thead>
+                        <tbody id="cal-body"></tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-gray-400 mt-3">
+                    <span class="inline-block w-2.5 h-2.5 rounded-sm bg-red-400 align-middle mr-1"></span>접수·제출 마감
+                    <span class="inline-block w-2.5 h-2.5 rounded-sm bg-blue-400 align-middle ml-3 mr-1"></span>시행
+                    <span class="inline-block w-2.5 h-2.5 rounded-sm bg-gray-400 align-middle ml-3 mr-1"></span>기타
+                </p>
+            </div>
+
+            <!-- D-day 리스트 -->
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <h2 class="text-lg font-semibold mb-3">마감 임박순</h2>
+                <div id="dday-list" class="divide-y divide-gray-100 dark:divide-gray-700 max-h-[560px] overflow-y-auto"></div>
+            </div>
+        </div>
+
+        <footer class="mt-8 text-center text-xs text-gray-400 py-6 border-t border-gray-200 dark:border-gray-700">
+            일정은 정규식 기반 자동 추출이라 누락·오류가 있을 수 있습니다 — 클릭해 원문을 확인하세요.
+        </footer>
+    </div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+let events = [], view = new Date();
+
+(function themeInit() {
+    const html = document.documentElement;
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && matchMedia('(prefers-color-scheme: dark)').matches))
+        html.classList.add('dark');
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = $('theme-toggle'), icon = btn.querySelector('i');
+        const upd = () => { icon.setAttribute('data-lucide', html.classList.contains('dark') ? 'sun' : 'moon'); lucide.createIcons(); };
+        upd();
+        btn.onclick = () => { html.classList.toggle('dark'); localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light'; upd(); };
+    });
+})();
+
+const typeColor = t =>
+    t === '시행' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300'
+    : (t === '접수마감' || t === '의견제출' || t === '신고·납부') ? 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300'
+    : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300';
+
+function renderCal() {
+    const y = view.getFullYear(), m = view.getMonth();
+    $('cal-title').textContent = `${y}년 ${m + 1}월`;
+    $('cal-head').innerHTML = ['월','화','수','목','금','토','일'].map(d =>
+        `<th class="text-[11px] font-bold text-gray-400 pb-1">${d}</th>`).join('');
+
+    const first = new Date(y, m, 1);
+    const startOffset = (first.getDay() + 6) % 7;
+    const daysInMonth = new Date(y, m + 1, 0).getDate();
+    const todayStr = new Date().toLocaleDateString('sv');  // YYYY-MM-DD (로컬)
+    const byDate = {};
+    for (const e of events) (byDate[e.date] = byDate[e.date] || []).push(e);
+
+    let html = '', day = 1;
+    for (let row = 0; row < 6 && day <= daysInMonth; row++) {
+        html += '<tr>';
+        for (let col = 0; col < 7; col++) {
+            if ((row === 0 && col < startOffset) || day > daysInMonth) {
+                html += '<td class="h-[74px]"></td>'; continue;
+            }
+            const dstr = `${y}-${String(m + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+            const evs = byDate[dstr] || [];
+            const isToday = dstr === todayStr;
+            html += `<td class="align-top h-[74px] w-[14.28%] rounded-lg border ${isToday ? 'border-blue-400 dark:border-blue-500 ring-1 ring-blue-300 dark:ring-blue-700' : 'border-gray-200 dark:border-gray-700'} bg-white dark:bg-gray-800 p-1.5">
+                <div class="text-[11px] font-bold num ${isToday ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400'}">${day}</div>
+                ${evs.slice(0, 2).map(e => `<a href="${esc(e.link)}" target="_blank" title="[${esc(e.type)}] ${esc(e.title)}&#10;근거: ${esc(e.source)}"
+                    class="block mt-0.5 px-1.5 py-0.5 rounded text-[10px] font-medium truncate ${typeColor(e.type)}">${esc(e.title)}</a>`).join('')}
+                ${evs.length > 2 ? `<div class="text-[10px] text-gray-400 mt-0.5">외 ${evs.length - 2}건</div>` : ''}
+            </td>`;
+            day++;
+        }
+        html += '</tr>';
+    }
+    $('cal-body').innerHTML = html;
+}
+
+function renderDday() {
+    const todayStr = new Date().toLocaleDateString('sv');
+    const seen = new Set();
+    const up = events.filter(e => e.date >= todayStr).filter(e => {
+        const k = e.link + e.type;
+        if (seen.has(k)) return false;
+        seen.add(k); return true;
+    });
+    $('dday-list').innerHTML = up.length ? up.map(e => {
+        const dd = Math.round((new Date(e.date) - new Date(todayStr)) / 86400000);
+        return `<a href="${esc(e.link)}" target="_blank" title="근거: ${esc(e.source)}" class="flex items-start gap-3 py-2.5 hover:bg-gray-50 dark:hover:bg-gray-700/40 rounded-lg px-2 -mx-2">
+            <span class="num flex-none inline-flex px-2 py-0.5 rounded-full text-[11px] font-bold ${dd <= 7 ? 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300' : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300'}">D-${dd}</span>
+            <span class="min-w-0">
+                <span class="block text-sm font-medium leading-snug">${esc(e.title)}</span>
+                <span class="block text-xs text-gray-400 mt-0.5 num">${e.date} · ${esc(e.type)}</span>
+            </span></a>`;
+    }).join('') : '<p class="text-sm text-gray-400 py-4">예정된 일정이 없습니다.</p>';
+}
+
+async function init() {
+    try {
+        const dl = await (await fetch('data/deadlines.json')).json();
+        events = dl.events || [];
+    } catch (e) { events = []; }
+    renderCal(); renderDday(); lucide.createIcons();
+    $('prev-month').onclick = () => { view.setMonth(view.getMonth() - 1); renderCal(); lucide.createIcons(); };
+    $('next-month').onclick = () => { view.setMonth(view.getMonth() + 1); renderCal(); lucide.createIcons(); };
+    $('this-month').onclick = () => { view = new Date(); renderCal(); lucide.createIcons(); };
+}
+init();
+</script>
+</body>
+</html>

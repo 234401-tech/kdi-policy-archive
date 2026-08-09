@@ -1,0 +1,404 @@
+{
+  "generated_at": "2026-08-09T22:50:28.239180",
+  "threads": [
+    {
+      "phrase": "물가상황점검회의",
+      "count": 3,
+      "first": "2026-06-02",
+      "last": "2026-08-04",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282093",
+          "date": "2026-06-02",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283688",
+          "date": "2026-07-02",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285050",
+          "date": "2026-08-04",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "올해의상생기업대상",
+      "count": 2,
+      "first": "2026-05-12",
+      "last": "2026-08-04",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "국민이 추천하고 선정하는 「올해의 상생기업 대상」 후보자 접수 시작!",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=280848",
+          "date": "2026-05-12",
+          "score": 0
+        },
+        {
+          "title": "국민이 직접 뽑는 「올해의 상생기업대상」, 8월 5일부터 13일까지 국민투표 시작!",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285072",
+          "date": "2026-08-04",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "농업·농촌2045전략",
+      "count": 2,
+      "first": "2026-06-24",
+      "last": "2026-08-03",
+      "max_score": 18,
+      "items": [
+        {
+          "title": "농식품부, 20년 뒤 미래 청사진 그린다...「농업·농촌 2045전략」 수립 착수",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283188",
+          "date": "2026-06-24",
+          "score": 18
+        },
+        {
+          "title": "「농업·농촌 2045전략」 수립을 위한 국민제안 공모전 접수 시작",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284994",
+          "date": "2026-08-03",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "phrase": "생활인구",
+      "count": 2,
+      "first": "2026-05-28",
+      "last": "2026-07-30",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "’25년 4/4분기 『생활인구』 산정 결과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281708",
+          "date": "2026-05-28",
+          "score": 0
+        },
+        {
+          "title": "’26년 1/4분기 『생활인구』 산정 결과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284871",
+          "date": "2026-07-30",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "개인투자용국채",
+      "count": 3,
+      "first": "2026-05-29",
+      "last": "2026-07-29",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
+          "date": "2026-05-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
+          "date": "2026-06-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
+          "date": "2026-07-29",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "청년미래플러스",
+      "count": 2,
+      "first": "2026-06-10",
+      "last": "2026-07-20",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "유망산업의 기업 현직자 멘토링·직무교육 「청년미래플러스」 사업에 온라인 신청하세요!",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282472",
+          "date": "2026-06-10",
+          "score": 0
+        },
+        {
+          "title": "“청년의 취업성공 경험이 미래를 바꾼다” 「청년미래플러스」 열린 소통 간담회 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284448",
+          "date": "2026-07-20",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "모집방식비경쟁인수",
+      "count": 2,
+      "first": "2026-06-19",
+      "last": "2026-07-20",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "‘26.6월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282948",
+          "date": "2026-06-19",
+          "score": 0
+        },
+        {
+          "title": "‘26.7월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284392",
+          "date": "2026-07-20",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "불법외환거래대응반",
+      "count": 2,
+      "first": "2026-06-11",
+      "last": "2026-07-14",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「불법 외환거래 대응반」 회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282515",
+          "date": "2026-06-11",
+          "score": 0
+        },
+        {
+          "title": "제6차 「불법 외환거래 대응반」 회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284230",
+          "date": "2026-07-14",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "데이터로읽는우리교육",
+      "count": 2,
+      "first": "2026-06-02",
+      "last": "2026-07-13",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「데이터로 읽는 우리 교육」 제6호 발간: 안전하고 건강한 어린이집·유치원, 행복한 우리 아이",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281997",
+          "date": "2026-06-02",
+          "score": 0
+        },
+        {
+          "title": "「데이터로 읽는 우리 교육」 제9호 발간: 포용교육 시대, 특수교육이 만들어가는 변화",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284144",
+          "date": "2026-07-13",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "월간재정동향",
+      "count": 2,
+      "first": "2026-06-11",
+      "last": "2026-07-09",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「월간 재정동향」 2026년 6월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282523",
+          "date": "2026-06-11",
+          "score": 0
+        },
+        {
+          "title": "「월간 재정동향」 2026년 7월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284010",
+          "date": "2026-07-09",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "모두의창업",
+      "count": 4,
+      "first": "2026-05-14",
+      "last": "2026-07-08",
+      "max_score": 28,
+      "items": [
+        {
+          "title": "캠퍼스 달군 「모두의 창업」...중기부, 청년 창업 현장 소통 이어가",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281046",
+          "date": "2026-05-14",
+          "score": 0
+        },
+        {
+          "title": "대한민국은 지금 창업 열풍, 「모두의 창업」 최종 6.2만명 신청, 역대 최대 기록",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281311",
+          "date": "2026-05-19",
+          "score": 18
+        },
+        {
+          "title": "6.2만 명의 열기, 도전부터 재도전까지 「모두의 창업」이 혁신의 길을 이끈다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281503",
+          "date": "2026-05-22",
+          "score": 28
+        },
+        {
+          "title": "중기부, 「모두의 창업」 전국 현장 소통 나선다",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283975",
+          "date": "2026-07-08",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "국민참여형국민성장펀드",
+      "count": 5,
+      "first": "2026-05-19",
+      "last": "2026-07-06",
+      "max_score": 15,
+      "items": [
+        {
+          "title": "「국민참여형 국민성장펀드」가입 관련 주요 문의사항(FAQ)에 대해 답변드립니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281297",
+          "date": "2026-05-19",
+          "score": 15
+        },
+        {
+          "title": "5.22일 출시를 앞두고 「국민참여형 국민성장펀드」 판매를 위한 준비상황을 점검하였습니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281375",
+          "date": "2026-05-20",
+          "score": 15
+        },
+        {
+          "title": "「국민참여형 국민성장펀드」 투자구조와 우선 손실 부담(후순위 출자)의 구체적 내용을 설명드립니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281476",
+          "date": "2026-05-22",
+          "score": 15
+        },
+        {
+          "title": "「국민참여형 국민성장펀드」의 운용사들과 함께 국민재산의 운용성과를 높일 수 있는 방안을 논의하였습니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282622",
+          "date": "2026-06-15",
+          "score": 15
+        },
+        {
+          "title": "제2차「국민참여형 국민성장펀드」모집을 위해 자펀드 운용사(10개) 선정 절차를 개시합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283870",
+          "date": "2026-07-06",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "phrase": "퀀텀코리아2026",
+      "count": 2,
+      "first": "2026-07-02",
+      "last": "2026-07-06",
+      "max_score": 18,
+      "items": [
+        {
+          "title": "세계 양자 기술의 현재와 미래가 한자리에, 「퀀텀 코리아 2026」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283702",
+          "date": "2026-07-02",
+          "score": 18
+        },
+        {
+          "title": "「퀀텀코리아2026」, 글로벌 양자협력의 플랫폼으로 도약하다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283847",
+          "date": "2026-07-06",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "phrase": "WGBI상시점검및투자유치추진단",
+      "count": 2,
+      "first": "2026-05-29",
+      "last": "2026-06-30",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「WGBI 상시점검 및 투자유치 추진단」 제7차 회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281879",
+          "date": "2026-05-29",
+          "score": 0
+        },
+        {
+          "title": "「WGBI 상시점검 및 투자유치 추진단」 제8차 회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283569",
+          "date": "2026-06-30",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "제48차유네스코세계유산위원회",
+      "count": 2,
+      "first": "2026-05-14",
+      "last": "2026-06-29",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「제48차 유네스코 세계유산위원회」 기념주화 발행",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281052",
+          "date": "2026-05-14",
+          "score": 0
+        },
+        {
+          "title": "「제48차 유네스코 세계유산위원회」 기념주화 교부일정 및 온·오프라인 판매 안내",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283418",
+          "date": "2026-06-29",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "고유가피해지원금",
+      "count": 2,
+      "first": "2026-05-18",
+      "last": "2026-06-29",
+      "max_score": 8,
+      "items": [
+        {
+          "title": "「고유가 피해지원금」 2차 지급 신청 5월 18일 개시",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281193",
+          "date": "2026-05-18",
+          "score": 8
+        },
+        {
+          "title": "「고유가 피해지원금」 7월 3일 18시까지 꼭 신청하세요",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283450",
+          "date": "2026-06-29",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "전국민인공지능경진대회",
+      "count": 2,
+      "first": "2026-05-27",
+      "last": "2026-06-29",
+      "max_score": 33,
+      "items": [
+        {
+          "title": "「전 국민 인공지능 경진대회」, 100만 명 이상 참여 기대되는 온라인 인공지능 체험 축제 “클릭 온 인공지능(AI) 시즌1” 시작(오픈)",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281647",
+          "date": "2026-05-27",
+          "score": 23
+        },
+        {
+          "title": "「전 국민 인공지능 경진대회」 개막 3개월 만에 참가자 100만 명 돌파",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283470",
+          "date": "2026-06-29",
+          "score": 33
+        }
+      ]
+    }
+  ]
+}

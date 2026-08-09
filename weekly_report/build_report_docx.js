@@ -78,7 +78,17 @@ function fieldTable(t) {
   });
 }
 
+// ☞ 사용자 코멘트 (보고서 스튜디오 편집에서 입력)
+function cmt(text) {
+  return new Paragraph({
+    children: [run(`☞ ${text}`, { bold: true, size: 19 })],
+    shading: { type: ShadingType.CLEAR, fill: "FFF6DD" },
+    indent: { left: 280 }, spacing: { before: 40, after: 100 },
+  });
+}
+
 function richItem(base, rep, out) {
+  if (base.excluded) return;               // 편집에서 제외한 항목
   out.push(oTitle(base));
   if (rep.lead) out.push(dash(rep.lead));
   for (const p of (rep.points || [])) {
@@ -87,6 +97,7 @@ function richItem(base, rep, out) {
     else if (p.h || p.header) { out.push(dash(p.h || p.header)); (p.items || p.sub || []).forEach(s => out.push(bul(s))); }
   }
   if (rep.insight) out.push(dot(rep.insight));
+  if (base.userComment) out.push(cmt(base.userComment));
 }
 
 // ▨ 부처명 (양식 마커)
@@ -145,8 +156,10 @@ for (const g of R.groups) {
     if (rest.length) children.push(new Paragraph({ children: [run(`그 외 ${rest.length}건: ` + rest.slice(0, 8).map(i => i.title).join(" / "), { size: 15, color: "888888" })], indent: { left: 280 }, spacing: { after: 40 } }));
   } else {
     for (const i of g.items.slice(0, 6)) {
+      if (i.excluded) continue;            // 편집에서 제외한 항목
       children.push(oTitle(i));
       (i.bullets || []).forEach(b => children.push(dash(b)));
+      if (i.userComment) children.push(cmt(i.userComment));
     }
   }
 }

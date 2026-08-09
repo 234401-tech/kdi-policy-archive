@@ -102,6 +102,45 @@ def _day_diff(a, b):
         return 999
 
 
+THREADS_OUT = ROOT / "docs" / "data" / "threads.json"
+_quote_re = re.compile(r"[「『]([^」』]{2,30})[」』]")
+
+
+def build_threads(items):
+    """제목의 「정책명」 인용구가 같은 발표들을 하나의 '정책 스레드'로 묶는다.
+    (예: 「반도체특별법」 발표→시행령→시행 — 타임라인 추적의 기반)"""
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for it in items:
+        if it.get("muted") or it.get("dup_of"):
+            continue
+        for m in _quote_re.finditer(it.get("title") or ""):
+            key = re.sub(r"\s+", "", m.group(1))
+            groups[key].append(it)
+    threads = []
+    for key, its in groups.items():
+        uniq = {i["id"]: i for i in its}.values()
+        if len(uniq) < 2:
+            continue
+        entries = sorted(({
+            "title": i["title"], "link": i["link"],
+            "date": (i.get("collected_at") or "")[:10],
+            "score": i.get("pt_score", 0),
+        } for i in uniq), key=lambda x: x["date"])
+        threads.append({
+            "phrase": key, "count": len(entries),
+            "first": entries[0]["date"], "last": entries[-1]["date"],
+            "max_score": max(e["score"] for e in entries),
+            "items": entries,
+        })
+    threads.sort(key=lambda t: (t["max_score"] >= 40, t["last"], t["count"]), reverse=True)
+    THREADS_OUT.write_text(json.dumps(
+        {"generated_at": __import__("datetime").datetime.now().isoformat(),
+         "threads": threads[:60]},
+        ensure_ascii=False, indent=2), encoding="utf-8")
+    return len(threads)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--all", action="store_true", help="전체 항목 재계산 (규칙 변경 후)")
@@ -124,11 +163,12 @@ def main():
         updated += 1
 
     dups = mark_dups(items)
+    threads = build_threads(items)
 
     ARCHIVE.write_text(json.dumps(archive, ensure_ascii=False, indent=2), encoding="utf-8")
     scored = [it for it in items if it.get("pt_score", 0) >= 70]
     muted = sum(1 for it in items if it.get("muted"))
-    print(f"채점 {updated}건 갱신 / 관련도 70+ {len(scored)}건 / 숨김 {muted}건 / 중복 {dups}건")
+    print(f"채점 {updated}건 갱신 / 관련도 70+ {len(scored)}건 / 숨김 {muted}건 / 중복 {dups}건 / 스레드 {threads}개")
 
 
 if __name__ == "__main__":

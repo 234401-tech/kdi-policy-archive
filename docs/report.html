@@ -31,6 +31,12 @@
         .rpt-cnt { font-weight: 400; font-size: 0.72rem; color: #999; }
         .rpt-o { font-size: 0.95rem; font-weight: 700; margin: 10px 0 2px; padding-left: 1.35em; text-indent: -1.35em; }
         .rpt-o .meta { font-weight: 400; font-size: 0.78rem; color: #888; }
+        .rpt-cmt { font-size: 0.86rem; margin: 4px 0 6px 1.6em; padding: 3px 8px 3px 10px; font-weight: 700; background: #FFF6DD; border-left: 3px solid #C77817; }
+        .edit-ctl { text-indent: 0; display: inline-flex; align-items: center; gap: 4px; margin-right: 6px; vertical-align: 1px; }
+        .edit-ctl input { accent-color: #0B657E; cursor: pointer; }
+        .edit-ctl button { font-size: 11px; border: 1px solid #bbb; background: #fff; border-radius: 5px; padding: 0 6px; cursor: pointer; color: #555; }
+        .rpt-excluded { opacity: .38; }
+        @media print { .edit-ctl { display: none !important; } }
         .rpt-dash { font-size: 0.87rem; margin: 2px 0 2px 1.6em; padding-left: 0.95em; text-indent: -0.95em; }
         .rpt-bul { font-size: 0.85rem; margin: 2px 0 2px 3.0em; padding-left: 1em; text-indent: -1em; }
         .rpt-dot { font-size: 0.86rem; margin: 4px 0 6px 1.6em; padding-left: 0.95em; text-indent: -0.95em; font-weight: 700; background: #f3f6fc; border-left: 3px solid #1F3864; padding: 3px 8px 3px 10px; }
@@ -84,6 +90,9 @@
                 <div class="flex-1"></div>
                 <button id="btn-ai" class="flex items-center gap-2 px-3 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
                     <i data-lucide="bot" class="w-4 h-4"></i> AI 요약
+                </button>
+                <button id="btn-edit" class="flex items-center gap-2 px-3 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+                    <i data-lucide="pencil" class="w-4 h-4"></i> 편집
                 </button>
                 <button id="btn-hwpx" class="hidden items-center gap-2 px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
                     <i data-lucide="download" class="w-4 h-4"></i> HWPX 저장
@@ -221,9 +230,22 @@ function rptTable(t) {
     }).join("")}</tbody></table>`;
 }
 
+// 편집 모드: ○ 제목 앞 체크박스(포함/제외) + ✎ 코멘트 버튼
+let editMode = false;
+function editCtl(base) {
+    if (!editMode) return "";
+    return `<span class="edit-ctl"><input type="checkbox" data-ek="${esc(base._ek)}" ${base.excluded ? "" : "checked"} title="보고서에 포함">` +
+           `<button type="button" data-cmt="${esc(base._ek)}" title="코멘트(☞) 달기">✎</button></span>`;
+}
+function cmtLine(base) {
+    return base.userComment ? `<p class="rpt-cmt">☞ ${esc(base.userComment)}</p>` : "";
+}
+
 // AI 구조화 항목: ○ 제목 → - 포인트 → • (목적)/(내용) → 표
 function richItem(base, rep) {
-    let h = `<p class="rpt-o">○ ${esc(base.title)} <span class="meta">(${shortD(base.date)})</span> <a href="${esc(base.link)}" target="_blank">[원문]</a>${catChips(base.categories)}</p>`;
+    if (base.excluded && !editMode) return "";
+    const dim = base.excluded ? ' rpt-excluded' : '';
+    let h = `<div class="${dim.trim()}"><p class="rpt-o">${editCtl(base)}○ ${esc(base.title)} <span class="meta">(${shortD(base.date)})</span> <a href="${esc(base.link)}" target="_blank">[원문]</a>${catChips(base.categories)}</p>`;
     if (rep.lead) h += `<p class="rpt-dash">- ${esc(rep.lead)}</p>`;
     for (const p of (rep.points || [])) {
         if (typeof p === "string") { h += `<p class="rpt-dash">- ${esc(p)}</p>`; continue; }
@@ -234,11 +256,14 @@ function richItem(base, rep) {
         }
     }
     if (rep.insight) h += `<p class="rpt-dot">· ${esc(rep.insight)}</p>`;
-    return h;
+    return h + cmtLine(base) + `</div>`;
 }
 
 function render(r) {
     current = r;
+    // 편집용 항목 키 부여 (부처|제목)
+    for (const g of (r.groups || []))
+        for (const i of g.items) if (!i._ek) i._ek = g.dept + "|" + i.title;
     // [부처별 핵심 키워드] — 양식의 ○ 불릿
     const kwLines = r.ai?.keywords
         ? Object.entries(r.ai.keywords).map(([d, kws]) => `<p class="rpt-kw">○ <b>${esc(d)}</b> : ${esc(Array.isArray(kws) ? kws.join(", ") : kws)}</p>`).join("")
@@ -263,9 +288,12 @@ function render(r) {
         }
         // AI 미적용 — 자동 추출(○ 제목 / - 요약)
         const cap = 6, main = g.items.slice(0, cap), rest = g.items.slice(cap);
-        return head + main.map(i => `
-            <p class="rpt-o">○ ${esc(i.title)} <span class="meta">(${shortD(i.date)})</span> <a href="${esc(i.link)}" target="_blank">[원문]</a>${catChips(i.categories)}</p>
-            ${i.bullets.map(b => `<p class="rpt-dash">- ${esc(b)}</p>`).join("")}`).join("")
+        return head + main.map(i => {
+            if (i.excluded && !editMode) return "";
+            return `<div class="${i.excluded ? 'rpt-excluded' : ''}">
+            <p class="rpt-o">${editCtl(i)}○ ${esc(i.title)} <span class="meta">(${shortD(i.date)})</span> <a href="${esc(i.link)}" target="_blank">[원문]</a>${catChips(i.categories)}</p>
+            ${i.bullets.map(b => `<p class="rpt-dash">- ${esc(b)}</p>`).join("")}${cmtLine(i)}</div>`;
+        }).join("")
             + (rest.length ? `<details><summary>그 외 ${rest.length}건 보기</summary>
                 ${rest.map(i => `<p class="rpt-dash">· <a href="${esc(i.link)}" target="_blank">${esc(i.title)}</a> <span class="meta">(${shortD(i.date)})</span></p>`).join("")}</details>` : "");
     };
@@ -289,7 +317,39 @@ function render(r) {
         ${othersHtml}`;
     $("report-area").classList.remove("hidden");
     $("empty-hint").classList.add("hidden");
-    ["btn-word", "btn-print", "btn-ai", "btn-hwpx"].forEach(id => $(id).disabled = false);
+    ["btn-word", "btn-print", "btn-ai", "btn-hwpx", "btn-edit"].forEach(id => $(id).disabled = false);
+}
+
+// ───────────────────────── 편집 모드 (항목 제외·코멘트) ─────────────────────────
+function findByEk(ek) {
+    for (const g of (current?.groups || []))
+        for (const i of g.items) if (i._ek === ek) return i;
+    return null;
+}
+function setupEditHandlers() {
+    $("btn-edit").addEventListener("click", () => {
+        editMode = !editMode;
+        $("btn-edit").innerHTML = editMode
+            ? '<i data-lucide="check" class="w-4 h-4"></i> 편집 완료'
+            : '<i data-lucide="pencil" class="w-4 h-4"></i> 편집';
+        render(current); lucide.createIcons();
+    });
+    $("report-area").addEventListener("change", e => {
+        const ek = e.target.dataset?.ek;
+        if (!ek) return;
+        const it = findByEk(ek);
+        if (it) { it.excluded = !e.target.checked; render(current); lucide.createIcons(); }
+    });
+    $("report-area").addEventListener("click", e => {
+        const ek = e.target.dataset?.cmt;
+        if (!ek) return;
+        const it = findByEk(ek);
+        if (!it) return;
+        const v = prompt("이 항목에 달 코멘트 (☞) — 비우면 삭제", it.userComment || "");
+        if (v === null) return;
+        if (v.trim()) it.userComment = v.trim(); else delete it.userComment;
+        render(current); lucide.createIcons();
+    });
 }
 
 // ───────────────────────── AI 요약 (open.hasa.re.kr) ─────────────────────────
@@ -380,6 +440,8 @@ function saveWord() {
         .rpt-tbl td .ci{display:block;}
         .rpt-others{border-collapse:collapse;width:100%;} .rpt-others td{border:1px solid #333;padding:3pt 6pt;font-size:9pt;vertical-align:top;} .rpt-others .dept{font-weight:bold;background:#f5f5f5;}
         details>summary{display:none;} details>*{margin-left:14pt;} a{color:#000;text-decoration:none;}
+        .edit-ctl{display:none;} .rpt-excluded{display:none;}
+        .rpt-cmt{font-size:9.5pt;font-weight:bold;margin:3pt 0 5pt 14pt;background:#FFF6DD;padding:2pt 6pt;}
         </style></head><body>${body.replace(/<span class="rpt-marker"><\/span>/g, "▪ ")}</body></html>`;
     const blob = new Blob(["﻿" + html], { type: "application/msword" });
     const a = document.createElement("a");
@@ -447,6 +509,7 @@ async function init() {
     $("btn-word").onclick = saveWord;
     $("btn-ai").onclick = () => $("ai-settings").classList.toggle("hidden");
     $("btn-ai-run").onclick = runAI;
+    setupEditHandlers();
     $("btn-hwpx").onclick = saveHwpx;
 
     // 로컬 서버(report_server.py) 감지 → HWPX 버튼 + 서버 경유 AI 활성화
