@@ -96,7 +96,16 @@
                         <select id="sort-filter" class="w-full p-2 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
                             <option value="desc">최신순</option>
                             <option value="asc">오래된순</option>
+                            <option value="score">관련도순</option>
                         </select>
+                    </div>
+
+                    <!-- Muted toggle -->
+                    <div class="mb-6">
+                        <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 cursor-pointer">
+                            <input type="checkbox" id="show-muted" class="rounded accent-blue-600">
+                            숨김 항목 표시 <span id="muted-count" class="text-xs text-gray-400"></span>
+                        </label>
                     </div>
 
                     <button id="download-csv" class="w-full py-2 px-4 bg-gray-900 hover:bg-gray-800 dark:bg-gray-100 dark:hover:bg-white dark:text-gray-900 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">
@@ -119,6 +128,7 @@
                             <thead class="text-xs text-gray-500 bg-gray-50/80 dark:bg-gray-700/50 dark:text-gray-400 border-b border-gray-100 dark:border-gray-700 whitespace-nowrap">
                                 <tr>
                                     <th scope="col" class="px-4 py-4 font-medium text-center w-16">번호</th>
+                                    <th scope="col" class="px-4 py-4 font-medium text-center w-20" title="포항TP 관심 프로필(profile.json) 기준 관련도">관련도</th>
                                     <th scope="col" class="px-4 py-4 font-medium text-center w-28">분류</th>
                                     <th scope="col" class="px-4 py-4 font-medium">제목</th>
                                     <th scope="col" class="px-4 py-4 font-medium text-center w-32">출처</th>
@@ -129,7 +139,7 @@
                             <tbody id="items-container" class="divide-y divide-gray-100 dark:divide-gray-700">
                                 <!-- Items will be rendered here -->
                                 <tr>
-                                    <td colspan="6" class="text-center py-12 text-gray-500" id="loading-indicator">
+                                    <td colspan="7" class="text-center py-12 text-gray-500" id="loading-indicator">
                                         <i data-lucide="loader-2" class="w-8 h-8 mx-auto animate-spin mb-2"></i>
                                         데이터를 불러오는 중...
                                     </td>

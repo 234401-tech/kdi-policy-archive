@@ -8,6 +8,7 @@ let activeFilters = new Set();
 let searchQuery = '';
 let dateFilter = 'all';
 let sortOrder = 'desc';
+let showMuted = false;
 
 // Elements
 const itemsContainer = document.getElementById('items-container');
@@ -167,6 +168,12 @@ function setupEventListeners() {
         applyFilters();
     });
 
+    const showMutedCheckbox = document.getElementById('show-muted');
+    if (showMutedCheckbox) showMutedCheckbox.addEventListener('change', (e) => {
+        showMuted = e.target.checked;
+        applyFilters();
+    });
+
     document.getElementById('download-csv').addEventListener('click', downloadCSV);
     
     // Category Management Modal
@@ -300,6 +307,17 @@ function generateCategoriesJson() {
 function applyFilters() {
     let result = allItems;
 
+    // 중복 병합: 원본만 표시 (score.py가 dup_of 표시)
+    result = result.filter(item => !item.dup_of);
+
+    // 숨김(Mute) 처리 — mute_rules.json 기준, 토글로 표시 가능
+    const mutedInScope = result.filter(item => item.muted).length;
+    const mutedCountEl = document.getElementById('muted-count');
+    if (mutedCountEl) mutedCountEl.textContent = mutedInScope > 0 ? `(${mutedInScope}건)` : '';
+    if (!showMuted) {
+        result = result.filter(item => !item.muted);
+    }
+
     // Category filter (OR matching for selected categories)
     if (activeFilters.size > 0) {
         result = result.filter(item => {
@@ -332,9 +350,13 @@ function applyFilters() {
 
     // Sort
     result.sort((a, b) => {
+        if (sortOrder === 'score') {
+            const diff = (b.pt_score || 0) - (a.pt_score || 0);
+            if (diff !== 0) return diff;
+        }
         const dateA = new Date(a.pub_date || a.collected_at);
         const dateB = new Date(b.pub_date || b.collected_at);
-        return sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
+        return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
     });
 
     filteredItems = result;
@@ -352,7 +374,7 @@ function renderList() {
     const paginatedItems = filteredItems.slice(start, end);
 
     if (paginatedItems.length === 0) {
-        itemsContainer.innerHTML = `<tr><td colspan="6" class="text-center py-12 text-gray-500 dark:text-gray-400">조건에 맞는 결과가 없습니다.</td></tr>`;
+        itemsContainer.innerHTML = `<tr><td colspan="7" class="text-center py-12 text-gray-500 dark:text-gray-400">조건에 맞는 결과가 없습니다.</td></tr>`;
         renderPagination();
         return;
     }
@@ -361,7 +383,7 @@ function renderList() {
 
     paginatedItems.forEach(item => {
         const row = document.createElement('tr');
-        row.className = 'hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group cursor-pointer';
+        row.className = 'hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group cursor-pointer' + (item.muted ? ' opacity-50' : '');
         row.onclick = (e) => {
             // Prevent opening again if a link was clicked directly
             if (e.target.tagName !== 'A') {
@@ -384,8 +406,24 @@ function renderList() {
             categoriesHtml = `<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400 whitespace-nowrap">미분류</span>`;
         }
 
+        // 관련도 배지 (score.py가 계산한 pt_score, 근거는 툴팁)
+        const score = item.pt_score || 0;
+        const reasonsTip = (item.pt_reasons && item.pt_reasons.length) ? `근거: ${item.pt_reasons.join(', ')}` : '매칭된 관심 키워드 없음';
+        let scoreHtml;
+        if (score >= 80) {
+            scoreHtml = `<span class="inline-flex items-center justify-center min-w-[38px] px-1.5 py-0.5 rounded-md text-xs font-bold bg-teal-600 text-white" title="${reasonsTip}">${score}</span>`;
+        } else if (score >= 60) {
+            scoreHtml = `<span class="inline-flex items-center justify-center min-w-[38px] px-1.5 py-0.5 rounded-md text-xs font-bold bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-300" title="${reasonsTip}">${score}</span>`;
+        } else if (score >= 40) {
+            scoreHtml = `<span class="inline-flex items-center justify-center min-w-[38px] px-1.5 py-0.5 rounded-md text-xs font-semibold bg-gray-200 text-gray-700 dark:bg-gray-600 dark:text-gray-200" title="${reasonsTip}">${score}</span>`;
+        } else {
+            scoreHtml = `<span class="text-xs text-gray-400 dark:text-gray-500" title="${reasonsTip}">${score > 0 ? score : '·'}</span>`;
+        }
+        const mutedChip = item.muted ? `<span class="ml-1 inline-flex px-1.5 py-0.5 rounded text-[10px] font-medium bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-gray-400" title="mute_rules.json 패턴과 일치">숨김</span>` : '';
+
         row.innerHTML = `
             <td class="px-4 py-4 text-center text-gray-500 dark:text-gray-400">${virtualNo--}</td>
+            <td class="px-4 py-4 text-center whitespace-nowrap">${scoreHtml}${mutedChip}</td>
             <td class="px-4 py-4 text-center">
                 <div class="flex gap-1 flex-wrap justify-center">
                     ${categoriesHtml}
@@ -558,12 +596,13 @@ function downloadCSV() {
         return;
     }
 
-    const headers = ['Title', 'Link', 'Date', 'Categories', 'Author', 'Description'];
+    const headers = ['Title', 'Link', 'Date', 'Score', 'ScoreReasons', 'Categories', 'Author', 'Description'];
     const rows = filteredItems.map(item => {
         const desc = (item.description || '').replace(/"/g, '""').replace(/\n/g, ' ');
         const cats = (item.matched_categories || []).join(', ');
+        const reasons = (item.pt_reasons || []).join(', ');
         const date = new Date(item.pub_date || item.collected_at).toLocaleDateString();
-        return `"${item.title.replace(/"/g, '""')}","${item.link}","${date}","${cats}","${(item.author || '').replace(/"/g, '""')}","${desc}"`;
+        return `"${item.title.replace(/"/g, '""')}","${item.link}","${date}","${item.pt_score || 0}","${reasons}","${cats}","${(item.author || '').replace(/"/g, '""')}","${desc}"`;
     });
 
     const csvContent = "\uFEFF" + [headers.join(','), ...rows].join('\n');
