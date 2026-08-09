@@ -47,6 +47,15 @@ async function init() {
 
         renderCategoryFilters();
         setupEventListeners();
+
+        // 대시보드 급상승 키워드 클릭 → 검색어 프리셋
+        const preset = localStorage.getItem('presetSearch');
+        if (preset) {
+            localStorage.removeItem('presetSearch');
+            searchInput.value = preset;
+            searchQuery = preset.toLowerCase();
+        }
+
         applyFilters();
         
     } catch (error) {

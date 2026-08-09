@@ -1,0 +1,35 @@
+name: Daily Briefing
+on:
+  schedule:
+    - cron: '30 23 * * 0-4'   # 매일 08:30 KST (월~금 아침 = UTC 일~목 23:30)
+  workflow_dispatch:
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate briefing (+ optional send)
+        env:
+          HASA_API_KEY: ${{ secrets.HASA_API_KEY }}      # 없으면 규칙 기반 요약
+          HASA_MODEL: ${{ vars.HASA_MODEL || 'exaone-4.0-32b' }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}            # 이메일 발송(선택)
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          KAKAOWORK_WEBHOOK: ${{ secrets.KAKAOWORK_WEBHOOK }}  # 카카오워크(선택)
+        run: python scripts/daily_briefing.py --hours 24
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add docs/data/briefing.json
+          git diff --cached --quiet || \
+            git commit -m "data: daily briefing [skip ci]"
+          git push

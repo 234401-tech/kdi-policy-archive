@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대시보드 — KDI 정책자료 아카이브</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        /* 차트 팔레트 — dataviz 검증 통과 (light/dark 별도) */
+        :root { --s1:#0A85A3; --s2:#BF6E00; --s3:#7C5CD6; --s4:#C24573;
+                --h0:#E4EFF2; --h1:#BCDCE4; --h2:#7FBECB; --h3:#3D93A8; --h4:#0B657E;
+                --grid:#E5E7EB; --tick:#6B7280; }
+        .dark  { --s1:#1D9AB8; --s2:#C77817; --s3:#8F73E3; --s4:#D65F8B;
+                --h0:#22313A; --h1:#1E4552; --h2:#1D6478; --h3:#2F8CA6; --h4:#6BC2D6;
+                --grid:#374151; --tick:#9CA3AF; }
+        .num { font-variant-numeric: tabular-nums; }
+        .tipbox { position:absolute; pointer-events:none; background:#111827; color:#F9FAFB; font-size:12px;
+                  border-radius:7px; padding:6px 10px; opacity:0; transition:opacity .12s; white-space:nowrap; z-index:20; }
+        .heatcell { height:28px; min-width:34px; border-radius:5px; text-align:center; font-size:11px; font-weight:700; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Header -->
+        <header class="mb-8 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
+                    <i data-lucide="layout-dashboard" class="w-8 h-8 text-blue-600 dark:text-blue-400"></i>
+                    정책 대시보드
+                </h1>
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">오늘 봐야 할 것 — 브리핑 · 관련도 상위 · 키워드 흐름 <span id="asof" class="text-xs"></span></p>
+            </div>
+            <div class="flex items-center gap-3 flex-wrap">
+                <a href="index.html" class="flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors">
+                    <i data-lucide="library" class="w-4 h-4"></i> 아카이브
+                </a>
+                <a href="report.html" class="flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">
+                    <i data-lucide="file-text" class="w-4 h-4"></i> 주간 보고서
+                </a>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i data-lucide="moon" class="w-5 h-5 text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- 오늘의 브리핑 -->
+        <div id="briefing-card" class="hidden mb-6 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border-l-4 border-blue-600 border border-gray-100 dark:border-gray-700">
+            <div class="flex items-center gap-2 mb-3">
+                <i data-lucide="sunrise" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+                <h2 class="text-lg font-semibold">오늘의 브리핑</h2>
+                <span id="briefing-meta" class="text-xs text-gray-400"></span>
+            </div>
+            <ul id="briefing-bullets" class="space-y-1.5 text-sm text-gray-700 dark:text-gray-300 list-disc list-inside"></ul>
+        </div>
+
+        <!-- KPI -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <p class="text-[11px] font-bold tracking-wider text-gray-400">오늘 신규</p>
+                <p class="text-3xl font-bold num mt-1"><span id="kpi-today">–</span><span class="text-sm font-medium text-gray-400"> 건</span></p>
+            </div>
+            <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <p class="text-[11px] font-bold tracking-wider text-gray-400">최근 7일 수집</p>
+                <p class="text-3xl font-bold num mt-1"><span id="kpi-week">–</span><span class="text-sm font-medium text-gray-400"> 건</span></p>
+            </div>
+            <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <p class="text-[11px] font-bold tracking-wider text-gray-400">포항 관련 70점+ <span class="font-normal">(30일)</span></p>
+                <p class="text-3xl font-bold num mt-1 text-teal-600 dark:text-teal-400"><span id="kpi-score">–</span><span class="text-sm font-medium text-gray-400"> 건</span></p>
+            </div>
+            <a id="kpi-report" href="report.html" class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
+                <p class="text-[11px] font-bold tracking-wider text-gray-400">최신 주간보고서</p>
+                <p id="kpi-report-title" class="text-sm font-semibold mt-2 line-clamp-2 text-blue-600 dark:text-blue-400">보고서 생성하기 →</p>
+            </a>
+        </div>
+
+        <!-- 트렌드 + 급상승 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+            <div class="lg:col-span-2 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <h2 class="text-lg font-semibold mb-1">관심 키워드 언급 추이 <span class="text-xs font-normal text-gray-400">주간 건수 · 최근 12주 · 관련도 근거 기준</span></h2>
+                <div id="trend-legend" class="flex gap-4 flex-wrap text-xs text-gray-500 dark:text-gray-400 mb-2"></div>
+                <div class="relative">
+                    <svg id="trend-svg" width="100%" height="230" viewBox="0 0 720 230" role="img" aria-label="관심 키워드 주간 언급 추이"></svg>
+                    <div class="tipbox" id="trend-tip"></div>
+                </div>
+            </div>
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <h2 class="text-lg font-semibold mb-1">급상승 키워드 <span class="text-xs font-normal text-gray-400">이번 주 vs 직전 4주</span></h2>
+                <div id="surge" class="flex flex-wrap gap-2 items-center mt-3"></div>
+                <p class="text-xs text-gray-400 mt-4">제목에서 새로 등장했거나 급증한 단어 — 새 정책 라인의 조기 신호. 클릭하면 아카이브 검색으로 이동.</p>
+            </div>
+        </div>
+
+        <!-- 관련도 TOP + 히트맵 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <h2 class="text-lg font-semibold mb-3">포항 관련도 TOP <span class="text-xs font-normal text-gray-400">최근 14일</span></h2>
+                <div id="toplist" class="divide-y divide-gray-100 dark:divide-gray-700"></div>
+            </div>
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <h2 class="text-lg font-semibold mb-3">부처 × 분야 발표량 <span class="text-xs font-normal text-gray-400">최근 4주</span></h2>
+                <div class="overflow-x-auto"><table id="heatmap" class="w-full" style="border-collapse:separate; border-spacing:2px"></table></div>
+                <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-3">
+                    <span>0</span>
+                    <i class="inline-block w-5 h-2.5 rounded-sm" style="background:var(--h0)"></i><i class="inline-block w-5 h-2.5 rounded-sm" style="background:var(--h1)"></i>
+                    <i class="inline-block w-5 h-2.5 rounded-sm" style="background:var(--h2)"></i><i class="inline-block w-5 h-2.5 rounded-sm" style="background:var(--h3)"></i>
+                    <i class="inline-block w-5 h-2.5 rounded-sm" style="background:var(--h4)"></i>
+                    <span id="heat-max"></span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-8 text-center text-xs text-gray-400 py-6 border-t border-gray-200 dark:border-gray-700">
+            데이터: KDI 경제정보센터 수집분 · 관련도 기준은 <code class="bg-gray-100 dark:bg-gray-700 px-1 rounded">data/profile.json</code>에서 수정
+        </footer>
+    </div>
+
+<script>
+// AI는 언급량이 압도적(주 40~80건)이라 별도 축이 필요해 제외 — 규모가 비슷한 4종만 비교
+const SERIES = [
+    { label: "이차전지", cssVar: "--s1" },
+    { label: "철강",     cssVar: "--s2" },
+    { label: "소부장",   cssVar: "--s3" },
+    { label: "수소",     cssVar: "--s4" },
+];
+const DEPTS = [
+    ["산업부", ["산업통상부", "산업부"]],
+    ["과기부", ["과학기술정보통신부", "과기정통부", "과기부"]],
+    ["기후부", ["기후에너지환경부", "기후부"]],
+    ["중기부", ["중소벤처기업부", "중기부"]],
+    ["재경부", ["재정경제부", "재경부", "기획예산처"]],
+    ["금융위", ["금융위원회", "금융위"]],
+];
+const HEAT_COLS = ["이차전지", "철강", "수소", "AI", "소부장"];
+const STOP = new Set(["개최","발표","추진","위한","관련","통해","위해","정부","지원","사업","방안","계획","확대","강화","협력","현장","점검","실시","선정","공모","우리","국민","오늘","제고","마련","대상","최초","분야","기업","산업"]);
+
+const $ = id => document.getElementById(id);
+const esc = s => (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const cssVal = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim() ||
+                    getComputedStyle(document.body).getPropertyValue(v).trim();
+
+let items = [], trendData = null;
+
+function itemDate(it) { return (it.collected_at || it.pub_date || "").slice(0, 10); }
+function daysAgo(n) { const d = new Date(); d.setDate(d.getDate() - n); return d.toISOString().slice(0, 10); }
+function mondayOf(dstr) {
+    const d = new Date(dstr + "T00:00:00");
+    d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+    return d.toISOString().slice(0, 10);
+}
+
+// ── 테마 토글 (app.js와 동일 동작) ──
+(function themeInit() {
+    const html = document.documentElement;
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && matchMedia('(prefers-color-scheme: dark)').matches))
+        html.classList.add('dark');
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = $('theme-toggle'), icon = btn.querySelector('i');
+        const upd = () => { icon.setAttribute('data-lucide', html.classList.contains('dark') ? 'sun' : 'moon'); lucide.createIcons(); };
+        upd();
+        btn.onclick = () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+            upd(); renderTrend(); renderHeatmap();
+        };
+    });
+})();
+
+async function init() {
+    const [archive, briefing, weekly] = await Promise.all([
+        fetch('data/archive.json').then(r => r.json()),
+        fetch('data/briefing.json').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('data/weekly/index.json').then(r => r.ok ? r.json() : null).catch(() => null),
+    ]);
+    items = (archive.items || []).filter(it => !it.dup_of);
+    $('asof').textContent = archive.last_updated ? `· 업데이트 ${new Date(archive.last_updated).toLocaleString()}` : '';
+
+    renderBriefing(briefing);
+    renderKPI(weekly);
+    computeTrend(); renderTrend();
+    renderSurge();
+    renderTop();
+    renderHeatmap();
+    lucide.createIcons();
+}
+
+function renderBriefing(b) {
+    if (!b || !b.bullets || !b.bullets.length) return;
+    $('briefing-card').classList.remove('hidden');
+    $('briefing-meta').textContent = `${b.date} · 신규 ${b.item_count}건 대상 · ${b.model === 'rule-based' ? '규칙 기반' : b.model}`;
+    $('briefing-bullets').innerHTML = b.bullets.map(x => `<li>${esc(x)}</li>`).join('');
+}
+
+function renderKPI(weekly) {
+    const today = daysAgo(0), week = daysAgo(7), month = daysAgo(30);
+    const visible = items.filter(it => !it.muted);
+    $('kpi-today').textContent = visible.filter(it => itemDate(it) === today).length;
+    $('kpi-week').textContent = visible.filter(it => itemDate(it) >= week).length;
+    $('kpi-score').textContent = visible.filter(it => itemDate(it) >= month && (it.pt_score || 0) >= 70).length;
+    if (weekly && weekly.length) {
+        const last = weekly[weekly.length - 1];
+        $('kpi-report-title').textContent = last.title;
+        $('kpi-report').href = `report.html?week=${encodeURIComponent(last.file)}`;
+    }
+}
+
+// ── 키워드 트렌드 (12주) ──
+function computeTrend() {
+    const weeks = [];
+    for (let i = 11; i >= 0; i--) weeks.push(mondayOf(daysAgo(i * 7)));
+    const idx = Object.fromEntries(weeks.map((w, i) => [w, i]));
+    const counts = SERIES.map(() => new Array(12).fill(0));
+    for (const it of items) {
+        const w = idx[mondayOf(itemDate(it))];
+        if (w === undefined) continue;
+        const rs = it.pt_reasons || [];
+        SERIES.forEach((s, si) => { if (rs.includes(s.label)) counts[si][w]++; });
+    }
+    trendData = { weeks, counts };
+}
+
+function renderTrend() {
+    const { weeks, counts } = trendData;
+    const svg = $('trend-svg');
+    const W = 720, H = 230, L = 38, R = 46, T = 14, B = 34;
+    const max = Math.max(4, ...counts.flat());
+    const x = i => L + i * (W - L - R) / 11;
+    const y = v => T + (H - T - B) * (1 - v / max);
+    const grid = [0, Math.round(max / 2), max];
+    let html = grid.map(g =>
+        `<line x1="${L}" y1="${y(g)}" x2="${W - R}" y2="${y(g)}" stroke="${cssVal('--grid')}" stroke-width="1"/>` +
+        `<text x="${L - 7}" y="${y(g) + 4}" text-anchor="end" font-size="10" fill="${cssVal('--tick')}" class="num">${g}</text>`).join('');
+    weeks.forEach((w, i) => {
+        if (i % 2 === 0) {
+            const [, m, d] = w.split('-');
+            html += `<text x="${x(i)}" y="${H - 12}" text-anchor="middle" font-size="10" fill="${cssVal('--tick')}" class="num">${+m}/${+d}</text>`;
+        }
+    });
+    SERIES.forEach((s, si) => {
+        const col = cssVal(s.cssVar);
+        const pts = counts[si].map((v, i) => `${x(i)},${y(v)}`).join(' ');
+        html += `<polyline fill="none" stroke="${col}" stroke-width="2" points="${pts}"/>`;
+        const last = counts[si][11];
+        html += `<circle cx="${x(11)}" cy="${y(last)}" r="3.5" fill="${col}"/>` +
+                `<text x="${x(11) + 7}" y="${y(last) + 4 + si * 0.1}" font-size="11" font-weight="700" fill="${cssVal('--tick')}" class="num">${last}</text>`;
+    });
+    html += `<line id="trend-xh" y1="${T}" y2="${H - B}" stroke="${cssVal('--tick')}" stroke-dasharray="3 3" opacity="0"/>`;
+    svg.innerHTML = html;
+    $('trend-legend').innerHTML = SERIES.map(s =>
+        `<span class="inline-flex items-center gap-1.5"><i class="inline-block w-2.5 h-2.5 rounded-sm" style="background:var(${s.cssVar})"></i>${s.label}</span>`).join('');
+
+    svg.onmousemove = e => {
+        const r = svg.getBoundingClientRect();
+        const mx = (e.clientX - r.left) / r.width * W;
+        let best = 0, bd = 1e9;
+        for (let i = 0; i < 12; i++) { const d = Math.abs(x(i) - mx); if (d < bd) { bd = d; best = i; } }
+        const xh = $('trend-xh');
+        xh.setAttribute('x1', x(best)); xh.setAttribute('x2', x(best)); xh.setAttribute('opacity', '.6');
+        const tip = $('trend-tip');
+        tip.style.opacity = 1;
+        tip.style.left = Math.min(e.clientX - r.left + 14, r.width - 160) + 'px';
+        tip.style.top = (e.clientY - r.top - 8) + 'px';
+        const [, m, d] = weeks[best].split('-');
+        tip.innerHTML = `<b>${+m}/${+d} 주</b><br>` + SERIES.map((s, si) => `${s.label} ${counts[si][best]}건`).join(' · ');
+    };
+    svg.onmouseleave = () => { $('trend-tip').style.opacity = 0; $('trend-xh').setAttribute('opacity', '0'); };
+}
+
+// ── 급상승 키워드 ──
+function renderSurge() {
+    const thisMon = mondayOf(daysAgo(0));
+    const prevStart = mondayOf(daysAgo(28));
+    const cur = {}, prev = {};
+    for (const it of items) {
+        if (it.muted) continue;
+        const d = itemDate(it), w = mondayOf(d);
+        const bag = (w === thisMon) ? cur : (d >= prevStart && w !== thisMon ? prev : null);
+        if (!bag) continue;
+        const words = (it.title || '').split(/[^0-9A-Za-z가-힣]+/);
+        const seen = new Set();
+        for (const w2 of words) {
+            if (w2.length < 2 || STOP.has(w2) || /^\d+$/.test(w2) || seen.has(w2)) continue;
+            seen.add(w2);
+            bag[w2] = (bag[w2] || 0) + 1;
+        }
+    }
+    const surges = Object.entries(cur)
+        .map(([w, c]) => ({ w, c, p: (prev[w] || 0) / 4 }))
+        .filter(s => s.c >= 2 && s.c >= s.p * 2)
+        .sort((a, b) => (b.c - b.p) - (a.c - a.p))
+        .slice(0, 8);
+    $('surge').innerHTML = surges.length ? surges.map((s, i) =>
+        `<a href="index.html" onclick="localStorage.setItem('presetSearch','${esc(s.w)}')"
+            class="px-3 py-1 rounded-full border text-${i < 2 ? 'sm font-bold border-teal-500 text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/30' : 'xs font-medium border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300'}">${esc(s.w)} <span class="num">×${s.c}</span></a>`).join('')
+        : '<span class="text-sm text-gray-400">이번 주 급상승 키워드가 아직 없습니다.</span>';
+}
+
+// ── 관련도 TOP ──
+function renderTop() {
+    const cutoff = daysAgo(14);
+    const top = items.filter(it => !it.muted && itemDate(it) >= cutoff && (it.pt_score || 0) >= 40)
+        .sort((a, b) => (b.pt_score || 0) - (a.pt_score || 0)).slice(0, 10);
+    $('toplist').innerHTML = top.length ? top.map(it => {
+        const s = it.pt_score || 0;
+        const badge = s >= 80 ? 'bg-teal-600 text-white' : s >= 60 ? 'bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-300' : 'bg-gray-200 text-gray-700 dark:bg-gray-600 dark:text-gray-200';
+        return `<a href="${esc(it.link)}" target="_blank" class="flex items-start gap-3 py-2.5 hover:bg-gray-50 dark:hover:bg-gray-700/40 rounded-lg px-2 -mx-2">
+            <span class="num inline-flex items-center justify-center min-w-[38px] px-1.5 py-0.5 rounded-md text-xs font-bold ${badge}">${s}</span>
+            <span class="min-w-0">
+                <span class="block text-sm font-medium truncate">${esc(it.title)}</span>
+                <span class="block text-xs text-gray-400">${itemDate(it)} · ${esc((it.pt_reasons || []).slice(0, 4).join(', '))}</span>
+            </span></a>`;
+    }).join('') : '<p class="text-sm text-gray-400 py-4">최근 14일 내 관련도 40점 이상 자료가 없습니다.</p>';
+}
+
+// ── 부처 × 분야 히트맵 ──
+function renderHeatmap() {
+    const cutoff = daysAgo(28);
+    const recent = items.filter(it => itemDate(it) >= cutoff && !it.muted);
+    const counts = DEPTS.map(() => HEAT_COLS.map(() => 0));
+    for (const it of recent) {
+        const hay = (it.title || '') + '|' + (it.description || '').slice(0, 200);
+        let di = -1;
+        for (let i = 0; i < DEPTS.length; i++) if (DEPTS[i][1].some(p => hay.includes(p))) { di = i; break; }
+        if (di < 0) continue;
+        const rs = it.pt_reasons || [];
+        HEAT_COLS.forEach((c, ci) => { if (rs.includes(c)) counts[di][ci]++; });
+    }
+    const max = Math.max(1, ...counts.flat());
+    const ramp = v => v === 0 ? 'var(--h0)' : v <= max * .25 ? 'var(--h1)' : v <= max * .5 ? 'var(--h2)' : v <= max * .75 ? 'var(--h3)' : 'var(--h4)';
+    let html = '<thead><tr><th></th>' + HEAT_COLS.map(c => `<th class="text-[11px] font-bold text-gray-400 pb-1">${c}</th>`).join('') + '</tr></thead><tbody>';
+    DEPTS.forEach((d, di) => {
+        html += `<tr><td class="text-[11px] font-bold text-gray-400 pr-2 text-right whitespace-nowrap">${d[0]}</td>` +
+            HEAT_COLS.map((c, ci) => {
+                const v = counts[di][ci];
+                const fg = (v > max * .5) ? (document.documentElement.classList.contains('dark') ? '#0F181D' : '#fff') : 'inherit';
+                return `<td class="heatcell" style="background:${ramp(v)}; color:${fg}" title="${d[0]} × ${c}: ${v}건">${v || ''}</td>`;
+            }).join('') + '</tr>';
+    });
+    $('heatmap').innerHTML = html + '</tbody>';
+    $('heat-max').textContent = `${max}건`;
+}
+
+init();
+</script>
+</body>
+</html>
