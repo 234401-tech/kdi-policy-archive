@@ -78,10 +78,24 @@
         </footer>
     </div>
 
+    <!-- 날짜별 전체 일정 팝업 -->
+    <div id="day-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+        <div id="day-overlay" class="absolute inset-0 bg-gray-900/50"></div>
+        <div class="relative max-w-xl mx-auto mt-16 mb-8 mx-4 sm:mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 p-6 max-h-[75vh] flex flex-col">
+            <div class="flex items-center justify-between mb-3">
+                <h3 id="day-title" class="text-lg font-bold num"></h3>
+                <button id="day-close" class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="닫기">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div id="day-list" class="overflow-y-auto divide-y divide-gray-100 dark:divide-gray-700 -mx-2"></div>
+        </div>
+    </div>
+
 <script>
 const $ = id => document.getElementById(id);
 const esc = s => (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-let events = [], view = new Date();
+let events = [], view = new Date(), byDate = {};
 
 (function themeInit() {
     const html = document.documentElement;
@@ -110,7 +124,7 @@ function renderCal() {
     const startOffset = (first.getDay() + 6) % 7;
     const daysInMonth = new Date(y, m + 1, 0).getDate();
     const todayStr = new Date().toLocaleDateString('sv');  // YYYY-MM-DD (로컬)
-    const byDate = {};
+    byDate = {};
     for (const e of events) (byDate[e.date] = byDate[e.date] || []).push(e);
 
     let html = '', day = 1;
@@ -123,11 +137,12 @@ function renderCal() {
             const dstr = `${y}-${String(m + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
             const evs = byDate[dstr] || [];
             const isToday = dstr === todayStr;
-            html += `<td class="align-top h-[74px] w-[14.28%] rounded-lg border ${isToday ? 'border-blue-400 dark:border-blue-500 ring-1 ring-blue-300 dark:ring-blue-700' : 'border-gray-200 dark:border-gray-700'} bg-white dark:bg-gray-800 p-1.5">
+            const clickable = evs.length ? `data-day="${dstr}" role="button" tabindex="0"` : '';
+            html += `<td ${clickable} class="align-top h-[74px] w-[14.28%] rounded-lg border ${isToday ? 'border-blue-400 dark:border-blue-500 ring-1 ring-blue-300 dark:ring-blue-700' : 'border-gray-200 dark:border-gray-700'} bg-white dark:bg-gray-800 p-1.5 ${evs.length ? 'cursor-pointer hover:border-blue-300 dark:hover:border-blue-600 transition-colors' : ''}">
                 <div class="text-[11px] font-bold num ${isToday ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400'}">${day}</div>
                 ${evs.slice(0, 2).map(e => `<a href="${esc(e.link)}" target="_blank" title="[${esc(e.type)}] ${esc(e.title)}&#10;근거: ${esc(e.source)}"
                     class="block mt-0.5 px-1.5 py-0.5 rounded text-[10px] font-medium truncate ${typeColor(e.type)}">${esc(e.title)}</a>`).join('')}
-                ${evs.length > 2 ? `<div class="text-[10px] text-gray-400 mt-0.5">외 ${evs.length - 2}건</div>` : ''}
+                ${evs.length > 2 ? `<div class="text-[10px] font-medium text-blue-500 dark:text-blue-400 mt-0.5 hover:underline">외 ${evs.length - 2}건 보기</div>` : ''}
             </td>`;
             day++;
         }
@@ -135,6 +150,26 @@ function renderCal() {
     }
     $('cal-body').innerHTML = html;
 }
+
+// ── 날짜 팝업: 그날 전체 일정 ──
+function openDay(dstr) {
+    const evs = byDate[dstr] || [];
+    if (!evs.length) return;
+    const [y, m, d] = dstr.split('-');
+    const wd = ['일','월','화','수','목','금','토'][new Date(dstr + 'T00:00:00').getDay()];
+    $('day-title').textContent = `${+m}월 ${+d}일 (${wd}) · ${evs.length}건`;
+    $('day-list').innerHTML = evs.map(e => `
+        <a href="${esc(e.link)}" target="_blank" class="block px-2 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/40 rounded-lg">
+            <div class="flex items-center gap-2 mb-1">
+                <span class="flex-none inline-flex px-2 py-0.5 rounded-full text-[11px] font-bold ${typeColor(e.type)}">${esc(e.type)}</span>
+                <span class="text-sm font-medium leading-snug">${esc(e.title)}</span>
+            </div>
+            <p class="text-xs text-gray-400 leading-relaxed">근거: ${esc(e.source)}</p>
+        </a>`).join('');
+    $('day-modal').classList.remove('hidden');
+    lucide.createIcons();
+}
+function closeDay() { $('day-modal').classList.add('hidden'); }
 
 function renderDday() {
     const todayStr = new Date().toLocaleDateString('sv');
@@ -164,6 +199,19 @@ async function init() {
     $('prev-month').onclick = () => { view.setMonth(view.getMonth() - 1); renderCal(); lucide.createIcons(); };
     $('next-month').onclick = () => { view.setMonth(view.getMonth() + 1); renderCal(); lucide.createIcons(); };
     $('this-month').onclick = () => { view = new Date(); renderCal(); lucide.createIcons(); };
+
+    // 날짜 셀 클릭 → 그날 전체 일정 팝업 (원문 링크 클릭은 그대로 새 탭)
+    $('cal-body').addEventListener('click', e => {
+        if (e.target.closest('a')) return;
+        const td = e.target.closest('td[data-day]');
+        if (td) openDay(td.dataset.day);
+    });
+    $('cal-body').addEventListener('keydown', e => {
+        if (e.key === 'Enter' && e.target.dataset?.day) openDay(e.target.dataset.day);
+    });
+    $('day-close').onclick = closeDay;
+    $('day-overlay').onclick = closeDay;
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDay(); });
 }
 init();
 </script>
