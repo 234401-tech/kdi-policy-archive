@@ -1,2 +1,9 @@
-# 로컬 docx/hwpx 생성 작업공간 (한글 COM 변환용, 배포 대상 아님)
-weekly_report/
+__pycache__/
+*.pyc
+
+# 로컬 hwpx 작업공간 — 생성물/의존성/키는 제외, 핵심 소스만 추적
+weekly_report/*
+!weekly_report/build_report_docx.js
+!weekly_report/hwpx_convert.ps1
+!weekly_report/주간보고서_hwpx변환.bat
+!weekly_report/package.json

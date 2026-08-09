@@ -131,49 +131,62 @@ def hasa_ai(report):
             raise RuntimeError("사용 가능한 모델 없음")
         model = models[0]["id"]
 
-    digest = "\n\n".join(
-        f"## {g['dept']}\n" + "\n".join(
-            f"[{idx}] {i['title']}\n{(i.get('desc') or ' '.join(i['bullets'])).replace(chr(10), ' ')[:600]}"
-            for idx, i in enumerate(g["items"][:15]))
-        for g in report["groups"])
-    prompt = (
-        f"아래는 {report['period']} 기간 부처별 발표자료다(각 항목 앞 [번호]는 그 부처 내 인덱스).\n"
-        "각 부처에서 포항·경북 산업(이차전지·철강·수소·소재부품장비·AI·바이오)과 관련성이 높거나 "
-        "중요한 발표를 최대 4건 골라, 아래 보고서 양식으로 구조화하라.\n\n"
-        "출력 JSON 형식:\n"
+    SYS = ("너는 포항테크노파크 미래전략팀의 정책분석가다. 정부 보도자료를 팀 내부 보고서 양식에 맞춰 "
+           "구조화한다. 반드시 유효한 JSON 객체 하나만 출력하고, 코드블록·설명 등 다른 텍스트는 절대 쓰지 않는다.")
+    # 양식 예시(기획재정부 '성장전략 TF' — 표/‌(목적)(내용) 사용법 학습용)
+    EXAMPLE = (
         '{\n'
-        ' "keywords": {"부처명": "핵심 키워드를 쉼표로 나열한 한 줄"},\n'
-        ' "reports": {\n'
-        '   "부처명": [\n'
-        '     {\n'
-        '       "idx": 0,\n'
-        '       "lead": "한 줄 핵심요약(선택)",\n'
-        '       "points": [\n'
-        '         "일반 요약 문장",\n'
-        '         {"h": "소제목", "items": ["(목적) ...", "(내용) ..."]},\n'
-        '         {"table": {"cols": ["분야","주요내용"], "rows": [{"field":"분야명","content":["내용1","내용2"]}]}}\n'
-        '       ],\n'
-        '       "insight": "포항·경북 관점 시사점 한 문장(선택)"\n'
-        '     }\n'
-        '   ]\n'
-        ' }\n'
-        '}\n\n'
-        "규칙:\n"
-        "- points는 보도자료 성격에 맞게 구성. 단순 발표면 문자열 2~3개, 회의·대책·계획이면 소제목+세부(•)나 표를 활용.\n"
-        "- 표는 '분야별 주요내용'이 뚜렷할 때만 사용. 억지로 만들지 말 것.\n"
-        "- 제목은 바꾸지 말고 idx로만 지정. 중요도 낮은 부처·항목은 생략 가능.\n"
-        "- 반드시 위 JSON만 출력.\n\n"
-        f"{digest}")
-    out = call("/chat/completions", {
-        "model": model, "temperature": 0.2, "max_tokens": 4000,
-        "messages": [
-            {"role": "system", "content": "너는 포항테크노파크 미래전략팀의 정책분석가다. 정부 보도자료를 팀 내부 보고서 양식에 맞춰 구조화한다. 반드시 유효한 JSON만 출력하고 다른 말은 하지 않는다."},
-            {"role": "user", "content": prompt},
-        ],
-    })
-    txt = out["choices"][0]["message"]["content"]
-    txt = re.sub(r"^```json?\s*|```\s*$", "", txt.strip())
-    return json.loads(txt)
+        ' "keyword": "성장전략 TF 가동, 기업활력 제고, 한미 관세협상 대응",\n'
+        ' "reports": [\n'
+        '   {"idx": 0, "lead": "기존 \'비상경제점검 TF\' → \'성장전략 TF\'로 전환",\n'
+        '    "points": [\n'
+        '      {"h": "\'성장전략 TF\' 개요", "items": ["(목적) \'진짜성장\'을 위한 기업 활력 제고를 최우선 목표로 설정", "(내용) 기업부담 완화·규제 개선 등 종합 플랫폼 운영"]},\n'
+        '      {"table": {"cols": ["분야","주요내용"], "rows": [\n'
+        '        {"field": "기업지원·신산업", "content": ["투자애로 해소, 경제형벌 합리화", "AI·데이터 등 신산업 패키지 육성"]},\n'
+        '        {"field": "한·미 관세협상", "content": ["자동차·상호관세 15% 인하", "3,500억불 금융패키지 조성"]}]}}\n'
+        '    ],\n'
+        '    "insight": "포항 철강·이차전지 기업의 대미 수출·투자 여건 변화 모니터링 필요"}\n'
+        ' ]\n'
+        '}')
+    RULES = (
+        "각 부처 자료에서 포항·경북 산업(이차전지·철강·수소·소재부품장비·AI·바이오)과 관련성이 높거나 "
+        "중요한 발표를 **최대 3건**만 골라 구조화하라.\n"
+        "- 각 항목: idx(위 [번호] 그대로), lead(한줄, 선택), points(배열), insight(포항·경북 시사점 한 문장, 선택).\n"
+        "- points 원소는 3가지 중 하나: ① 문자열('- '항목) ② {\"h\":소제목,\"items\":[\"(목적)…\",\"(내용)…\"]} ③ {\"table\":{\"cols\":[\"분야\",\"주요내용\"],\"rows\":[{\"field\":…,\"content\":[…]}]}}.\n"
+        "- 회의·대책·계획·업무보고는 소제목(h)+세부나 표를 적극 활용하고, 단순 동정·행사는 문자열 2~3개로 짧게.\n"
+        "- 표는 '분야별 주요내용'이 뚜렷할 때만. 제목은 바꾸지 말고 idx로만 지정.\n"
+        "- 출력 형식: {\"keyword\": \"핵심 키워드 한 줄\", \"reports\": [ ... ]}  (아래 예시와 동일 구조, 이 부처 것만)")
+
+    keywords, reports = {}, {}
+    for g in report["groups"]:
+        items = g["items"][:12]
+        if not items:
+            continue
+        digest = "\n".join(
+            f"[{idx}] {i['title']}\n{(i.get('desc') or ' '.join(i['bullets'])).replace(chr(10), ' ')[:500]}"
+            for idx, i in enumerate(items))
+        usr = (f"[부처: {g['dept']}]  기간 {report['period']}\n{RULES}\n\n"
+               f"### 예시(형식 참고용)\n{EXAMPLE}\n\n### 실제 자료\n{digest}")
+        try:
+            out = call("/chat/completions", {
+                "model": model, "temperature": 0.2, "max_tokens": 2200,
+                "messages": [{"role": "system", "content": SYS}, {"role": "user", "content": usr}],
+            })
+            txt = out["choices"][0]["message"]["content"].strip()
+            txt = re.sub(r"^```json?\s*|```\s*$", "", txt).strip()
+            m = re.search(r"\{.*\}", txt, re.S)  # 앞뒤 잡음 제거
+            data = json.loads(m.group(0) if m else txt)
+            if data.get("keyword"):
+                keywords[g["dept"]] = data["keyword"]
+            reps = [r for r in (data.get("reports") or []) if isinstance(r.get("idx"), int)]
+            if reps:
+                reports[g["dept"]] = reps[:3]
+            print(f"  · {g['dept']}: reports {len(reports.get(g['dept'], []))}건")
+        except Exception as e:
+            print(f"  · {g['dept']}: 실패({str(e)[:60]})")
+    if not keywords and not reports:
+        return None
+    return {"keywords": keywords, "reports": reports}
 
 
 def main():
