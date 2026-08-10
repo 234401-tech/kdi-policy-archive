@@ -71,36 +71,35 @@
                 </a>
             </div>
 
-            <!-- Controls -->
-            <div class="mt-5 flex flex-wrap items-end gap-3">
-                <div>
-                    <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">시작일</label>
-                    <input type="date" id="start-date" class="p-2 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">종료일</label>
-                    <input type="date" id="end-date" class="p-2 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
-                </div>
-                <button id="btn-generate" class="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition-colors">
+            <!-- Controls: 생성 도구 (한 줄, 다른 페이지 내비 버튼 톤) -->
+            <div class="mt-5 flex flex-wrap items-center gap-2">
+                <input type="date" id="start-date" title="시작일" class="px-2.5 py-1.5 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
+                <span class="text-sm text-gray-400">~</span>
+                <input type="date" id="end-date" title="종료일" class="px-2.5 py-1.5 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white">
+                <button id="btn-generate" class="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-medium whitespace-nowrap transition-colors">
                     <i data-lucide="sparkles" class="w-4 h-4"></i> 보고서 생성
                 </button>
-                <select id="weekly-list" class="p-2 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white hidden">
+                <select id="weekly-list" class="px-2.5 py-1.5 max-w-[300px] bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm outline-none dark:text-white hidden">
                     <option value="">📁 저장된 주간 보고서…</option>
                 </select>
                 <div class="flex-1"></div>
-                <button id="btn-ai" class="flex items-center gap-2 px-3 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+                <button id="btn-ai" class="flex items-center gap-1.5 px-3 py-1.5 bg-violet-600 hover:bg-violet-700 text-white rounded-lg text-xs font-medium whitespace-nowrap transition-colors disabled:opacity-40" disabled>
                     <i data-lucide="bot" class="w-4 h-4"></i> AI 요약
                 </button>
-                <button id="btn-edit" class="flex items-center gap-2 px-3 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+            </div>
+
+            <!-- 보고서 작업 도구: 보고서가 표시된 뒤에만 나타남 -->
+            <div id="report-actions" class="mt-3 hidden flex-wrap items-center gap-2">
+                <button id="btn-edit" class="flex items-center gap-1.5 px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-medium whitespace-nowrap transition-colors disabled:opacity-40" disabled>
                     <i data-lucide="pencil" class="w-4 h-4"></i> 편집
                 </button>
-                <button id="btn-hwpx" class="hidden items-center gap-2 px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+                <button id="btn-hwpx" class="hidden items-center gap-1.5 px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-medium whitespace-nowrap transition-colors disabled:opacity-40" disabled>
                     <i data-lucide="download" class="w-4 h-4"></i> HWPX 저장
                 </button>
-                <button id="btn-word" class="flex items-center gap-2 px-3 py-2 bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+                <button id="btn-word" class="flex items-center gap-1.5 px-3 py-1.5 bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white rounded-lg text-xs font-medium whitespace-nowrap transition-colors disabled:opacity-40" disabled>
                     <i data-lucide="download" class="w-4 h-4"></i> Word 저장
                 </button>
-                <button id="btn-print" class="flex items-center gap-2 px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg text-sm font-medium transition-colors disabled:opacity-40" disabled>
+                <button id="btn-print" class="flex items-center gap-1.5 px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg text-xs font-medium whitespace-nowrap transition-colors disabled:opacity-40" disabled>
                     <i data-lucide="printer" class="w-4 h-4"></i> 인쇄/PDF
                 </button>
             </div>
@@ -319,6 +318,8 @@ function render(r) {
     $("report-area").classList.remove("hidden");
     $("empty-hint").classList.add("hidden");
     ["btn-word", "btn-print", "btn-ai", "btn-hwpx", "btn-edit"].forEach(id => $(id).disabled = false);
+    const _ra = $("report-actions");
+    _ra.classList.remove("hidden"); _ra.classList.add("flex");
 }
 
 // ───────────────────────── 편집 모드 (항목 제외·코멘트) ─────────────────────────
@@ -568,7 +569,10 @@ async function init() {
                 if (pj.ok) {
                     window.__LOCAL = true;
                     window.__AI_OK = !!pj.ai;
-                    if (pj.ai) $("ai-settings").classList.add("hidden");  // 키 입력 패널 불필요
+                    if (pj.ai) {
+                        $("ai-settings").classList.add("hidden");  // 키 입력 패널 불필요
+                        $("btn-ai").classList.add("hidden");       // 요약이 자동이라 버튼도 불필요
+                    }
                     const hb = $("btn-hwpx");
                     hb.classList.remove("hidden"); hb.classList.add("flex");
                     maybeAutoAI();
