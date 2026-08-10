@@ -16,11 +16,18 @@ ARCHIVE_PATH = "docs/data/archive.json"
 CATEGORIES_PATH = "docs/data/categories.json"
 KST = timezone(timedelta(hours=9))
 
+FETCH_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+                  '(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'Accept': 'application/rss+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'ko-KR,ko;q=0.9,en;q=0.5',
+    'Referer': 'https://eiec.kdi.re.kr/policy/materialList.do',
+}
+
 def fetch_rss(url, retries=3):
     for attempt in range(retries):
         try:
-            headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-            response = requests.get(url, headers=headers, timeout=10, verify=False)
+            response = requests.get(url, headers=FETCH_HEADERS, timeout=10, verify=False)
             response.raise_for_status()
             return response.content
         except requests.exceptions.RequestException as e:
@@ -91,6 +98,14 @@ def main():
             new_items = parse_rss(xml_content)
         except Exception as e:
             print(f"Error: {e}")
+            sys.exit(1)
+
+        # 차단 페이지가 HTTP 200으로 오면 파싱 결과가 빈 목록이 되어
+        # '신규 0건 성공'으로 위장됨 — 빈 피드는 실패로 처리해 드러낸다.
+        if not new_items:
+            head = xml_content[:300].decode("utf-8", "replace")
+            print("RSS returned no items - likely blocked or format changed.")
+            print(f"Response head: {head}")
             sys.exit(1)
 
         new_count = 0
