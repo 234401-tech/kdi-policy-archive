@@ -17,7 +17,13 @@ import socketserver
 import subprocess
 import sys
 import tempfile
+import time
+from datetime import datetime
 from pathlib import Path
+
+
+def log(msg):
+    print(f"[{datetime.now():%H:%M:%S}] {msg}", flush=True)
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -47,13 +53,19 @@ def make_hwpx(report):
     js.write_text(json.dumps(report, ensure_ascii=False), encoding="utf-8")
 
     # 1) JSON → docx (node + docx 패키지: weekly_report/node_modules)
+    # encoding 미지정 시 자식 프로세스의 UTF-8 한글 출력을 cp949로 읽다가
+    # UnicodeDecodeError로 리더 스레드가 죽음 → utf-8 + replace로 고정
+    log("HWPX 1/2: Word(docx) 생성 중...")
     r = subprocess.run(["node", str(DOCX_BUILDER), str(js), str(docx)],
-                       capture_output=True, text=True, timeout=120)
+                       capture_output=True, encoding="utf-8", errors="replace",
+                       timeout=120)
     if r.returncode != 0 or not docx.exists():
-        raise RuntimeError(f"docx 생성 실패: {r.stderr[:300]}")
+        raise RuntimeError(f"docx 생성 실패: {(r.stderr or '')[:300]}")
 
     # 2) docx → hwpx (한글 COM, headless)
+    log("HWPX 2/2: 한글(HWP)로 변환 중...")
     ps = f'''
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $ErrorActionPreference="Stop"
 Get-Process -Name Hwp -EA SilentlyContinue | Stop-Process -Force -EA SilentlyContinue
 Start-Sleep -Milliseconds 400
@@ -64,9 +76,10 @@ $h.XHwpWindows.Item(0).Visible = $false
 $h.Quit()
 '''
     r2 = subprocess.run(["powershell", "-NoProfile", "-Command", ps],
-                        capture_output=True, text=True, timeout=90)
+                        capture_output=True, encoding="utf-8", errors="replace",
+                        timeout=90)
     if not hwpx.exists():
-        raise RuntimeError(f"hwpx 변환 실패(한글 승인창 확인): {r2.stderr[:300]}")
+        raise RuntimeError(f"hwpx 변환 실패(한글 승인창 확인): {(r2.stderr or '')[:300]}")
     return hwpx.read_bytes()
 
 
@@ -86,6 +99,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self):
         if self.path.startswith("/api/ai"):
+            t0 = time.time()
+            log("AI 요약 요청 받음")
             try:
                 if not hasa_ai:
                     raise RuntimeError("build_weekly_report 임포트 실패")
@@ -94,17 +109,22 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 n = int(self.headers.get("Content-Length", 0))
                 report = json.loads(self.rfile.read(n).decode("utf-8"))
                 ai = hasa_ai(report)
+                log(f"AI 요약 완료 ({time.time()-t0:.1f}초)")
                 self._json({"ok": True, "ai": ai})
             except Exception as e:
+                log(f"AI 요약 실패: {str(e)[:200]}")
                 self._json({"ok": False, "error": str(e)[:400]}, code=500)
             return
         if self.path.startswith("/api/hwpx"):
+            t0 = time.time()
             try:
                 n = int(self.headers.get("Content-Length", 0))
                 report = json.loads(self.rfile.read(n).decode("utf-8"))
+                log(f"HWPX 변환 요청 받음 ({report.get('start','?')}~{report.get('end','?')})")
                 data = make_hwpx(report)
                 label = report.get("weekLabel", "주간보고서")
                 fname = f"{label}_정부정책_{report.get('start','')}_{report.get('end','')}.hwpx"
+                log(f"HWPX 완료: {fname} ({len(data)//1024}KB, {time.time()-t0:.1f}초)")
                 self.send_response(200)
                 self.send_header("Content-Type", "application/hwp+zip")
                 # RFC 5987 (한글 파일명)
@@ -114,6 +134,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(data)
             except Exception as e:
+                log(f"HWPX 실패: {str(e)[:200]}")
                 self._json({"ok": False, "error": str(e)[:400]}, code=500)
             return
         self.send_error(404)
@@ -134,6 +155,14 @@ def _urlq(s):
 
 class _BaseServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
     daemon_threads = True
+
+    def handle_error(self, request, client_address):
+        # 브라우저 새로고침/탭 닫기로 끊긴 연결은 정상 상황 — traceback 소음 제거
+        exc = sys.exc_info()[1]
+        if isinstance(exc, (ConnectionResetError, ConnectionAbortedError,
+                            BrokenPipeError, TimeoutError)):
+            return
+        log(f"요청 처리 오류 ({client_address[0]}): {exc!r}")
 
     def server_bind(self):
         # HTTPServer.server_bind 대체 — 구형 파이썬 + 한글 PC이름 조합에서
@@ -160,9 +189,28 @@ class Server(_BaseServer):
         super().server_bind()
 
 
+def _lan_ip():
+    """팀 접속 안내용 내부 IP (오프라인이면 None)."""
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except OSError:
+        return None
+
+
 if __name__ == "__main__":
-    print(f"보고서 서버 실행: http://localhost:{PORT}/report.html")
-    print("HWPX 저장 버튼 사용 가능(한글 필요). Ctrl+C로 종료.")
+    ai_on = bool(hasa_ai and os.environ.get("HASA_API_KEY"))
+    lan = _lan_ip()
+    print("─" * 50)
+    print("  주간 정책동향 보고서 서버  (Ctrl+C로 종료)")
+    print(f"   · 이 PC    : http://localhost:{PORT}/report.html")
+    if lan:
+        print(f"   · 팀 접속  : http://{lan}:{PORT}/report.html (같은 네트워크)")
+    print(f"   · HWPX 저장: 가능(한글 필요)   AI 요약: {'가능' if ai_on else '키 없음 → 규칙 기반'}")
+    print("─" * 50)
     try:
         srv = Server(("::", PORT), Handler)            # IPv6+IPv4 동시 수신
     except (AttributeError, OSError, ValueError):
