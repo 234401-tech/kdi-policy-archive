@@ -515,6 +515,7 @@ async function init() {
             sel.onchange = async () => {
                 if (!sel.value) return;
                 const r = await (await fetch(`data/weekly/${sel.value}`)).json();
+                sel.selectedIndex = 0;   // 같은 항목을 다시 선택해도 동작하도록 초기화
                 render(r);
                 maybeAutoAI();
             };
