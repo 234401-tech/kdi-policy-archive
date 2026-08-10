@@ -127,6 +127,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **kw):
         super().__init__(*a, directory=str(DOCS), **kw)
 
+    def end_headers(self):
+        # 화면(html)은 항상 최신 버전 사용 — 옛 탭이 구버전 JS로 남는 문제 방지
+        if self.path.split("?")[0].endswith((".html", "/")):
+            self.send_header("Cache-Control", "no-cache")
+        super().end_headers()
+
     def log_message(self, *a):
         pass
 
