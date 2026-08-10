@@ -364,6 +364,8 @@ async function runAI() {
     }
     $("ai-status").textContent = "AI 요약 생성 중… (1~2분 소요 — 완료될 때까지 새로고침하지 마세요)";
     $("btn-ai-run").disabled = true;
+    $("btn-hwpx").disabled = true;   // 요약 없는 파일이 저장되지 않도록 완료까지 잠금
+    $("btn-word").disabled = true;
     try {
         const res = await fetch("/api/ai", {
             method: "POST", headers: { "Content-Type": "application/json" },
@@ -377,8 +379,16 @@ async function runAI() {
         $("ai-status").textContent = `AI 요약 적용 완료 ✓ (${n}건 구조화 — HWPX/Word 저장·인쇄 가능)`;
     } catch (e) {
         $("ai-status").textContent = "실패: " + e.message;
+        // 사용량 제한(429)이면 한 번만 자동 재시도
+        if (/429|사용량/.test(e.message) && !window.__AI_RETRIED) {
+            window.__AI_RETRIED = true;
+            $("ai-status").textContent = "AI 사용량 제한 감지 — 90초 후 자동으로 다시 시도합니다…";
+            setTimeout(runAI, 90000);
+        }
     } finally {
         $("btn-ai-run").disabled = false;
+        $("btn-hwpx").disabled = false;
+        $("btn-word").disabled = false;
     }
 }
 
@@ -521,7 +531,11 @@ async function init() {
     };
     $("btn-print").onclick = () => window.print();
     $("btn-word").onclick = saveWord;
-    $("btn-ai").onclick = () => $("ai-settings").classList.toggle("hidden");
+    $("btn-ai").onclick = () => {
+        // 서버가 키를 갖고 있으면 패널(키 입력) 없이 바로 재요약
+        if (window.__LOCAL && window.__AI_OK) { runAI(); return; }
+        $("ai-settings").classList.toggle("hidden");
+    };
     $("btn-ai-run").onclick = runAI;
     setupEditHandlers();
     $("btn-hwpx").onclick = saveHwpx;
@@ -535,6 +549,7 @@ async function init() {
                 if (pj.ok) {
                     window.__LOCAL = true;
                     window.__AI_OK = !!pj.ai;
+                    if (pj.ai) $("ai-settings").classList.add("hidden");  // 키 입력 패널 불필요
                     const hb = $("btn-hwpx");
                     hb.classList.remove("hidden"); hb.classList.add("flex");
                     maybeAutoAI();

@@ -17,9 +17,17 @@ import socketserver
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 from datetime import datetime
 from pathlib import Path
+
+
+try:  # 리다이렉트된 로그 파일도 한글이 깨지지 않게
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
 
 
 def log(msg):
@@ -45,7 +53,34 @@ except Exception:
     hasa_ai = None
 
 
-AI_CACHE = {}  # {(start, end, total): AI 요약} — 브라우저 이탈로 응답 유실돼도 재요청 시 즉시 응답
+AI_CACHE = {}  # {(start, end, total): AI 요약} — 메모리 + 디스크 이중화(서버 재시작에도 유지)
+AI_CACHE_DIR = ROOT / "weekly_report" / ".ai_cache"
+AI_INFLIGHT = {}   # 같은 기간 동시 요청 합치기(탭 여러 개 → API 호출 1번)
+AI_LOCK = threading.Lock()
+
+
+def ai_cache_get(key):
+    if key in AI_CACHE:
+        return AI_CACHE[key]
+    p = AI_CACHE_DIR / f"{key[0]}_{key[1]}_{key[2]}.json"
+    if p.exists():
+        try:
+            ai = json.loads(p.read_text(encoding="utf-8"))
+            AI_CACHE[key] = ai
+            return ai
+        except Exception:
+            pass
+    return None
+
+
+def ai_cache_put(key, ai):
+    AI_CACHE[key] = ai
+    try:
+        AI_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        (AI_CACHE_DIR / f"{key[0]}_{key[1]}_{key[2]}.json").write_text(
+            json.dumps(ai, ensure_ascii=False), encoding="utf-8")
+    except OSError:
+        pass
 
 
 def make_hwpx(report):
@@ -113,14 +148,31 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 n = int(self.headers.get("Content-Length", 0))
                 report = json.loads(self.rfile.read(n).decode("utf-8"))
                 ckey = (report.get("start"), report.get("end"), report.get("total"))
-                ai = AI_CACHE.get(ckey)
+                ai = ai_cache_get(ckey)
                 if ai is not None:
                     log("AI 요약: 캐시 재사용 (즉시 응답)")
                 else:
-                    ai = hasa_ai(report)
-                    if ai:
-                        AI_CACHE[ckey] = ai
-                    log(f"AI 요약 완료 ({time.time()-t0:.1f}초)")
+                    with AI_LOCK:
+                        ev = AI_INFLIGHT.get(ckey)
+                        leader = ev is None
+                        if leader:
+                            ev = AI_INFLIGHT[ckey] = threading.Event()
+                    if leader:
+                        try:
+                            ai = hasa_ai(report)
+                            if ai:
+                                ai_cache_put(ckey, ai)
+                        finally:
+                            with AI_LOCK:
+                                AI_INFLIGHT.pop(ckey, None)
+                            ev.set()
+                        log(f"AI 요약 {'완료' if ai else '결과 없음'} ({time.time()-t0:.1f}초)")
+                    else:
+                        log("AI 요약: 같은 기간 요청 진행 중 — 완료 대기(중복 API 호출 방지)")
+                        ev.wait(timeout=600)
+                        ai = ai_cache_get(ckey)
+                if not ai:
+                    raise RuntimeError("AI 요약 생성 실패 — API 사용량 제한(429) 가능성. 잠시 후 다시 시도하세요.")
                 payload, code = {"ok": True, "ai": ai}, 200
             except Exception as e:
                 log(f"AI 요약 실패: {str(e)[:200]}")

@@ -22,7 +22,8 @@ if "%CODE%"=="200" (
 ) else (
     echo [2/3] 보고서 서버 시작...
 )
-start "정책보고서서버" /min cmd /c "%PY% scripts\report_server.py & pause"
+rem 로그는 파일로 기록(콘솔 클릭 시 출력이 얼어 서버가 멈추는 Windows 문제 방지)
+start "정책보고서서버" /min cmd /c "%PY% scripts\report_server.py > "%~dp0weekly_report\server.log" 2>&1"
 timeout /t 2 /nobreak >nul
 
 echo [3/3] 브라우저 열기...
@@ -31,8 +32,8 @@ echo.
 echo   아카이브:  http://localhost:8000/  (첫 화면 - 상단 메뉴로 보고서/대시보드 이동)
 echo   보고서:    http://localhost:8000/report.html  (HWPX 저장 버튼은 1~2초 뒤 표시)
 echo   팀 공유:   https://234401-tech.github.io/kdi-policy-archive/
-echo   서버 로그: 작업표시줄에 최소화된 '정책보고서서버' 창을 열면 보입니다.
-echo   종료:      그 창을 닫으면 서버가 꺼집니다.
+echo   서버 로그: KDI 정책자료\weekly_report\server.log (메모장으로 열어 확인)
+echo   종료:      작업표시줄의 '정책보고서서버' 창을 닫으면 서버가 꺼집니다.
 echo.
 echo   이 창은 잠시 후 자동으로 닫힙니다.
 timeout /t 8 >nul

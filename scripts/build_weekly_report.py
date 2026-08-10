@@ -15,6 +15,8 @@ import argparse
 import json
 import os
 import re
+import time
+import urllib.error
 import urllib.request
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -168,10 +170,21 @@ def hasa_ai(report):
         usr = (f"[부처: {g['dept']}]  기간 {report['period']}\n{RULES}\n\n"
                f"### 예시(형식 참고용)\n{EXAMPLE}\n\n### 실제 자료\n{digest}")
         try:
-            out = call("/chat/completions", {
-                "model": model, "temperature": 0.2, "max_tokens": 2200,
-                "messages": [{"role": "system", "content": SYS}, {"role": "user", "content": usr}],
-            })
+            out = None
+            for attempt in range(3):  # 429(사용량 제한)는 잠시 쉬었다 재시도
+                try:
+                    out = call("/chat/completions", {
+                        "model": model, "temperature": 0.2, "max_tokens": 2200,
+                        "messages": [{"role": "system", "content": SYS}, {"role": "user", "content": usr}],
+                    })
+                    break
+                except urllib.error.HTTPError as e:
+                    if e.code == 429 and attempt < 2:
+                        wait = 20 * (attempt + 1)
+                        print(f"  · {g['dept']}: 429 사용량 제한 — {wait}초 후 재시도")
+                        time.sleep(wait)
+                    else:
+                        raise
             txt = out["choices"][0]["message"]["content"].strip()
             txt = re.sub(r"^```json?\s*|```\s*$", "", txt).strip()
             m = re.search(r"\{.*\}", txt, re.S)  # 앞뒤 잡음 제거
