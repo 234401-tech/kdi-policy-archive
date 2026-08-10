@@ -1,9 +1,59 @@
 {
-  "date": "2026-08-10",
-  "generated_at": "2026-08-10T08:54:01.352941+09:00",
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T08:56:41.380136+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 60,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "미래를 달릴 아이디어, 첨단산업 인재양성 부트캠프 미래차 경진대회에서 펼쳐지다 (관련: 이차전지, AI)",
+    "출산·혼인세액공제 등 세제지원 제도는 종료되는 것이 아니라 재정(예산)지원으로 방식이 변경됩니다. (관련: 수소, 지원제도)",
+    "호우 피해 특별재난지역 납세자에 대한 적극적인 세정지원 실시 (관련: 경북, 지원제도)"
+  ],
+  "top": [
+    {
+      "title": "미래를 달릴 아이디어, 첨단산업 인재양성 부트캠프 미래차 경진대회에서 펼쳐지다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285210",
+      "score": 43,
+      "reasons": [
+        "이차전지",
+        "AI"
+      ]
+    },
+    {
+      "title": "출산·혼인세액공제 등 세제지원 제도는 종료되는 것이 아니라 재정(예산)지원으로 방식이 변경됩니다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285214",
+      "score": 35,
+      "reasons": [
+        "수소",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "호우 피해 특별재난지역 납세자에 대한 적극적인 세정지원 실시",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285216",
+      "score": 32,
+      "reasons": [
+        "경북",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "한강홍수통제소-한국과학기술정보연구원, 도시침수예보 고도화 업무협약",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285230",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "사업재편의 미래, 청년의 시각으로 그린다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285231",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    }
+  ]
 }
