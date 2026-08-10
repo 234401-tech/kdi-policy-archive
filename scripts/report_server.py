@@ -33,7 +33,8 @@ PORT = int(os.environ.get("REPORT_PORT", "8000"))
 
 # HASA 키: 환경변수 없으면 키파일에서 로드
 if not os.environ.get("HASA_API_KEY") and KEY_FILE.exists():
-    os.environ["HASA_API_KEY"] = KEY_FILE.read_text(encoding="utf-8").strip()
+    # utf-8-sig: 메모장이 BOM을 붙여 저장해도 키 앞에 보이지 않는 문자가 섞이지 않게
+    os.environ["HASA_API_KEY"] = KEY_FILE.read_text(encoding="utf-8-sig").strip()
 os.environ.setdefault("HASA_MODEL", "exaone-4.0-32b")
 
 # build_weekly_report.hasa_ai 재사용
