@@ -23,9 +23,9 @@ from datetime import datetime
 from pathlib import Path
 
 
-try:  # 리다이렉트된 로그 파일도 한글이 깨지지 않게
-    sys.stdout.reconfigure(encoding="utf-8")
-    sys.stderr.reconfigure(encoding="utf-8")
+try:  # 로그 파일 한글 유지 + 줄 단위 즉시 기록(버퍼에 갇혀 로그가 늦게 보이는 것 방지)
+    sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
+    sys.stderr.reconfigure(encoding="utf-8", line_buffering=True)
 except Exception:
     pass
 
