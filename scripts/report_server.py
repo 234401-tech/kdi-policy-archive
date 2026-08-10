@@ -56,6 +56,7 @@ except Exception:
 AI_CACHE = {}  # {(start, end, total): AI 요약} — 메모리 + 디스크 이중화(서버 재시작에도 유지)
 AI_CACHE_DIR = ROOT / "weekly_report" / ".ai_cache"
 AI_INFLIGHT = {}   # 같은 기간 동시 요청 합치기(탭 여러 개 → API 호출 1번)
+AI_PROGRESS = {}   # {ckey: {"done": n, "total": m, "current": 부처명}} — 진행률 표시용
 AI_LOCK = threading.Lock()
 
 
@@ -134,6 +135,16 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self._json({"ok": True, "hwpx": True,
                         "ai": bool(hasa_ai and os.environ.get("HASA_API_KEY"))})
             return
+        if self.path.startswith("/api/ai/progress"):
+            from urllib.parse import parse_qs, urlparse
+            q = parse_qs(urlparse(self.path).query)
+            try:
+                key = (q.get("start", [None])[0], q.get("end", [None])[0],
+                       int(q.get("total", ["0"])[0]))
+            except ValueError:
+                key = None
+            self._json(AI_PROGRESS.get(key) or {})
+            return
         super().do_GET()
 
     def do_POST(self):
@@ -158,13 +169,16 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                         if leader:
                             ev = AI_INFLIGHT[ckey] = threading.Event()
                     if leader:
+                        def _prog(dept, done, total):
+                            AI_PROGRESS[ckey] = {"done": done, "total": total, "current": dept}
                         try:
-                            ai = hasa_ai(report)
+                            ai = hasa_ai(report, progress=_prog)
                             if ai:
                                 ai_cache_put(ckey, ai)
                         finally:
                             with AI_LOCK:
                                 AI_INFLIGHT.pop(ckey, None)
+                            AI_PROGRESS.pop(ckey, None)
                             ev.set()
                         log(f"AI 요약 {'완료' if ai else '결과 없음'} ({time.time()-t0:.1f}초)")
                     else:

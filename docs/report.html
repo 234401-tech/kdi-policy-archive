@@ -366,6 +366,18 @@ async function runAI() {
     $("btn-ai-run").disabled = true;
     $("btn-hwpx").disabled = true;   // 요약 없는 파일이 저장되지 않도록 완료까지 잠금
     $("btn-word").disabled = true;
+    // 진행률 폴링: 서버가 부처 단위로 알려줌 → "2/6 부처 완료 — ○○부 처리 중"
+    const progQ = new URLSearchParams({ start: current.start, end: current.end, total: current.total });
+    const progTimer = setInterval(async () => {
+        try {
+            const p = await (await fetch("/api/ai/progress?" + progQ, { cache: "no-store" })).json();
+            if (p && p.total) {
+                const pct = Math.round(p.done / p.total * 100);
+                $("ai-status").textContent =
+                    `AI 요약 생성 중… ${p.done}/${p.total} 부처 완료(${pct}%) — ${p.current} 처리 중 (새로고침 금지)`;
+            }
+        } catch (e) { /* 폴링 실패는 무시 */ }
+    }, 2500);
     try {
         const res = await fetch("/api/ai", {
             method: "POST", headers: { "Content-Type": "application/json" },
@@ -386,6 +398,7 @@ async function runAI() {
             setTimeout(runAI, 90000);
         }
     } finally {
+        clearInterval(progTimer);
         $("btn-ai-run").disabled = false;
         $("btn-hwpx").disabled = false;
         $("btn-word").disabled = false;

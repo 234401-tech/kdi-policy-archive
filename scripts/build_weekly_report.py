@@ -110,8 +110,11 @@ def build(start, end):
     }
 
 
-def hasa_ai(report):
-    """open.hasa.re.kr OpenAI 호환 API로 부처별 키워드/시사점/핵심선별 생성."""
+def hasa_ai(report, progress=None):
+    """open.hasa.re.kr OpenAI 호환 API로 부처별 키워드/시사점/핵심선별 생성.
+
+    progress: 선택 콜백 progress(dept, done, total) — 부처 처리 시작마다 호출.
+    """
     key = os.environ.get("HASA_API_KEY")
     if not key:
         return None
@@ -160,10 +163,14 @@ def hasa_ai(report):
         "- 출력 형식: {\"keyword\": \"핵심 키워드 한 줄\", \"reports\": [ ... ]}  (아래 예시와 동일 구조, 이 부처 것만)")
 
     keywords, reports = {}, {}
-    for g in report["groups"]:
+    groups = [g for g in report["groups"] if g["items"]]
+    for gi, g in enumerate(groups):
+        if progress:
+            try:
+                progress(g["dept"], gi, len(groups))
+            except Exception:
+                pass
         items = g["items"][:12]
-        if not items:
-            continue
         digest = "\n".join(
             f"[{idx}] {i['title']}\n{(i.get('desc') or ' '.join(i['bullets'])).replace(chr(10), ' ')[:500]}"
             for idx, i in enumerate(items))
