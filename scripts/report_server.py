@@ -132,15 +132,30 @@ def _urlq(s):
     return quote(s, safe="")
 
 
-class Server(socketserver.ThreadingMixIn, http.server.HTTPServer):
-    """IPv6+IPv4 겸용(dualstack) — 브라우저의 localhost(::1) 접속도 처리."""
+class _BaseServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
     daemon_threads = True
+
+    def server_bind(self):
+        # HTTPServer.server_bind 대체 — 구형 파이썬 + 한글 PC이름 조합에서
+        # getfqdn()이 UnicodeDecodeError로 죽는 것을 방어
+        socketserver.TCPServer.server_bind(self)
+        host, port = self.socket.getsockname()[:2]
+        try:
+            self.server_name = socket.getfqdn(host)
+        except Exception:
+            self.server_name = "localhost"
+        self.server_port = port
+
+
+class Server(_BaseServer):
+    """IPv6+IPv4 겸용(dualstack) — 브라우저의 localhost(::1) 접속도 처리."""
     address_family = socket.AF_INET6
 
     def server_bind(self):
         try:
+            # Windows용 Python 3.7 이하에는 IPPROTO_IPV6 상수가 없음 → AttributeError
             self.socket.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 0)
-        except OSError:
+        except (AttributeError, OSError):
             pass
         super().server_bind()
 
@@ -149,9 +164,7 @@ if __name__ == "__main__":
     print(f"보고서 서버 실행: http://localhost:{PORT}/report.html")
     print("HWPX 저장 버튼 사용 가능(한글 필요). Ctrl+C로 종료.")
     try:
-        srv = Server(("::", PORT), Handler)      # IPv6+IPv4 동시 수신
-    except OSError:
-        class V4(socketserver.ThreadingMixIn, http.server.HTTPServer):
-            daemon_threads = True
-        srv = V4(("0.0.0.0", PORT), Handler)     # IPv6 미지원 환경 폴백
+        srv = Server(("::", PORT), Handler)            # IPv6+IPv4 동시 수신
+    except (AttributeError, OSError, ValueError):
+        srv = _BaseServer(("0.0.0.0", PORT), Handler)  # IPv6 미지원 환경 폴백
     srv.serve_forever()
