@@ -366,6 +366,9 @@ async function runAI() {
     $("btn-ai-run").disabled = true;
     $("btn-hwpx").disabled = true;   // 요약 없는 파일이 저장되지 않도록 완료까지 잠금
     $("btn-word").disabled = true;
+    // 요약 중 새로고침/이탈 시 브라우저 확인창 — 실수로 결과 수신을 끊는 것 방지
+    const unloadGuard = (ev) => { ev.preventDefault(); ev.returnValue = ""; };
+    window.addEventListener("beforeunload", unloadGuard);
     // 진행률 폴링: 서버가 부처 단위로 알려줌 → "2/6 부처 완료 — ○○부 처리 중"
     const progQ = new URLSearchParams({ start: current.start, end: current.end, total: current.total });
     const progTimer = setInterval(async () => {
@@ -398,6 +401,7 @@ async function runAI() {
             setTimeout(runAI, 90000);
         }
     } finally {
+        window.removeEventListener("beforeunload", unloadGuard);
         clearInterval(progTimer);
         $("btn-ai-run").disabled = false;
         $("btn-hwpx").disabled = false;
