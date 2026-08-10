@@ -26,8 +26,9 @@ start "정책보고서서버" /min cmd /c "%PY% scripts\report_server.py & pause
 timeout /t 2 /nobreak >nul
 
 echo [3/3] 브라우저 열기...
-start "" "http://localhost:8000/report.html"
+start "" "http://localhost:8000/"
 echo.
+echo   아카이브:  http://localhost:8000/  (첫 화면 - 상단 메뉴로 보고서/대시보드 이동)
 echo   보고서:    http://localhost:8000/report.html  (HWPX 저장 버튼은 1~2초 뒤 표시)
 echo   팀 공유:   https://234401-tech.github.io/kdi-policy-archive/
 echo   서버 로그: 작업표시줄에 최소화된 '정책보고서서버' 창을 열면 보입니다.
