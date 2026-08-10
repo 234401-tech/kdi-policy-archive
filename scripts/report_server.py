@@ -45,6 +45,9 @@ except Exception:
     hasa_ai = None
 
 
+AI_CACHE = {}  # {(start, end, total): AI 요약} — 브라우저 이탈로 응답 유실돼도 재요청 시 즉시 응답
+
+
 def make_hwpx(report):
     """보고서 dict → hwpx 바이트. 실패 시 예외."""
     tmp = Path(tempfile.mkdtemp(prefix="hwpx_"))
@@ -109,12 +112,24 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                     raise RuntimeError("HASA_API_KEY 없음(weekly_report/hasa_key.txt 확인)")
                 n = int(self.headers.get("Content-Length", 0))
                 report = json.loads(self.rfile.read(n).decode("utf-8"))
-                ai = hasa_ai(report)
-                log(f"AI 요약 완료 ({time.time()-t0:.1f}초)")
-                self._json({"ok": True, "ai": ai})
+                ckey = (report.get("start"), report.get("end"), report.get("total"))
+                ai = AI_CACHE.get(ckey)
+                if ai is not None:
+                    log("AI 요약: 캐시 재사용 (즉시 응답)")
+                else:
+                    ai = hasa_ai(report)
+                    if ai:
+                        AI_CACHE[ckey] = ai
+                    log(f"AI 요약 완료 ({time.time()-t0:.1f}초)")
+                payload, code = {"ok": True, "ai": ai}, 200
             except Exception as e:
                 log(f"AI 요약 실패: {str(e)[:200]}")
-                self._json({"ok": False, "error": str(e)[:400]}, code=500)
+                payload, code = {"ok": False, "error": str(e)[:400]}, 500
+            try:
+                self._json(payload, code=code)
+            except OSError:
+                log("브라우저 연결이 끊겨 응답을 못 보냈습니다(새로고침/이탈). "
+                    "같은 기간을 다시 생성하면 캐시로 즉시 적용됩니다.")
             return
         if self.path.startswith("/api/hwpx"):
             t0 = time.time()

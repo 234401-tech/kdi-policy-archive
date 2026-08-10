@@ -362,7 +362,7 @@ async function runAI() {
             "<br>· 또는 '저장된 주간 보고서'(주간 자동생성분)를 선택하면 AI 요약이 표시됩니다.";
         return;
     }
-    $("ai-status").textContent = "AI 요약 생성 중… (서버 경유, 1~2분 소요)";
+    $("ai-status").textContent = "AI 요약 생성 중… (1~2분 소요 — 완료될 때까지 새로고침하지 마세요)";
     $("btn-ai-run").disabled = true;
     try {
         const res = await fetch("/api/ai", {
