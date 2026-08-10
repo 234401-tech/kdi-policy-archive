@@ -382,6 +382,18 @@ async function runAI() {
     }
 }
 
+// 보고서 생성/열람 직후 AI 요약 자동 적용 (로컬 서버 + 키 있을 때)
+function maybeAutoAI() {
+    if (!current || current.ai) return;
+    if ($("btn-ai-run").disabled) return;          // 이미 실행 중
+    if (window.__LOCAL && window.__AI_OK) {
+        runAI();
+    } else if (window.__LOCAL && window.__AI_OK === false) {
+        $("ai-status").textContent =
+            "AI 요약 자동 적용 불가 — weekly_report/hasa_key.txt 에 HASA 키를 저장한 뒤 서버를 재시작하세요.";
+    }
+}
+
 // ───────────────────────── HWPX 저장 (로컬 서버 경유, 한글 필요) ─────────────────────────
 async function saveHwpx() {
     if (!current || !window.__LOCAL) return;
@@ -477,6 +489,7 @@ async function init() {
                 if (!sel.value) return;
                 const r = await (await fetch(`data/weekly/${sel.value}`)).json();
                 render(r);
+                maybeAutoAI();
             };
         }
     } catch (e) { }
@@ -504,6 +517,7 @@ async function init() {
         if (!s || !e || s > e) return alert("기간을 확인하세요.");
         history.replaceState(null, "", `?start=${s}&end=${e}`);
         render(buildReport(s, e));
+        maybeAutoAI();
     };
     $("btn-print").onclick = () => window.print();
     $("btn-word").onclick = saveWord;
@@ -520,8 +534,10 @@ async function init() {
                 const pj = await (await fetch("/api/ping", { cache: "no-store" })).json();
                 if (pj.ok) {
                     window.__LOCAL = true;
+                    window.__AI_OK = !!pj.ai;
                     const hb = $("btn-hwpx");
                     hb.classList.remove("hidden"); hb.classList.add("flex");
+                    maybeAutoAI();
                     const info = document.querySelector("#ai-settings p");
                     if (info) info.textContent = pj.ai
                         ? "로컬 서버 감지됨 — 서버가 키로 AI 요약을 호출합니다(브라우저에 키 입력 불필요)."
