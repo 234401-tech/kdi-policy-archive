@@ -38,6 +38,12 @@
         .rpt-excluded { opacity: .38; }
         @media print { .edit-ctl { display: none !important; } }
         .rpt-dash { font-size: 0.87rem; margin: 2px 0 2px 1.6em; padding-left: 0.95em; text-indent: -0.95em; }
+        /* AI 요약 항목의 원문 비교(화면 전용 — 인쇄/저장엔 미포함) */
+        .rpt-orig { margin: 2px 0 6px 1.6em; }
+        .rpt-orig summary { font-size: 11px; color: #94a3b8; cursor: pointer; user-select: none; }
+        .rpt-orig[open] summary { color: #64748b; margin-bottom: 2px; }
+        .rpt-orig .rpt-dash { opacity: .75; }
+        @media print { .rpt-orig { display: none !important; } }
         .rpt-bul { font-size: 0.85rem; margin: 2px 0 2px 3.0em; padding-left: 1em; text-indent: -1em; }
         .rpt-dot { font-size: 0.86rem; margin: 4px 0 6px 1.6em; padding-left: 0.95em; text-indent: -0.95em; font-weight: 700; background: #f3f6fc; border-left: 3px solid #1F3864; padding: 3px 8px 3px 10px; }
         .rpt-tbl { width: calc(100% - 1.6em); margin: 5px 0 8px 1.6em; border-collapse: collapse; }
@@ -256,6 +262,11 @@ function richItem(base, rep) {
         }
     }
     if (rep.insight) h += `<p class="rpt-dot">· ${esc(rep.insight)}</p>`;
+    // AI 요약과 원본을 대조할 수 있게 — 원문 요약(수집 불릿)을 접이식으로 (화면 전용)
+    if (base.bullets && base.bullets.length) {
+        h += `<details class="rpt-orig"><summary>▸ 원문 요약과 비교</summary>${
+            base.bullets.map(b => `<p class="rpt-dash">- ${esc(b)}</p>`).join("")}</details>`;
+    }
     return h + cmtLine(base) + `</div>`;
 }
 
