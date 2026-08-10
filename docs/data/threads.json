@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-08-10T05:40:22.671888",
+  "generated_at": "2026-08-10T06:16:04.218156",
   "threads": [
+    {
+      "phrase": "데이터로읽는우리교육",
+      "count": 3,
+      "first": "2026-06-02",
+      "last": "2026-08-10",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「데이터로 읽는 우리 교육」 제6호 발간: 안전하고 건강한 어린이집·유치원, 행복한 우리 아이",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281997",
+          "date": "2026-06-02",
+          "score": 0
+        },
+        {
+          "title": "「데이터로 읽는 우리 교육」 제9호 발간: 포용교육 시대, 특수교육이 만들어가는 변화",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284144",
+          "date": "2026-07-13",
+          "score": 0
+        },
+        {
+          "title": "「데이터로 읽는 우리 교육」 제11호 발간: 통계로 보는 BK21사업",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285226",
+          "date": "2026-08-10",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "물가상황점검회의",
       "count": 3,
@@ -177,27 +204,6 @@
           "title": "제6차 「불법 외환거래 대응반」 회의 개최",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284230",
           "date": "2026-07-14",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "데이터로읽는우리교육",
-      "count": 2,
-      "first": "2026-06-02",
-      "last": "2026-07-13",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "「데이터로 읽는 우리 교육」 제6호 발간: 안전하고 건강한 어린이집·유치원, 행복한 우리 아이",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281997",
-          "date": "2026-06-02",
-          "score": 0
-        },
-        {
-          "title": "「데이터로 읽는 우리 교육」 제9호 발간: 포용교육 시대, 특수교육이 만들어가는 변화",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284144",
-          "date": "2026-07-13",
           "score": 0
         }
       ]
