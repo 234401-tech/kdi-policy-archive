@@ -176,34 +176,42 @@ def hasa_ai(report, progress=None):
             for idx, i in enumerate(items))
         usr = (f"[부처: {g['dept']}]  기간 {report['period']}\n{RULES}\n\n"
                f"### 예시(형식 참고용)\n{EXAMPLE}\n\n### 실제 자료\n{digest}")
-        try:
-            out = None
-            for attempt in range(3):  # 429(사용량 제한)는 잠시 쉬었다 재시도
-                try:
-                    out = call("/chat/completions", {
-                        "model": model, "temperature": 0.2, "max_tokens": 2200,
-                        "messages": [{"role": "system", "content": SYS}, {"role": "user", "content": usr}],
-                    })
-                    break
-                except urllib.error.HTTPError as e:
-                    if e.code == 429 and attempt < 2:
-                        wait = 20 * (attempt + 1)
-                        print(f"  · {g['dept']}: 429 사용량 제한 — {wait}초 후 재시도")
-                        time.sleep(wait)
-                    else:
-                        raise
-            txt = out["choices"][0]["message"]["content"].strip()
-            txt = re.sub(r"^```json?\s*|```\s*$", "", txt).strip()
-            m = re.search(r"\{.*\}", txt, re.S)  # 앞뒤 잡음 제거
-            data = json.loads(m.group(0) if m else txt)
-            if data.get("keyword"):
-                keywords[g["dept"]] = data["keyword"]
-            reps = [r for r in (data.get("reports") or []) if isinstance(r.get("idx"), int)]
-            if reps:
-                reports[g["dept"]] = reps[:3]
-            print(f"  · {g['dept']}: reports {len(reports.get(g['dept'], []))}건")
-        except Exception as e:
-            print(f"  · {g['dept']}: 실패({str(e)[:60]})")
+        data = None
+        for round_no in range(2):  # LLM이 깨진 JSON을 주면 그 부처만 1회 재호출
+            try:
+                out = None
+                for attempt in range(3):  # 429(사용량 제한)는 잠시 쉬었다 재시도
+                    try:
+                        out = call("/chat/completions", {
+                            "model": model, "temperature": 0.2, "max_tokens": 2200,
+                            "messages": [{"role": "system", "content": SYS}, {"role": "user", "content": usr}],
+                        })
+                        break
+                    except urllib.error.HTTPError as e:
+                        if e.code == 429 and attempt < 2:
+                            wait = 20 * (attempt + 1)
+                            print(f"  · {g['dept']}: 429 사용량 제한 — {wait}초 후 재시도")
+                            time.sleep(wait)
+                        else:
+                            raise
+                txt = out["choices"][0]["message"]["content"].strip()
+                txt = re.sub(r"^```json?\s*|```\s*$", "", txt).strip()
+                m = re.search(r"\{.*\}", txt, re.S)  # 앞뒤 잡음 제거
+                data = json.loads(m.group(0) if m else txt)
+                break
+            except Exception as e:
+                if round_no == 0:
+                    print(f"  · {g['dept']}: 응답 이상({str(e)[:50]}) — 재호출")
+                else:
+                    print(f"  · {g['dept']}: 실패({str(e)[:60]})")
+        if not data:
+            continue
+        if data.get("keyword"):
+            keywords[g["dept"]] = data["keyword"]
+        reps = [r for r in (data.get("reports") or []) if isinstance(r.get("idx"), int)]
+        if reps:
+            reports[g["dept"]] = reps[:3]
+        print(f"  · {g['dept']}: reports {len(reports.get(g['dept'], []))}건")
     if not keywords and not reports:
         return None
     return {"keywords": keywords, "reports": reports}

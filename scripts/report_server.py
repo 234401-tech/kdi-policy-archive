@@ -75,6 +75,10 @@ def ai_cache_get(key):
 
 
 def ai_cache_put(key, ai):
+    old = AI_CACHE.get(key) or ai_cache_get(key)
+    if old:  # 부분 실패 대비 — 이전 결과와 합산(새 결과 우선)
+        ai = {"keywords": {**(old.get("keywords") or {}), **(ai.get("keywords") or {})},
+              "reports": {**(old.get("reports") or {}), **(ai.get("reports") or {})}}
     AI_CACHE[key] = ai
     try:
         AI_CACHE_DIR.mkdir(parents=True, exist_ok=True)
@@ -82,6 +86,7 @@ def ai_cache_put(key, ai):
             json.dumps(ai, ensure_ascii=False), encoding="utf-8")
     except OSError:
         pass
+    return ai
 
 
 def make_hwpx(report):
@@ -166,6 +171,16 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 report = json.loads(self.rfile.read(n).decode("utf-8"))
                 ckey = (report.get("start"), report.get("end"), report.get("total"))
                 ai = ai_cache_get(ckey)
+                cached_partial = None
+                if ai is not None:
+                    have = set((ai.get("reports") or {}).keys())
+                    missing = [g for g in (report.get("groups") or [])
+                               if g.get("items") and g.get("dept") not in have]
+                    if missing:
+                        log(f"AI 요약: 캐시에 {len(missing)}개 부처 누락 — 해당 부처만 보완 계산")
+                        cached_partial = ai
+                        report = dict(report, groups=missing)  # 누락 부처만 재계산
+                        ai = None
                 if ai is not None:
                     log("AI 요약: 캐시 재사용 (즉시 응답)")
                 else:
@@ -180,7 +195,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                         try:
                             ai = hasa_ai(report, progress=_prog)
                             if ai:
-                                ai_cache_put(ckey, ai)
+                                ai = ai_cache_put(ckey, ai)  # 기존 캐시와 합산된 전체본
                         finally:
                             with AI_LOCK:
                                 AI_INFLIGHT.pop(ckey, None)
@@ -191,6 +206,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                         log("AI 요약: 같은 기간 요청 진행 중 — 완료 대기(중복 API 호출 방지)")
                         ev.wait(timeout=600)
                         ai = ai_cache_get(ckey)
+                if not ai and cached_partial:
+                    log("보완 계산 실패 — 기존 부분 결과로 응답")
+                    ai = cached_partial
                 if not ai:
                     raise RuntimeError("AI 요약 생성 실패 — API 사용량 제한(429) 가능성. 잠시 후 다시 시도하세요.")
                 payload, code = {"ok": True, "ai": ai}, 200
