@@ -1,45 +1,37 @@
 {
-  "date": "2026-08-11",
-  "generated_at": "2026-08-11T08:56:41.380136+09:00",
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T09:04:32.198376+09:00",
   "window_hours": 24,
-  "item_count": 60,
+  "item_count": 44,
   "model": "rule-based",
   "bullets": [
-    "미래를 달릴 아이디어, 첨단산업 인재양성 부트캠프 미래차 경진대회에서 펼쳐지다 (관련: 이차전지, AI)",
-    "출산·혼인세액공제 등 세제지원 제도는 종료되는 것이 아니라 재정(예산)지원으로 방식이 변경됩니다. (관련: 수소, 지원제도)",
-    "호우 피해 특별재난지역 납세자에 대한 적극적인 세정지원 실시 (관련: 경북, 지원제도)"
+    "재생에너지 이격거리 규제 상한 도입 (관련: 수소, 에너지)",
+    "조달청, 규제합리화 신속 추진으로 현장 체감 속도 높여 (관련: AI, 지원제도, 지방우대)",
+    "과기정통부, 24시간 멈추지 않는 ‘자율실험실’ 생태계 구축 본격 시동 (관련: AI, 지원제도)"
   ],
   "top": [
     {
-      "title": "미래를 달릴 아이디어, 첨단산업 인재양성 부트캠프 미래차 경진대회에서 펼쳐지다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285210",
-      "score": 43,
-      "reasons": [
-        "이차전지",
-        "AI"
-      ]
-    },
-    {
-      "title": "출산·혼인세액공제 등 세제지원 제도는 종료되는 것이 아니라 재정(예산)지원으로 방식이 변경됩니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285214",
-      "score": 35,
+      "title": "재생에너지 이격거리 규제 상한 도입",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285297",
+      "score": 37,
       "reasons": [
         "수소",
-        "지원제도"
+        "에너지"
       ]
     },
     {
-      "title": "호우 피해 특별재난지역 납세자에 대한 적극적인 세정지원 실시",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285216",
-      "score": 32,
+      "title": "조달청, 규제합리화 신속 추진으로 현장 체감 속도 높여",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285260",
+      "score": 36,
       "reasons": [
-        "경북",
-        "지원제도"
+        "AI",
+        "지원제도",
+        "지방우대"
       ]
     },
     {
-      "title": "한강홍수통제소-한국과학기술정보연구원, 도시침수예보 고도화 업무협약",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285230",
+      "title": "과기정통부, 24시간 멈추지 않는 ‘자율실험실’ 생태계 구축 본격 시동",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285258",
       "score": 28,
       "reasons": [
         "AI",
@@ -47,12 +39,19 @@
       ]
     },
     {
-      "title": "사업재편의 미래, 청년의 시각으로 그린다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285231",
-      "score": 28,
+      "title": "함께 만드는 안전한 대구ㆍ경북!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285292",
+      "score": 27,
       "reasons": [
-        "AI",
-        "지원제도"
+        "경북"
+      ]
+    },
+    {
+      "title": "국민이 직접 뽑는 올해 최고의 정부혁신 ‘2026 왕중왕전‘ 온라인 국민 평가 시작",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285278",
+      "score": 18,
+      "reasons": [
+        "AI"
       ]
     }
   ]
