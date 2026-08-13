@@ -1,57 +1,59 @@
 {
-  "date": "2026-08-12",
-  "generated_at": "2026-08-12T09:04:32.198376+09:00",
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T09:03:55.214222+09:00",
   "window_hours": 24,
-  "item_count": 44,
+  "item_count": 40,
   "model": "rule-based",
   "bullets": [
-    "재생에너지 이격거리 규제 상한 도입 (관련: 수소, 에너지)",
-    "조달청, 규제합리화 신속 추진으로 현장 체감 속도 높여 (관련: AI, 지원제도, 지방우대)",
-    "과기정통부, 24시간 멈추지 않는 ‘자율실험실’ 생태계 구축 본격 시동 (관련: AI, 지원제도)"
+    "“국민참여성장펀드의 청년 가입기회를 확대할 계획입니다.” (관련: AI, 바이오, 지원제도)",
+    "AI와 실험실이 함께 진화하는 신약개발 혁신 생태계 구축 (관련: AI, 바이오)",
+    "조달청, ‘요소수 공급망 위기 대응’ 2026년 한국정책대상 ‘대상’ 수상 (관련: AI, 소부장)"
   ],
   "top": [
     {
-      "title": "재생에너지 이격거리 규제 상한 도입",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285297",
-      "score": 37,
-      "reasons": [
-        "수소",
-        "에너지"
-      ]
-    },
-    {
-      "title": "조달청, 규제합리화 신속 추진으로 현장 체감 속도 높여",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285260",
-      "score": 36,
+      "title": "“국민참여성장펀드의 청년 가입기회를 확대할 계획입니다.”",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285313",
+      "score": 48,
       "reasons": [
         "AI",
-        "지원제도",
-        "지방우대"
-      ]
-    },
-    {
-      "title": "과기정통부, 24시간 멈추지 않는 ‘자율실험실’ 생태계 구축 본격 시동",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285258",
-      "score": 28,
-      "reasons": [
-        "AI",
+        "바이오",
         "지원제도"
       ]
     },
     {
-      "title": "함께 만드는 안전한 대구ㆍ경북!",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285292",
-      "score": 27,
+      "title": "AI와 실험실이 함께 진화하는 신약개발 혁신 생태계 구축",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285325",
+      "score": 43,
       "reasons": [
-        "경북"
+        "AI",
+        "바이오"
       ]
     },
     {
-      "title": "국민이 직접 뽑는 올해 최고의 정부혁신 ‘2026 왕중왕전‘ 온라인 국민 평가 시작",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285278",
-      "score": 18,
+      "title": "조달청, ‘요소수 공급망 위기 대응’ 2026년 한국정책대상 ‘대상’ 수상",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285305",
+      "score": 41,
       "reasons": [
-        "AI"
+        "AI",
+        "소부장"
+      ]
+    },
+    {
+      "title": "식약처, 한국정책학회 ‘최우수 정책상‘ 수상",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285335",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "2026년 하반기 디(D)-테스트베드 참여자 모집",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285319",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
       ]
     }
   ]
