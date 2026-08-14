@@ -1,56 +1,63 @@
 {
-  "date": "2026-08-13",
-  "generated_at": "2026-08-13T09:03:55.214222+09:00",
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T09:03:41.189443+09:00",
   "window_hours": 24,
-  "item_count": 40,
+  "item_count": 54,
   "model": "rule-based",
   "bullets": [
-    "“국민참여성장펀드의 청년 가입기회를 확대할 계획입니다.” (관련: AI, 바이오, 지원제도)",
-    "AI와 실험실이 함께 진화하는 신약개발 혁신 생태계 구축 (관련: AI, 바이오)",
-    "조달청, ‘요소수 공급망 위기 대응’ 2026년 한국정책대상 ‘대상’ 수상 (관련: AI, 소부장)"
+    "막힌 투자는 뚫고, 현장의 애로는 풉니다. (관련: 포항, 경북, 이차전지)",
+    "첨단기술이 여는 미래, 미래성장동력 〈7대 SEED〉 보고회 개최 (관련: 수소, AI, 소부장)",
+    "지역성장동력을 키우는 유턴과 외투 (관련: AI, 소부장, 지원제도)"
   ],
   "top": [
     {
-      "title": "“국민참여성장펀드의 청년 가입기회를 확대할 계획입니다.”",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285313",
-      "score": 48,
+      "title": "막힌 투자는 뚫고, 현장의 애로는 풉니다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285350",
+      "score": 100,
+      "reasons": [
+        "포항",
+        "경북",
+        "이차전지",
+        "바이오",
+        "지원제도",
+        "지방우대"
+      ]
+    },
+    {
+      "title": "첨단기술이 여는 미래, 미래성장동력 〈7대 SEED〉 보고회 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285358",
+      "score": 83,
+      "reasons": [
+        "수소",
+        "AI",
+        "소부장",
+        "바이오",
+        "에너지"
+      ]
+    },
+    {
+      "title": "지역성장동력을 키우는 유턴과 외투",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285351",
+      "score": 46,
       "reasons": [
         "AI",
-        "바이오",
+        "소부장",
         "지원제도"
       ]
     },
     {
-      "title": "AI와 실험실이 함께 진화하는 신약개발 혁신 생태계 구축",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285325",
-      "score": 43,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "조달청, ‘요소수 공급망 위기 대응’ 2026년 한국정책대상 ‘대상’ 수상",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285305",
-      "score": 41,
+      "title": "구윤철 부총리 겸 재정경제부장관, 우즈벡 호자예프 부총리 면담",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285357",
+      "score": 36,
       "reasons": [
         "AI",
         "소부장"
       ]
     },
     {
-      "title": "식약처, 한국정책학회 ‘최우수 정책상‘ 수상",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285335",
+      "title": "AI 수술로봇 찾은 조달청 … 첨단기술 현장 행보",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285347",
       "score": 33,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "2026년 하반기 디(D)-테스트베드 참여자 모집",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285319",
-      "score": 28,
       "reasons": [
         "AI",
         "지원제도"
