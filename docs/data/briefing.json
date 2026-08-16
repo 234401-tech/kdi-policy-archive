@@ -1,67 +1,9 @@
 {
-  "date": "2026-08-14",
-  "generated_at": "2026-08-14T09:03:41.189443+09:00",
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T08:39:57.152891+09:00",
   "window_hours": 24,
-  "item_count": 54,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "막힌 투자는 뚫고, 현장의 애로는 풉니다. (관련: 포항, 경북, 이차전지)",
-    "첨단기술이 여는 미래, 미래성장동력 〈7대 SEED〉 보고회 개최 (관련: 수소, AI, 소부장)",
-    "지역성장동력을 키우는 유턴과 외투 (관련: AI, 소부장, 지원제도)"
-  ],
-  "top": [
-    {
-      "title": "막힌 투자는 뚫고, 현장의 애로는 풉니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285350",
-      "score": 100,
-      "reasons": [
-        "포항",
-        "경북",
-        "이차전지",
-        "바이오",
-        "지원제도",
-        "지방우대"
-      ]
-    },
-    {
-      "title": "첨단기술이 여는 미래, 미래성장동력 〈7대 SEED〉 보고회 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285358",
-      "score": 83,
-      "reasons": [
-        "수소",
-        "AI",
-        "소부장",
-        "바이오",
-        "에너지"
-      ]
-    },
-    {
-      "title": "지역성장동력을 키우는 유턴과 외투",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285351",
-      "score": 46,
-      "reasons": [
-        "AI",
-        "소부장",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "구윤철 부총리 겸 재정경제부장관, 우즈벡 호자예프 부총리 면담",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285357",
-      "score": 36,
-      "reasons": [
-        "AI",
-        "소부장"
-      ]
-    },
-    {
-      "title": "AI 수술로봇 찾은 조달청 … 첨단기술 현장 행보",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285347",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
