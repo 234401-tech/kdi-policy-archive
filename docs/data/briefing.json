@@ -1,9 +1,59 @@
 {
-  "date": "2026-08-18",
-  "generated_at": "2026-08-18T08:42:51.231153+09:00",
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T08:42:37.625446+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 56,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "테라파워-한국 기업 간 SMR 협력으로 한국 원전기업 수출 공급망 확대 (관련: 소부장, 에너지)",
+    "AI와 첨단기술로 미래 농림식품을 바꿀 연구개발 아이디어를 찾습니다. (관련: AI, 바이오)",
+    "조달청, AI·위성통신 등 혁신기술 실증으로 미래산업 경쟁력 높여 (관련: AI, 지원제도)"
+  ],
+  "top": [
+    {
+      "title": "테라파워-한국 기업 간 SMR 협력으로 한국 원전기업 수출 공급망 확대",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285467",
+      "score": 40,
+      "reasons": [
+        "소부장",
+        "에너지"
+      ]
+    },
+    {
+      "title": "AI와 첨단기술로 미래 농림식품을 바꿀 연구개발 아이디어를 찾습니다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285446",
+      "score": 38,
+      "reasons": [
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "조달청, AI·위성통신 등 혁신기술 실증으로 미래산업 경쟁력 높여",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285473",
+      "score": 38,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "＂AI·로봇으로 미래 국방 혁신 이끈다＂",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285463",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "한성숙 국무총리, 빌 게이츠 테라파워 이사회 의장 접견",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285462",
+      "score": 30,
+      "reasons": [
+        "AI",
+        "에너지"
+      ]
+    }
+  ]
 }
