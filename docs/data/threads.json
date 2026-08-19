@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-08-19T03:54:40.708330",
+  "generated_at": "2026-08-19T04:44:07.671889",
   "threads": [
+    {
+      "phrase": "2026금융권공동채용박람회",
+      "count": 2,
+      "first": "2026-07-06",
+      "last": "2026-08-19",
+      "max_score": 26,
+      "items": [
+        {
+          "title": "“함께하는 금융, 청년의 미래를 그리다” 「2026 금융권 공동채용 박람회」 개최 안내",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283825",
+          "date": "2026-07-06",
+          "score": 18
+        },
+        {
+          "title": "“함께하는 금융, 청년의 미래를 그리다” 「2026 금융권 공동채용 박람회」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285522",
+          "date": "2026-08-19",
+          "score": 26
+        }
+      ]
+    },
     {
       "phrase": "고용보험법시행령",
       "count": 2,
