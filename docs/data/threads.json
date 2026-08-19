@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-08-19T06:55:42.561020",
+  "generated_at": "2026-08-19T07:45:42.481108",
   "threads": [
+    {
+      "phrase": "올해의상생기업대상",
+      "count": 3,
+      "first": "2026-05-12",
+      "last": "2026-08-19",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "국민이 추천하고 선정하는 「올해의 상생기업 대상」 후보자 접수 시작!",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=280848",
+          "date": "2026-05-12",
+          "score": 0
+        },
+        {
+          "title": "국민이 직접 뽑는 「올해의 상생기업대상」, 8월 5일부터 13일까지 국민투표 시작!",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285072",
+          "date": "2026-08-04",
+          "score": 0
+        },
+        {
+          "title": "「올해의 상생기업대상」국민투표에 1만 4천여 명 참여",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285547",
+          "date": "2026-08-19",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "2026금융권공동채용박람회",
       "count": 2,
@@ -92,27 +119,6 @@
         {
           "title": "한국은행, 「물가 상황 점검회의」 개최",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285050",
-          "date": "2026-08-04",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "올해의상생기업대상",
-      "count": 2,
-      "first": "2026-05-12",
-      "last": "2026-08-04",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "국민이 추천하고 선정하는 「올해의 상생기업 대상」 후보자 접수 시작!",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=280848",
-          "date": "2026-05-12",
-          "score": 0
-        },
-        {
-          "title": "국민이 직접 뽑는 「올해의 상생기업대상」, 8월 5일부터 13일까지 국민투표 시작!",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285072",
           "date": "2026-08-04",
           "score": 0
         }
