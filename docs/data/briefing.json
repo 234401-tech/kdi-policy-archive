@@ -1,36 +1,28 @@
 {
-  "date": "2026-08-19",
-  "generated_at": "2026-08-19T08:42:37.625446+09:00",
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T08:42:52.012249+09:00",
   "window_hours": 24,
-  "item_count": 56,
+  "item_count": 50,
   "model": "rule-based",
   "bullets": [
-    "테라파워-한국 기업 간 SMR 협력으로 한국 원전기업 수출 공급망 확대 (관련: 소부장, 에너지)",
-    "AI와 첨단기술로 미래 농림식품을 바꿀 연구개발 아이디어를 찾습니다. (관련: AI, 바이오)",
-    "조달청, AI·위성통신 등 혁신기술 실증으로 미래산업 경쟁력 높여 (관련: AI, 지원제도)"
+    "한국고용정보원, 2026년 하반기 주요 업종 일자리 전망 발표 (관련: 철강, AI, 소부장)",
+    "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과 (관련: AI, 지원제도)",
+    "친환경차 검사기준 분리… 전기차 관리 강화「자동차관리법 시행규칙」 개정안 입법예고 (관련: 이차전지, 에너지)"
   ],
   "top": [
     {
-      "title": "테라파워-한국 기업 간 SMR 협력으로 한국 원전기업 수출 공급망 확대",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285467",
-      "score": 40,
+      "title": "한국고용정보원, 2026년 하반기 주요 업종 일자리 전망 발표",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285542",
+      "score": 58,
       "reasons": [
-        "소부장",
-        "에너지"
-      ]
-    },
-    {
-      "title": "AI와 첨단기술로 미래 농림식품을 바꿀 연구개발 아이디어를 찾습니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285446",
-      "score": 38,
-      "reasons": [
+        "철강",
         "AI",
-        "바이오"
+        "소부장"
       ]
     },
     {
-      "title": "조달청, AI·위성통신 등 혁신기술 실증으로 미래산업 경쟁력 높여",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285473",
+      "title": "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285504",
       "score": 38,
       "reasons": [
         "AI",
@@ -38,8 +30,17 @@
       ]
     },
     {
-      "title": "＂AI·로봇으로 미래 국방 혁신 이끈다＂",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285463",
+      "title": "친환경차 검사기준 분리… 전기차 관리 강화「자동차관리법 시행규칙」 개정안 입법예고",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285535",
+      "score": 37,
+      "reasons": [
+        "이차전지",
+        "에너지"
+      ]
+    },
+    {
+      "title": "2026년 대한민국 물산업 혁신 창업대전 공모",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285507",
       "score": 33,
       "reasons": [
         "AI",
@@ -47,12 +48,12 @@
       ]
     },
     {
-      "title": "한성숙 국무총리, 빌 게이츠 테라파워 이사회 의장 접견",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285462",
-      "score": 30,
+      "title": "공공서비스 혁신의 출발점 「2026 GovTech 창업경진대회」 참가 공모 개시",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285527",
+      "score": 33,
       "reasons": [
         "AI",
-        "에너지"
+        "지원제도"
       ]
     }
   ]
