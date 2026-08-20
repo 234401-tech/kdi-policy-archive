@@ -1,37 +1,37 @@
 {
-  "date": "2026-08-20",
-  "generated_at": "2026-08-20T08:42:52.012249+09:00",
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21T08:46:27.153713+09:00",
   "window_hours": 24,
-  "item_count": 50,
+  "item_count": 42,
   "model": "rule-based",
   "bullets": [
-    "한국고용정보원, 2026년 하반기 주요 업종 일자리 전망 발표 (관련: 철강, AI, 소부장)",
-    "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과 (관련: AI, 지원제도)",
-    "친환경차 검사기준 분리… 전기차 관리 강화「자동차관리법 시행규칙」 개정안 입법예고 (관련: 이차전지, 에너지)"
+    "중소 서비스 기업에 혁신을 더하다! 「중소기업 스마트서비스 사업」 지원대상 선정 (관련: AI, 소부장, 지원제도)",
+    "급식지원 우수사례 발굴을 위한 업무혁신 경진대회 수상작 발표 (관련: 경북, AI)",
+    "미래폐자원 순환이용 촉진… 폐기물관리법 및 전자제품등자원순환법 시행규칙 개정안 입법예고 (관련: 이차전지, 에너지)"
   ],
   "top": [
     {
-      "title": "한국고용정보원, 2026년 하반기 주요 업종 일자리 전망 발표",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285542",
-      "score": 58,
-      "reasons": [
-        "철강",
-        "AI",
-        "소부장"
-      ]
-    },
-    {
-      "title": "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285504",
-      "score": 38,
+      "title": "중소 서비스 기업에 혁신을 더하다! 「중소기업 스마트서비스 사업」 지원대상 선정",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285554",
+      "score": 46,
       "reasons": [
         "AI",
+        "소부장",
         "지원제도"
       ]
     },
     {
-      "title": "친환경차 검사기준 분리… 전기차 관리 강화「자동차관리법 시행규칙」 개정안 입법예고",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285535",
+      "title": "급식지원 우수사례 발굴을 위한 업무혁신 경진대회 수상작 발표",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285580",
+      "score": 40,
+      "reasons": [
+        "경북",
+        "AI"
+      ]
+    },
+    {
+      "title": "미래폐자원 순환이용 촉진… 폐기물관리법 및 전자제품등자원순환법 시행규칙 개정안 입법예고",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285568",
       "score": 37,
       "reasons": [
         "이차전지",
@@ -39,17 +39,18 @@
       ]
     },
     {
-      "title": "2026년 대한민국 물산업 혁신 창업대전 공모",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285507",
-      "score": 33,
+      "title": "2026년 상반기 벤처투자 8.9조원 ‘역대 최대’ 실적 경신",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285551",
+      "score": 36,
       "reasons": [
         "AI",
-        "지원제도"
+        "지원제도",
+        "지방우대"
       ]
     },
     {
-      "title": "공공서비스 혁신의 출발점 「2026 GovTech 창업경진대회」 참가 공모 개시",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285527",
+      "title": "과기정통부, 개방형 AI 컴퓨팅 인프라 생태계 구축을 위한 민관 협력 방안 논의",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285591",
       "score": 33,
       "reasons": [
         "AI",
