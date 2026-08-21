@@ -1,6 +1,48 @@
 {
-  "generated_at": "2026-08-21T04:47:10.354897",
+  "generated_at": "2026-08-21T05:38:34.565965",
   "threads": [
+    {
+      "phrase": "중앙재난안전대책본부",
+      "count": 2,
+      "first": "2026-07-24",
+      "last": "2026-08-21",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "7월 호우 대응 「중앙재난안전대책본부」, 「복구대책지원본부」 체제로 전환",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284657",
+          "date": "2026-07-24",
+          "score": 0
+        },
+        {
+          "title": "8월 호우 대응 「중앙재난안전대책본부」, 「복구대책지원본부」 체제로 전환",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285640",
+          "date": "2026-08-21",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "복구대책지원본부",
+      "count": 2,
+      "first": "2026-07-24",
+      "last": "2026-08-21",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "7월 호우 대응 「중앙재난안전대책본부」, 「복구대책지원본부」 체제로 전환",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284657",
+          "date": "2026-07-24",
+          "score": 0
+        },
+        {
+          "title": "8월 호우 대응 「중앙재난안전대책본부」, 「복구대책지원본부」 체제로 전환",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285640",
+          "date": "2026-08-21",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "2026년을지연습",
       "count": 2,
