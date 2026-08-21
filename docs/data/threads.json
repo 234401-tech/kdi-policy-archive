@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-08-21T03:09:56.631918",
+  "generated_at": "2026-08-21T04:47:10.354897",
   "threads": [
+    {
+      "phrase": "2026년을지연습",
+      "count": 2,
+      "first": "2026-08-21",
+      "last": "2026-08-21",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「2026년 을지연습」 관세청, ‘감시정 위기대응 훈련’ 실시",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285603",
+          "date": "2026-08-21",
+          "score": 0
+        },
+        {
+          "title": "「2026년 을지연습」 관세청, ‘비상상황 대응역량 강화 훈련’ 실시",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285604",
+          "date": "2026-08-21",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "올해의상생기업대상",
       "count": 3,
