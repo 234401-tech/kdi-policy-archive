@@ -1,9 +1,58 @@
 {
-  "date": "2026-08-24",
-  "generated_at": "2026-08-24T08:41:03.163495+09:00",
+  "date": "2026-08-25",
+  "generated_at": "2026-08-25T08:42:34.172349+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 62,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "미래기술의 씨앗을 성장동력으로 첨단기술 실증·사업화와 AI 신뢰 기반 논의 (관련: AI, 지원제도)",
+    "대한민국, APEC 보건실무그룹 의장경제로서 아태지역 보건협력 결실 이끈다 (관련: AI, 바이오)",
+    "“STEP으로 키운 역량 공유해요” 한국기술교육대 ‘STEP 학습 우수사례 공모전’ (관련: AI, 지원제도)"
+  ],
+  "top": [
+    {
+      "title": "미래기술의 씨앗을 성장동력으로 첨단기술 실증·사업화와 AI 신뢰 기반 논의",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285689",
+      "score": 38,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "대한민국, APEC 보건실무그룹 의장경제로서 아태지역 보건협력 결실 이끈다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285659",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "“STEP으로 키운 역량 공유해요” 한국기술교육대 ‘STEP 학습 우수사례 공모전’",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285674",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "폐자원 활용 바이오에너지로 에너지 자립마을 조성한다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285668",
+      "score": 30,
+      "reasons": [
+        "바이오",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "통합허가 대상 넓히고 우수·중소기업 부담은 줄인다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285669",
+      "score": 25,
+      "reasons": [
+        "이차전지"
+      ]
+    }
+  ]
 }
