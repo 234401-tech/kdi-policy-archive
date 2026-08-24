@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-08-24T03:11:01.992094",
+  "generated_at": "2026-08-24T04:53:24.482662",
   "threads": [
+    {
+      "phrase": "고유가피해지원금",
+      "count": 3,
+      "first": "2026-05-18",
+      "last": "2026-08-24",
+      "max_score": 8,
+      "items": [
+        {
+          "title": "「고유가 피해지원금」 2차 지급 신청 5월 18일 개시",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281193",
+          "date": "2026-05-18",
+          "score": 8
+        },
+        {
+          "title": "「고유가 피해지원금」 7월 3일 18시까지 꼭 신청하세요",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283450",
+          "date": "2026-06-29",
+          "score": 0
+        },
+        {
+          "title": "「고유가 피해지원금」 8월 31일까지 꼭 사용하세요",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285699",
+          "date": "2026-08-24",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "중앙재난안전대책본부",
       "count": 2,
@@ -470,27 +497,6 @@
         {
           "title": "「제48차 유네스코 세계유산위원회」 기념주화 교부일정 및 온·오프라인 판매 안내",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283418",
-          "date": "2026-06-29",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "고유가피해지원금",
-      "count": 2,
-      "first": "2026-05-18",
-      "last": "2026-06-29",
-      "max_score": 8,
-      "items": [
-        {
-          "title": "「고유가 피해지원금」 2차 지급 신청 5월 18일 개시",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281193",
-          "date": "2026-05-18",
-          "score": 8
-        },
-        {
-          "title": "「고유가 피해지원금」 7월 3일 18시까지 꼭 신청하세요",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283450",
           "date": "2026-06-29",
           "score": 0
         }
