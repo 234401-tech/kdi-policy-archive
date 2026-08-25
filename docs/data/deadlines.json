@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T08:27:59.304814+09:00",
+  "generated_at": "2026-08-25T10:41:51.923951+09:00",
   "events": [
     {
       "date": "2026-08-22",
@@ -147,6 +147,14 @@
     },
     {
       "date": "2026-08-27",
+      "type": "접수마감",
+      "title": "과학관에서 배움의 결실을 수확하자!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285719",
+      "score": 18,
+      "source": "으로 학교급별 발달 상황에 맞게 구성됨. - 접수는 8.25. 연간회원 우선, 8.27.까지 선착순으로 국립과천과학관 홈페이지에서 진행하"
+    },
+    {
+      "date": "2026-08-27",
       "type": "마감",
       "title": "2025년 기준 운수업조사 및 기업활동조사 실시",
       "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285160",
@@ -184,6 +192,14 @@
       "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285684",
       "score": 23,
       "source": "대한민국의 미래, 전북에서 한바탕 펼치다 산업통상부는 ’26.8.24.(월)부터 8.28.(금)까지 전북 한국소리문화의전당에서 제52회 국가품질"
+    },
+    {
+      "date": "2026-08-28",
+      "type": "마감",
+      "title": "“기술의 가치, 미래의 꿈을 잇다”",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285721",
+      "score": 10,
+      "source": ".(월) 인천광역시, 인천광역시교육청과 함께 제61회 전국기능경기대회를 8.22.~8.28. 7일간 인천광역시 내 6개 경기장에서 개최"
     },
     {
       "date": "2026-08-28",
@@ -1024,6 +1040,14 @@
       "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284493",
       "score": 10,
       "source": "진대회인 ‘한국관광의 샛별’을 개최한다고 밝혔다. - 이번 경진대회는 7.21.~10.20. 기간 중 ‘관광상품 혁신’, ‘관광소비 촉"
+    },
+    {
+      "date": "2026-10-25",
+      "type": "마감",
+      "title": "과학관에서 배움의 결실을 수확하자!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285719",
+      "score": 18,
+      "source": ".8.24.(월) 가을학기 개인교육과정 운영 계획을 발표한다. - 9.5.부터 10.25.까지 총 6차시로 주말마다 18종의 새 프로그램이"
     },
     {
       "date": "2026-10-28",
