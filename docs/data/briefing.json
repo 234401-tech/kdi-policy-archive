@@ -1,18 +1,46 @@
 {
-  "date": "2026-08-26",
-  "generated_at": "2026-08-26T08:44:35.230123+09:00",
+  "date": "2026-08-27",
+  "generated_at": "2026-08-27T13:34:22.959967+09:00",
   "window_hours": 24,
-  "item_count": 60,
+  "item_count": 53,
   "model": "rule-based",
   "bullets": [
-    "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소 (관련: AI, 바이오)",
-    "과기정통부, 「K-문샷 AI 휴머노이드 미션」 현장소통 (관련: AI, 지원제도)",
-    "교육부·외교부·아태교육원, 제11회 세계시민교육 국제회의 개최 (관련: AI, 지원제도)"
+    "연구실의 아이디어가 모두의 혁신으로, 「ICT 챌린지 2026」 대회 개최 (관련: 포항, AI)",
+    "식약처, ‘바이오 대도약’을 향한 길을 열다 (관련: AI, 소부장, 바이오)",
+    "제28회 전국학생통계활용대회 결과 발표 (관련: 경북, AI)"
   ],
   "top": [
     {
-      "title": "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285766",
+      "title": "연구실의 아이디어가 모두의 혁신으로, 「ICT 챌린지 2026」 대회 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285834",
+      "score": 63,
+      "reasons": [
+        "포항",
+        "AI"
+      ]
+    },
+    {
+      "title": "식약처, ‘바이오 대도약’을 향한 길을 열다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285831",
+      "score": 56,
+      "reasons": [
+        "AI",
+        "소부장",
+        "바이오"
+      ]
+    },
+    {
+      "title": "제28회 전국학생통계활용대회 결과 발표",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285807",
+      "score": 40,
+      "reasons": [
+        "경북",
+        "AI"
+      ]
+    },
+    {
+      "title": "AI 시대 정신건강 전문가를 꿈꾸다, 2026 청년 정신건강 커리어 성장캠프 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285786",
       "score": 38,
       "reasons": [
         "AI",
@@ -20,37 +48,12 @@
       ]
     },
     {
-      "title": "과기정통부, 「K-문샷 AI 휴머노이드 미션」 현장소통",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285776",
-      "score": 33,
+      "title": "“AI는 평가위원 조력자”…조달청, AI 기술평가 실증 착수",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285826",
+      "score": 38,
       "reasons": [
         "AI",
         "지원제도"
-      ]
-    },
-    {
-      "title": "교육부·외교부·아태교육원, 제11회 세계시민교육 국제회의 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285743",
-      "score": 28,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "“민간 AI 역량 모아 공공문제 해결한다” 행안부 ‘2026년 AI 분석모델 개발 경진대회’ 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285745",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    },
-    {
-      "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285754",
-      "score": 23,
-      "reasons": [
-        "AI"
       ]
     }
   ]
