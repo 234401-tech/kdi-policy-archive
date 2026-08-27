@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-08-27T08:52:08.384638",
+  "generated_at": "2026-08-27T19:46:31.934072",
   "threads": [
+    {
+      "phrase": "과학기술·인공지능미래전략회의",
+      "count": 2,
+      "first": "2026-05-14",
+      "last": "2026-08-28",
+      "max_score": 23,
+      "items": [
+        {
+          "title": "과기정통부, 첨단기술이 바꿀 미래 사회 설계를 위한 「과학기술·인공지능 미래 전략회의」 출범",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281001",
+          "date": "2026-05-14",
+          "score": 23
+        },
+        {
+          "title": "과기정통부, 범용인공지능(AGI) 시대 준비를 위한 제2차 「과학기술·인공지능 미래전략회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285928",
+          "date": "2026-08-28",
+          "score": 23
+        }
+      ]
+    },
     {
       "phrase": "고유가피해지원금",
       "count": 3,
