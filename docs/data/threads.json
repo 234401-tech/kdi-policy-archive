@@ -1,6 +1,39 @@
 {
-  "generated_at": "2026-08-27T19:46:31.934072",
+  "generated_at": "2026-08-28T04:10:25.896977",
   "threads": [
+    {
+      "phrase": "개인투자용국채",
+      "count": 4,
+      "first": "2026-05-29",
+      "last": "2026-08-28",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
+          "date": "2026-05-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
+          "date": "2026-06-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
+          "date": "2026-07-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 9월 2,300억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285936",
+          "date": "2026-08-28",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "과학기술·인공지능미래전략회의",
       "count": 2,
@@ -17,6 +50,27 @@
         {
           "title": "과기정통부, 범용인공지능(AGI) 시대 준비를 위한 제2차 「과학기술·인공지능 미래전략회의」 개최",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285928",
+          "date": "2026-08-28",
+          "score": 23
+        }
+      ]
+    },
+    {
+      "phrase": "독자AI파운데이션모델",
+      "count": 2,
+      "first": "2026-08-27",
+      "last": "2026-08-28",
+      "max_score": 23,
+      "items": [
+        {
+          "title": "「독자 AI 파운데이션 모델」 프로젝트로 확보한 AI 학습용 데이터 29종 본격 개방",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285918",
+          "date": "2026-08-27",
+          "score": 23
+        },
+        {
+          "title": "『독자 AI 파운데이션 모델』 프로젝트 2차 단계평가 결과를 상세히 공개합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285937",
           "date": "2026-08-28",
           "score": 23
         }
@@ -273,33 +327,6 @@
           "title": "’26년 1/4분기 『생활인구』 산정 결과",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284871",
           "date": "2026-07-30",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "개인투자용국채",
-      "count": 3,
-      "first": "2026-05-29",
-      "last": "2026-07-29",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
-          "date": "2026-05-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
-          "date": "2026-06-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
-          "date": "2026-07-29",
           "score": 0
         }
       ]
