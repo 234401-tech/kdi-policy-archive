@@ -1,28 +1,29 @@
 {
-  "date": "2026-08-27",
-  "generated_at": "2026-08-27T13:34:22.959967+09:00",
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T15:58:11.728545+09:00",
   "window_hours": 24,
-  "item_count": 53,
+  "item_count": 79,
   "model": "rule-based",
   "bullets": [
-    "연구실의 아이디어가 모두의 혁신으로, 「ICT 챌린지 2026」 대회 개최 (관련: 포항, AI)",
-    "식약처, ‘바이오 대도약’을 향한 길을 열다 (관련: AI, 소부장, 바이오)",
-    "제28회 전국학생통계활용대회 결과 발표 (관련: 경북, AI)"
+    "국민성장펀드가 로봇산업의 경쟁력 강화와 K-콘텐츠의 글로벌 영토 확장을 지원합니다. (관련: 이차전지, 바이오, 지원제도)",
+    "중앙아시아·아프리카·환태평양 경제권 등 대외경제 네트워크를 확대하고 우리 기업의 해외 진출을 지원하겠습니다. (관련: AI, 소부장, 바이오)",
+    "인공지능 데이터센터 전력망 안정적으로 연결한다… 연구회 본격 가동 (관련: AI, 에너지)"
   ],
   "top": [
     {
-      "title": "연구실의 아이디어가 모두의 혁신으로, 「ICT 챌린지 2026」 대회 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285834",
-      "score": 63,
+      "title": "국민성장펀드가 로봇산업의 경쟁력 강화와 K-콘텐츠의 글로벌 영토 확장을 지원합니다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285929",
+      "score": 55,
       "reasons": [
-        "포항",
-        "AI"
+        "이차전지",
+        "바이오",
+        "지원제도"
       ]
     },
     {
-      "title": "식약처, ‘바이오 대도약’을 향한 길을 열다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285831",
-      "score": 56,
+      "title": "중앙아시아·아프리카·환태평양 경제권 등 대외경제 네트워크를 확대하고 우리 기업의 해외 진출을 지원하겠습니다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285874",
+      "score": 51,
       "reasons": [
         "AI",
         "소부장",
@@ -30,27 +31,27 @@
       ]
     },
     {
-      "title": "제28회 전국학생통계활용대회 결과 발표",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285807",
+      "title": "인공지능 데이터센터 전력망 안정적으로 연결한다… 연구회 본격 가동",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285926",
       "score": 40,
       "reasons": [
-        "경북",
-        "AI"
+        "AI",
+        "에너지"
       ]
     },
     {
-      "title": "AI 시대 정신건강 전문가를 꿈꾸다, 2026 청년 정신건강 커리어 성장캠프 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285786",
-      "score": 38,
+      "title": "8월 27일 자로 구제역 방역이 평시 방역 체계로 전환됩니다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285924",
+      "score": 37,
       "reasons": [
-        "AI",
+        "경북",
         "바이오"
       ]
     },
     {
-      "title": "“AI는 평가위원 조력자”…조달청, AI 기술평가 실증 착수",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285826",
-      "score": 38,
+      "title": "인공지능(AI) 교과, 교원이 주도하여 교육자료부터 인정교과서까지 만든다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285876",
+      "score": 33,
       "reasons": [
         "AI",
         "지원제도"
