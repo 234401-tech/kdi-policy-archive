@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-08-28T04:10:25.896977",
+  "generated_at": "2026-08-28T17:17:51.405388",
   "threads": [
+    {
+      "phrase": "모두의AI",
+      "count": 2,
+      "first": "2026-08-19",
+      "last": "2026-08-29",
+      "max_score": 38,
+      "items": [
+        {
+          "title": "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285504",
+          "date": "2026-08-19",
+          "score": 38
+        },
+        {
+          "title": "「모두의 AI」 프로젝트, 사업자 선정 결과 발표",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285955",
+          "date": "2026-08-29",
+          "score": 23
+        }
+      ]
+    },
     {
       "phrase": "개인투자용국채",
       "count": 4,
