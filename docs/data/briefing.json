@@ -1,61 +1,9 @@
 {
-  "date": "2026-08-28",
-  "generated_at": "2026-08-28T15:58:11.728545+09:00",
+  "date": "2026-08-31",
+  "generated_at": "2026-08-31T10:24:37.910337+09:00",
   "window_hours": 24,
-  "item_count": 79,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "국민성장펀드가 로봇산업의 경쟁력 강화와 K-콘텐츠의 글로벌 영토 확장을 지원합니다. (관련: 이차전지, 바이오, 지원제도)",
-    "중앙아시아·아프리카·환태평양 경제권 등 대외경제 네트워크를 확대하고 우리 기업의 해외 진출을 지원하겠습니다. (관련: AI, 소부장, 바이오)",
-    "인공지능 데이터센터 전력망 안정적으로 연결한다… 연구회 본격 가동 (관련: AI, 에너지)"
-  ],
-  "top": [
-    {
-      "title": "국민성장펀드가 로봇산업의 경쟁력 강화와 K-콘텐츠의 글로벌 영토 확장을 지원합니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285929",
-      "score": 55,
-      "reasons": [
-        "이차전지",
-        "바이오",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "중앙아시아·아프리카·환태평양 경제권 등 대외경제 네트워크를 확대하고 우리 기업의 해외 진출을 지원하겠습니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285874",
-      "score": 51,
-      "reasons": [
-        "AI",
-        "소부장",
-        "바이오"
-      ]
-    },
-    {
-      "title": "인공지능 데이터센터 전력망 안정적으로 연결한다… 연구회 본격 가동",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285926",
-      "score": 40,
-      "reasons": [
-        "AI",
-        "에너지"
-      ]
-    },
-    {
-      "title": "8월 27일 자로 구제역 방역이 평시 방역 체계로 전환됩니다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285924",
-      "score": 37,
-      "reasons": [
-        "경북",
-        "바이오"
-      ]
-    },
-    {
-      "title": "인공지능(AI) 교과, 교원이 주도하여 교육자료부터 인정교과서까지 만든다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285876",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
