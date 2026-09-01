@@ -1,9 +1,61 @@
 {
-  "date": "2026-08-31",
-  "generated_at": "2026-08-31T10:24:37.910337+09:00",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T10:53:07.881861+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 82,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "권역별 성장엔진 육성을 위한 첨단산업 특성화 대학원 선정 (관련: 경북, 바이오, 지원제도)",
+    "‘국민안전산업펀드 1호’ 펀드 결성 추진 (관련: AI, 지원제도)",
+    "인공지능(AI)으로 신선식품 수급 최적화 데이터 기반 유통구조 개선으로 부가가치 창출 (관련: AI, 지원제도)"
+  ],
+  "top": [
+    {
+      "title": "권역별 성장엔진 육성을 위한 첨단산업 특성화 대학원 선정",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286052",
+      "score": 55,
+      "reasons": [
+        "경북",
+        "바이오",
+        "지원제도",
+        "지방우대"
+      ]
+    },
+    {
+      "title": "‘국민안전산업펀드 1호’ 펀드 결성 추진",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286053",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "인공지능(AI)으로 신선식품 수급 최적화 데이터 기반 유통구조 개선으로 부가가치 창출",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286014",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "AI 기반 산업안전, 침수·화재 대응까지, 국민 안전 지키는 우수 기술 한자리에",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286055",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "국가데이터처 제32회 통계의날 기념행사 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286030",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    }
+  ]
 }
