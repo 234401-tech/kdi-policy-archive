@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-09-01T07:39:17.562895",
+  "generated_at": "2026-09-01T13:25:04.635562",
   "threads": [
+    {
+      "phrase": "2026년세제개편안",
+      "count": 2,
+      "first": "2026-08-04",
+      "last": "2026-09-01",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "『2026년 세제개편안』 발표",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285041",
+          "date": "2026-08-04",
+          "score": 0
+        },
+        {
+          "title": "「2026년 세제개편안」 정부안 확정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286165",
+          "date": "2026-09-01",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "모두의AI",
       "count": 2,
