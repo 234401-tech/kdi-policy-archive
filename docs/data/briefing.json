@@ -1,59 +1,66 @@
 {
-  "date": "2026-09-01",
-  "generated_at": "2026-09-01T10:53:07.881861+09:00",
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T10:08:29.724874+09:00",
   "window_hours": 24,
-  "item_count": 82,
+  "item_count": 80,
   "model": "rule-based",
   "bullets": [
-    "권역별 성장엔진 육성을 위한 첨단산업 특성화 대학원 선정 (관련: 경북, 바이오, 지원제도)",
-    "‘국민안전산업펀드 1호’ 펀드 결성 추진 (관련: AI, 지원제도)",
-    "인공지능(AI)으로 신선식품 수급 최적화 데이터 기반 유통구조 개선으로 부가가치 창출 (관련: AI, 지원제도)"
+    "‘규제 혁신으로 여는 대한민국의 미래’ 「2026 규제자유특구 혁신 주간」 개최 (관련: 경북, 이차전지, 소부장)",
+    "산업부, 충청-영남-호남을 잇는 ‘배터리 삼각벨트’ 본격 가동 (관련: 경북, 이차전지, 소부장)",
+    "산업부 장관, G20 혁신장관회의 참석 및 한미 경제협력 확대 위해 방미 (관련: 철강, AI, 소부장)"
   ],
   "top": [
     {
-      "title": "권역별 성장엔진 육성을 위한 첨단산업 특성화 대학원 선정",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286052",
-      "score": 55,
+      "title": "‘규제 혁신으로 여는 대한민국의 미래’ 「2026 규제자유특구 혁신 주간」 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286152",
+      "score": 95,
       "reasons": [
         "경북",
+        "이차전지",
+        "소부장",
         "바이오",
-        "지원제도",
-        "지방우대"
-      ]
-    },
-    {
-      "title": "‘국민안전산업펀드 1호’ 펀드 결성 추진",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286053",
-      "score": 33,
-      "reasons": [
-        "AI",
         "지원제도"
       ]
     },
     {
-      "title": "인공지능(AI)으로 신선식품 수급 최적화 데이터 기반 유통구조 개선으로 부가가치 창출",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286014",
-      "score": 33,
+      "title": "산업부, 충청-영남-호남을 잇는 ‘배터리 삼각벨트’ 본격 가동",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286127",
+      "score": 80,
       "reasons": [
-        "AI",
+        "경북",
+        "이차전지",
+        "소부장",
         "지원제도"
       ]
     },
     {
-      "title": "AI 기반 산업안전, 침수·화재 대응까지, 국민 안전 지키는 우수 기술 한자리에",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286055",
-      "score": 33,
+      "title": "산업부 장관, G20 혁신장관회의 참석 및 한미 경제협력 확대 위해 방미",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286126",
+      "score": 58,
+      "reasons": [
+        "철강",
+        "AI",
+        "소부장"
+      ]
+    },
+    {
+      "title": "2027 재경부 예산 39.7조원 편성",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286141",
+      "score": 58,
       "reasons": [
         "AI",
+        "소부장",
+        "에너지",
         "지원제도"
       ]
     },
     {
-      "title": "국가데이터처 제32회 통계의날 기념행사 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286030",
-      "score": 28,
+      "title": "조달청, 혁신조달 강화와 공공조달 AI 전환에 ‘27년 예산 집중 투입",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286147",
+      "score": 51,
       "reasons": [
         "AI",
+        "소부장",
         "지원제도"
       ]
     }
