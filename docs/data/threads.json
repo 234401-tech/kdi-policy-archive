@@ -1,6 +1,39 @@
 {
-  "generated_at": "2026-09-02T04:08:32.348214",
+  "generated_at": "2026-09-02T09:25:31.894117",
   "threads": [
+    {
+      "phrase": "물가상황점검회의",
+      "count": 4,
+      "first": "2026-06-02",
+      "last": "2026-09-02",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282093",
+          "date": "2026-06-02",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283688",
+          "date": "2026-07-02",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285050",
+          "date": "2026-08-04",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286191",
+          "date": "2026-09-02",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "2026년세제개편안",
       "count": 2,
@@ -300,33 +333,6 @@
           "title": "「데이터로 읽는 우리 교육」 제11호 발간: 통계로 보는 BK21사업",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285226",
           "date": "2026-08-10",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "물가상황점검회의",
-      "count": 3,
-      "first": "2026-06-02",
-      "last": "2026-08-04",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "한국은행, 「물가 상황 점검회의」 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282093",
-          "date": "2026-06-02",
-          "score": 0
-        },
-        {
-          "title": "한국은행, 「물가 상황 점검회의」 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283688",
-          "date": "2026-07-02",
-          "score": 0
-        },
-        {
-          "title": "한국은행, 「물가 상황 점검회의」 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285050",
-          "date": "2026-08-04",
           "score": 0
         }
       ]
