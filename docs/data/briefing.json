@@ -1,67 +1,59 @@
 {
-  "date": "2026-09-02",
-  "generated_at": "2026-09-02T10:08:29.724874+09:00",
+  "date": "2026-09-03",
+  "generated_at": "2026-09-03T10:14:40.358016+09:00",
   "window_hours": 24,
-  "item_count": 80,
+  "item_count": 67,
   "model": "rule-based",
   "bullets": [
-    "‘규제 혁신으로 여는 대한민국의 미래’ 「2026 규제자유특구 혁신 주간」 개최 (관련: 경북, 이차전지, 소부장)",
-    "산업부, 충청-영남-호남을 잇는 ‘배터리 삼각벨트’ 본격 가동 (관련: 경북, 이차전지, 소부장)",
-    "산업부 장관, G20 혁신장관회의 참석 및 한미 경제협력 확대 위해 방미 (관련: 철강, AI, 소부장)"
+    "과기정통부, ‘창업가형 석·박사급 고급인재 육성’ 본격 추진 (관련: 포항, AI)",
+    "양자기술 산업화를 견인할 3대 지역 거점, ‘양자클러스터’ 지정 (관련: AI, 바이오, 지원제도)",
+    "AI·신기술 제품 광고하려면 실증할 수 있어야 (관련: AI, 지원제도)"
   ],
   "top": [
     {
-      "title": "‘규제 혁신으로 여는 대한민국의 미래’ 「2026 규제자유특구 혁신 주간」 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286152",
-      "score": 95,
+      "title": "과기정통부, ‘창업가형 석·박사급 고급인재 육성’ 본격 추진",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286239",
+      "score": 63,
       "reasons": [
-        "경북",
-        "이차전지",
-        "소부장",
+        "포항",
+        "AI"
+      ]
+    },
+    {
+      "title": "양자기술 산업화를 견인할 3대 지역 거점, ‘양자클러스터’ 지정",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286179",
+      "score": 43,
+      "reasons": [
+        "AI",
         "바이오",
         "지원제도"
       ]
     },
     {
-      "title": "산업부, 충청-영남-호남을 잇는 ‘배터리 삼각벨트’ 본격 가동",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286127",
-      "score": 80,
+      "title": "AI·신기술 제품 광고하려면 실증할 수 있어야",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286231",
+      "score": 38,
       "reasons": [
-        "경북",
-        "이차전지",
-        "소부장",
+        "AI",
         "지원제도"
       ]
     },
     {
-      "title": "산업부 장관, G20 혁신장관회의 참석 및 한미 경제협력 확대 위해 방미",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286126",
-      "score": 58,
+      "title": "추격의 시대를 끝낸다 5년간 R&D 200 조원, ‘대체불가 대한민국‘ 승부수",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286168",
+      "score": 36,
       "reasons": [
-        "철강",
         "AI",
         "소부장"
       ]
     },
     {
-      "title": "2027 재경부 예산 39.7조원 편성",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286141",
-      "score": 58,
+      "title": "2026 BOK-CEPR-OECD 공동 컨퍼런스 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286192",
+      "score": 33,
       "reasons": [
         "AI",
-        "소부장",
-        "에너지",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "조달청, 혁신조달 강화와 공공조달 AI 전환에 ‘27년 예산 집중 투입",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286147",
-      "score": 51,
-      "reasons": [
-        "AI",
-        "소부장",
-        "지원제도"
+        "바이오"
       ]
     }
   ]
