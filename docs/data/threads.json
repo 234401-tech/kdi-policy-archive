@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-09-04T04:10:00.310632",
+  "generated_at": "2026-09-04T09:27:45.093424",
   "threads": [
+    {
+      "phrase": "모두의AI",
+      "count": 3,
+      "first": "2026-08-19",
+      "last": "2026-09-04",
+      "max_score": 38,
+      "items": [
+        {
+          "title": "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285504",
+          "date": "2026-08-19",
+          "score": 38
+        },
+        {
+          "title": "「모두의 AI」 프로젝트, 사업자 선정 결과 발표",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285955",
+          "date": "2026-08-29",
+          "score": 23
+        },
+        {
+          "title": "「모두의 AI」 프로젝트 착수 간담회 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286367",
+          "date": "2026-09-04",
+          "score": 23
+        }
+      ]
+    },
     {
       "phrase": "물가상황점검회의",
       "count": 4,
@@ -52,27 +79,6 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286165",
           "date": "2026-09-01",
           "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "모두의AI",
-      "count": 2,
-      "first": "2026-08-19",
-      "last": "2026-08-29",
-      "max_score": 38,
-      "items": [
-        {
-          "title": "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285504",
-          "date": "2026-08-19",
-          "score": 38
-        },
-        {
-          "title": "「모두의 AI」 프로젝트, 사업자 선정 결과 발표",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285955",
-          "date": "2026-08-29",
-          "score": 23
         }
       ]
     },
