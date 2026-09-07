@@ -1,60 +1,9 @@
 {
-  "date": "2026-09-04",
-  "generated_at": "2026-09-04T10:05:49.428186+09:00",
+  "date": "2026-09-07",
+  "generated_at": "2026-09-07T10:08:10.514816+09:00",
   "window_hours": 24,
-  "item_count": 64,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "구윤철 부총리, 주요 20개국(G20) 재무장관회의 참석 및 주요인사 면담 결과 (관련: AI, 소부장, 지원제도)",
-    "경북 예천 소(牛) 농장 예찰검사에서 구제역이 발생되어 방역관리 강화 (관련: 경북, 바이오)",
-    "G20 회원국들 모여, AI 혁신을 위한 다자간 협력방안 논의 (관련: AI, 소부장)"
-  ],
-  "top": [
-    {
-      "title": "구윤철 부총리, 주요 20개국(G20) 재무장관회의 참석 및 주요인사 면담 결과",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286303",
-      "score": 46,
-      "reasons": [
-        "AI",
-        "소부장",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "경북 예천 소(牛) 농장 예찰검사에서 구제역이 발생되어 방역관리 강화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286322",
-      "score": 42,
-      "reasons": [
-        "경북",
-        "바이오"
-      ]
-    },
-    {
-      "title": "G20 회원국들 모여, AI 혁신을 위한 다자간 협력방안 논의",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286242",
-      "score": 41,
-      "reasons": [
-        "AI",
-        "소부장"
-      ]
-    },
-    {
-      "title": "바이오 대도약을 향한 ‘2026 GBC’ 성황리에 마무리",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286244",
-      "score": 38,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "양자, 다양한 기술과의 융합에서 답을 찾다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286314",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
