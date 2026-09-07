@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-09-07T04:13:40.531205",
+  "generated_at": "2026-09-07T10:06:02.501088",
   "threads": [
+    {
+      "phrase": "사회연대경제기본법",
+      "count": 2,
+      "first": "2026-08-21",
+      "last": "2026-09-07",
+      "max_score": 22,
+      "items": [
+        {
+          "title": "「사회연대경제기본법」 국회 통과...지역·민생 문제, ‘함께 해결하는 경제’ 열린다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285618",
+          "date": "2026-08-21",
+          "score": 22
+        },
+        {
+          "title": "「사회연대경제기본법」 시행 준비 본격화, 행안부, 전국 지방정부·현장 워크숍 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286433",
+          "date": "2026-09-07",
+          "score": 0
+        }
+      ]
+    },
     {
       "phrase": "모두의AI",
       "count": 3,
