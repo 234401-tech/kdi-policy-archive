@@ -1,9 +1,60 @@
 {
-  "date": "2026-09-07",
-  "generated_at": "2026-09-07T10:08:10.514816+09:00",
+  "date": "2026-09-08",
+  "generated_at": "2026-09-08T10:15:13.729479+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 69,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "미 루이지애나 저탄소 제철소 첫 삽 한-미 철강·자동차 공급망 협력 강화 (관련: 철강, 수소, 소부장)",
+    "중기부-과기정통부, “피지컬 AI로 중소제조 현장의 미래를 연다” (관련: AI, 지원제도)",
+    "고용노동부와 한국고용정보원, 인공지능(AI) 시대 일자리 변화를 먼저 읽는 ‘한국형 지표’의 새 이름 찾는다 (관련: AI, 지원제도)"
+  ],
+  "top": [
+    {
+      "title": "미 루이지애나 저탄소 제철소 첫 삽 한-미 철강·자동차 공급망 협력 강화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286384",
+      "score": 70,
+      "reasons": [
+        "철강",
+        "수소",
+        "소부장"
+      ]
+    },
+    {
+      "title": "중기부-과기정통부, “피지컬 AI로 중소제조 현장의 미래를 연다”",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286444",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "고용노동부와 한국고용정보원, 인공지능(AI) 시대 일자리 변화를 먼저 읽는 ‘한국형 지표’의 새 이름 찾는다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286418",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "1분 숏폼 영상에 담는 ‘똑똑’한 수학교실, ‘똑똑! 수학탐험대’ 숏폼 공모전 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286398",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "메가프로젝트·M.AX·대미투자프로젝트 이끌 실전인재 50여명 영입 추진",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286412",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    }
+  ]
 }
