@@ -1,58 +1,63 @@
 {
-  "date": "2026-09-08",
-  "generated_at": "2026-09-08T10:15:13.729479+09:00",
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T10:18:33.412286+09:00",
   "window_hours": 24,
-  "item_count": 69,
+  "item_count": 64,
   "model": "rule-based",
   "bullets": [
-    "미 루이지애나 저탄소 제철소 첫 삽 한-미 철강·자동차 공급망 협력 강화 (관련: 철강, 수소, 소부장)",
-    "중기부-과기정통부, “피지컬 AI로 중소제조 현장의 미래를 연다” (관련: AI, 지원제도)",
-    "고용노동부와 한국고용정보원, 인공지능(AI) 시대 일자리 변화를 먼저 읽는 ‘한국형 지표’의 새 이름 찾는다 (관련: AI, 지원제도)"
+    "「지역활성화 투자 펀드」 제11호 프로젝트 선정 (관련: 경북, 바이오, 지원제도)",
+    "지방정부-대학-기업 손잡고 인재 기른다, 지역 주도 지역인재 양성 가속 (관련: 수소, AI, 바이오)",
+    "우리 마을에서 만든 전기, 이웃과 나눠요… 제주 ‘에너지제로 마을’ 조성 본격 착수 (관련: 이차전지, AI, 에너지)"
   ],
   "top": [
     {
-      "title": "미 루이지애나 저탄소 제철소 첫 삽 한-미 철강·자동차 공급망 협력 강화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286384",
-      "score": 70,
+      "title": "「지역활성화 투자 펀드」 제11호 프로젝트 선정",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
+      "score": 65,
       "reasons": [
-        "철강",
+        "경북",
+        "바이오",
+        "지원제도",
+        "지방우대"
+      ]
+    },
+    {
+      "title": "지방정부-대학-기업 손잡고 인재 기른다, 지역 주도 지역인재 양성 가속",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286479",
+      "score": 65,
+      "reasons": [
         "수소",
+        "AI",
+        "바이오",
+        "에너지"
+      ]
+    },
+    {
+      "title": "우리 마을에서 만든 전기, 이웃과 나눠요… 제주 ‘에너지제로 마을’ 조성 본격 착수",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286463",
+      "score": 65,
+      "reasons": [
+        "이차전지",
+        "AI",
+        "에너지",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "관세청, 「전국 관세조사 관계관 회의」 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286504",
+      "score": 36,
+      "reasons": [
+        "AI",
         "소부장"
       ]
     },
     {
-      "title": "중기부-과기정통부, “피지컬 AI로 중소제조 현장의 미래를 연다”",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286444",
+      "title": "한-프 산업·통상·공급망 아우르는 전략적 협력체계 구축",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286461",
       "score": 33,
       "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "고용노동부와 한국고용정보원, 인공지능(AI) 시대 일자리 변화를 먼저 읽는 ‘한국형 지표’의 새 이름 찾는다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286418",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "1분 숏폼 영상에 담는 ‘똑똑’한 수학교실, ‘똑똑! 수학탐험대’ 숏폼 공모전 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286398",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "메가프로젝트·M.AX·대미투자프로젝트 이끌 실전인재 50여명 영입 추진",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286412",
-      "score": 33,
-      "reasons": [
-        "AI",
+        "소부장",
         "지원제도"
       ]
     }
