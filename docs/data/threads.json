@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T04:25:32.797981",
+  "generated_at": "2026-09-10T09:32:29.684837",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,33 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "월간재정동향",
+      "count": 3,
+      "first": "2026-06-11",
+      "last": "2026-09-10",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「월간 재정동향」 2026년 6월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282523",
+          "date": "2026-06-11",
+          "score": 0
+        },
+        {
+          "title": "「월간 재정동향」 2026년 7월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284010",
+          "date": "2026-07-09",
+          "score": 0
+        },
+        {
+          "title": "「월간 재정동향」 2026년 9월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286642",
+          "date": "2026-09-10",
+          "score": 0
         }
       ]
     },
@@ -486,27 +513,6 @@
           "title": "제6차 「불법 외환거래 대응반」 회의 개최",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284230",
           "date": "2026-07-14",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "월간재정동향",
-      "count": 2,
-      "first": "2026-06-11",
-      "last": "2026-07-09",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "「월간 재정동향」 2026년 6월호 발간",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282523",
-          "date": "2026-06-11",
-          "score": 0
-        },
-        {
-          "title": "「월간 재정동향」 2026년 7월호 발간",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284010",
-          "date": "2026-07-09",
           "score": 0
         }
       ]
