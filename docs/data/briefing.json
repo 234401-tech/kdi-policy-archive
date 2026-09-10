@@ -1,64 +1,61 @@
 {
-  "date": "2026-09-09",
-  "generated_at": "2026-09-09T10:18:33.412286+09:00",
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T10:12:03.813931+09:00",
   "window_hours": 24,
-  "item_count": 64,
+  "item_count": 75,
   "model": "rule-based",
   "bullets": [
-    "「지역활성화 투자 펀드」 제11호 프로젝트 선정 (관련: 경북, 바이오, 지원제도)",
-    "지방정부-대학-기업 손잡고 인재 기른다, 지역 주도 지역인재 양성 가속 (관련: 수소, AI, 바이오)",
-    "우리 마을에서 만든 전기, 이웃과 나눠요… 제주 ‘에너지제로 마을’ 조성 본격 착수 (관련: 이차전지, AI, 에너지)"
+    "안전한 한가위 바닷길을 위한 여객선, 낚시어선 등 안전관리 현장점검 (관련: 포항, 경북)",
+    "한성숙 국무총리, 「레이몽드 가네」 캐나다 상원의장 면담 (관련: 철강, AI, 소부장)",
+    "2026 대한민국 도시대상, ‘지속가능한 도시’의 해법을 찾다 (관련: 경북, 수소, 에너지)"
   ],
   "top": [
     {
-      "title": "「지역활성화 투자 펀드」 제11호 프로젝트 선정",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
-      "score": 65,
+      "title": "안전한 한가위 바닷길을 위한 여객선, 낚시어선 등 안전관리 현장점검",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286565",
+      "score": 67,
       "reasons": [
-        "경북",
-        "바이오",
-        "지원제도",
-        "지방우대"
+        "포항",
+        "경북"
       ]
     },
     {
-      "title": "지방정부-대학-기업 손잡고 인재 기른다, 지역 주도 지역인재 양성 가속",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286479",
-      "score": 65,
+      "title": "한성숙 국무총리, 「레이몽드 가네」 캐나다 상원의장 면담",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286524",
+      "score": 58,
       "reasons": [
-        "수소",
-        "AI",
-        "바이오",
-        "에너지"
-      ]
-    },
-    {
-      "title": "우리 마을에서 만든 전기, 이웃과 나눠요… 제주 ‘에너지제로 마을’ 조성 본격 착수",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286463",
-      "score": 65,
-      "reasons": [
-        "이차전지",
-        "AI",
-        "에너지",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "관세청, 「전국 관세조사 관계관 회의」 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286504",
-      "score": 36,
-      "reasons": [
+        "철강",
         "AI",
         "소부장"
       ]
     },
     {
-      "title": "한-프 산업·통상·공급망 아우르는 전략적 협력체계 구축",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286461",
-      "score": 33,
+      "title": "2026 대한민국 도시대상, ‘지속가능한 도시’의 해법을 찾다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286595",
+      "score": 54,
       "reasons": [
+        "경북",
+        "수소",
+        "에너지"
+      ]
+    },
+    {
+      "title": "에이펙(APEC) 에너지장관회의, 에너지 안보 공조와 인공지능 시대 에너지 혁신 논의",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286567",
+      "score": 53,
+      "reasons": [
+        "AI",
         "소부장",
-        "지원제도"
+        "에너지"
+      ]
+    },
+    {
+      "title": "국가AI전략위 출범 1년, 대한민국 AI 대전환 성과 본격화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286522",
+      "score": 41,
+      "reasons": [
+        "AI",
+        "소부장"
       ]
     }
   ]
