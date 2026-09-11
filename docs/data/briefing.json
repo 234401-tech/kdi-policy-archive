@@ -1,61 +1,59 @@
 {
-  "date": "2026-09-10",
-  "generated_at": "2026-09-10T10:12:03.813931+09:00",
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T10:13:38.731192+09:00",
   "window_hours": 24,
-  "item_count": 75,
+  "item_count": 81,
   "model": "rule-based",
   "bullets": [
-    "안전한 한가위 바닷길을 위한 여객선, 낚시어선 등 안전관리 현장점검 (관련: 포항, 경북)",
-    "한성숙 국무총리, 「레이몽드 가네」 캐나다 상원의장 면담 (관련: 철강, AI, 소부장)",
-    "2026 대한민국 도시대상, ‘지속가능한 도시’의 해법을 찾다 (관련: 경북, 수소, 에너지)"
+    "국내 태양광산업, 세계 시장 주도권 확보 나선다…‘태양광 산업경쟁력 강화 위원회’ 출범 (관련: 소부장, 에너지, 지원제도)",
+    "공공사업·신산업 유치로 지식산업센터 수요 창출, 공정한 경제질서 확립 위한 무역기반 재정·금융범죄 근절 (관련: 철강, AI)",
+    "과기정통부, 프랑스와 인공지능 및 양자기술 협력 강화 (관련: AI, 바이오)"
   ],
   "top": [
     {
-      "title": "안전한 한가위 바닷길을 위한 여객선, 낚시어선 등 안전관리 현장점검",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286565",
-      "score": 67,
+      "title": "국내 태양광산업, 세계 시장 주도권 확보 나선다…‘태양광 산업경쟁력 강화 위원회’ 출범",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286680",
+      "score": 45,
       "reasons": [
-        "포항",
-        "경북"
+        "소부장",
+        "에너지",
+        "지원제도"
       ]
     },
     {
-      "title": "한성숙 국무총리, 「레이몽드 가네」 캐나다 상원의장 면담",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286524",
-      "score": 58,
+      "title": "공공사업·신산업 유치로 지식산업센터 수요 창출, 공정한 경제질서 확립 위한 무역기반 재정·금융범죄 근절",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286631",
+      "score": 40,
       "reasons": [
         "철강",
-        "AI",
-        "소부장"
+        "AI"
       ]
     },
     {
-      "title": "2026 대한민국 도시대상, ‘지속가능한 도시’의 해법을 찾다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286595",
-      "score": 54,
+      "title": "과기정통부, 프랑스와 인공지능 및 양자기술 협력 강화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286608",
+      "score": 38,
       "reasons": [
-        "경북",
-        "수소",
-        "에너지"
+        "AI",
+        "바이오"
       ]
     },
     {
-      "title": "에이펙(APEC) 에너지장관회의, 에너지 안보 공조와 인공지능 시대 에너지 혁신 논의",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286567",
-      "score": 53,
+      "title": "지능형 기지국(AI-RAN) 기반 AI 로봇 실증 방문으로 조선소 현장 안전과 생산성을 동시에 잡는다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286630",
+      "score": 38,
       "reasons": [
         "AI",
-        "소부장",
-        "에너지"
+        "지원제도"
       ]
     },
     {
-      "title": "국가AI전략위 출범 1년, 대한민국 AI 대전환 성과 본격화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286522",
-      "score": 41,
+      "title": "초혁신경제 위한 미래 산업 핵심 부품 육성, ’27년 예산안으로 뒷받침한다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286669",
+      "score": 35,
       "reasons": [
-        "AI",
-        "소부장"
+        "이차전지",
+        "지원제도"
       ]
     }
   ]
