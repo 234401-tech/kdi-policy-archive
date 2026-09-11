@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T04:17:16.249383",
+  "generated_at": "2026-09-11T09:29:26.176609",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,33 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "사회연대경제기본법",
+      "count": 3,
+      "first": "2026-08-21",
+      "last": "2026-09-11",
+      "max_score": 22,
+      "items": [
+        {
+          "title": "「사회연대경제기본법」 국회 통과...지역·민생 문제, ‘함께 해결하는 경제’ 열린다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285618",
+          "date": "2026-08-21",
+          "score": 22
+        },
+        {
+          "title": "「사회연대경제기본법」 시행 준비 본격화, 행안부, 전국 지방정부·현장 워크숍 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286433",
+          "date": "2026-09-07",
+          "score": 0
+        },
+        {
+          "title": "지역공동체 살리는 「사회연대경제기본법」 제정 성과에 3천만 원 특별성과포상금 수여",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286716",
+          "date": "2026-09-11",
+          "score": 0
         }
       ]
     },
@@ -45,27 +72,6 @@
           "title": "「월간 재정동향」 2026년 9월호 발간",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286642",
           "date": "2026-09-10",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "사회연대경제기본법",
-      "count": 2,
-      "first": "2026-08-21",
-      "last": "2026-09-07",
-      "max_score": 22,
-      "items": [
-        {
-          "title": "「사회연대경제기본법」 국회 통과...지역·민생 문제, ‘함께 해결하는 경제’ 열린다.",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285618",
-          "date": "2026-08-21",
-          "score": 22
-        },
-        {
-          "title": "「사회연대경제기본법」 시행 준비 본격화, 행안부, 전국 지방정부·현장 워크숍 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286433",
-          "date": "2026-09-07",
           "score": 0
         }
       ]
