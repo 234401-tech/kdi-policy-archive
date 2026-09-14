@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T04:43:51.433288",
+  "generated_at": "2026-09-14T10:30:20.357200",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,45 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "모두의창업",
+      "count": 5,
+      "first": "2026-05-14",
+      "last": "2026-09-14",
+      "max_score": 28,
+      "items": [
+        {
+          "title": "캠퍼스 달군 「모두의 창업」...중기부, 청년 창업 현장 소통 이어가",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281046",
+          "date": "2026-05-14",
+          "score": 0
+        },
+        {
+          "title": "대한민국은 지금 창업 열풍, 「모두의 창업」 최종 6.2만명 신청, 역대 최대 기록",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281311",
+          "date": "2026-05-19",
+          "score": 18
+        },
+        {
+          "title": "6.2만 명의 열기, 도전부터 재도전까지 「모두의 창업」이 혁신의 길을 이끈다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281503",
+          "date": "2026-05-22",
+          "score": 28
+        },
+        {
+          "title": "중기부, 「모두의 창업」 전국 현장 소통 나선다",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283975",
+          "date": "2026-07-08",
+          "score": 0
+        },
+        {
+          "title": "청년의 창업 도전, 대학에서 시작된다 2차 「모두의 창업」 고려대 캠퍼스 투어 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286760",
+          "date": "2026-09-14",
+          "score": 0
         }
       ]
     },
@@ -519,39 +558,6 @@
           "title": "제6차 「불법 외환거래 대응반」 회의 개최",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284230",
           "date": "2026-07-14",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "모두의창업",
-      "count": 4,
-      "first": "2026-05-14",
-      "last": "2026-07-08",
-      "max_score": 28,
-      "items": [
-        {
-          "title": "캠퍼스 달군 「모두의 창업」...중기부, 청년 창업 현장 소통 이어가",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281046",
-          "date": "2026-05-14",
-          "score": 0
-        },
-        {
-          "title": "대한민국은 지금 창업 열풍, 「모두의 창업」 최종 6.2만명 신청, 역대 최대 기록",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281311",
-          "date": "2026-05-19",
-          "score": 18
-        },
-        {
-          "title": "6.2만 명의 열기, 도전부터 재도전까지 「모두의 창업」이 혁신의 길을 이끈다.",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281503",
-          "date": "2026-05-22",
-          "score": 28
-        },
-        {
-          "title": "중기부, 「모두의 창업」 전국 현장 소통 나선다",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283975",
-          "date": "2026-07-08",
           "score": 0
         }
       ]
