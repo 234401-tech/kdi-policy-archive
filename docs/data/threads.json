@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T04:35:17.173871",
+  "generated_at": "2026-09-15T09:58:12.742291",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "금융업권생산적금융협의체",
+      "count": 2,
+      "first": "2026-05-27",
+      "last": "2026-09-15",
+      "max_score": 30,
+      "items": [
+        {
+          "title": "금융위원회, 제4차 「금융업권 생산적 금융협의체」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281646",
+          "date": "2026-05-27",
+          "score": 30
+        },
+        {
+          "title": "금융위원회, 제5차 「금융업권 생산적 금융협의체」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286841",
+          "date": "2026-09-15",
+          "score": 10
         }
       ]
     },
