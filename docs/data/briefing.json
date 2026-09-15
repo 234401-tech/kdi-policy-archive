@@ -1,9 +1,61 @@
 {
-  "date": "2026-09-14",
-  "generated_at": "2026-09-14T10:15:40.643284+09:00",
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T10:35:58.775906+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 85,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "한 총리, 암참과 함께 한미 新경제협력 모색 - 韓美, AI와 첨단기술, 공급망과 에너지, 전략적 투자를 함께 설계하는 협력관계 - (관련: AI, 소부장, 바이오)",
+    "제주서 그린수소 국제 협력 확대… 수전해 실증성과 공유 (관련: 수소, 에너지, 지원제도)",
+    "인공지능(AI)부터 제조·물류까지... 기업이 만든 현장형 인재양성, 우수사례로 확산 (관련: 철강, AI)"
+  ],
+  "top": [
+    {
+      "title": "한 총리, 암참과 함께 한미 新경제협력 모색 - 韓美, AI와 첨단기술, 공급망과 에너지, 전략적 투자를 함께 설계하는 협력관계 -",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286732",
+      "score": 61,
+      "reasons": [
+        "AI",
+        "소부장",
+        "바이오"
+      ]
+    },
+    {
+      "title": "제주서 그린수소 국제 협력 확대… 수전해 실증성과 공유",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286752",
+      "score": 52,
+      "reasons": [
+        "수소",
+        "에너지",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "인공지능(AI)부터 제조·물류까지... 기업이 만든 현장형 인재양성, 우수사례로 확산",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286740",
+      "score": 45,
+      "reasons": [
+        "철강",
+        "AI"
+      ]
+    },
+    {
+      "title": "공정 자동화와 사업전환으로 경쟁력은 높이고, 일자리도 늘리다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286734",
+      "score": 43,
+      "reasons": [
+        "이차전지",
+        "AI"
+      ]
+    },
+    {
+      "title": "한-중앙아 6개국 산업장관회의 개최, 다자 간 산업·핵심광물 협의 첫 발",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286775",
+      "score": 43,
+      "reasons": [
+        "이차전지",
+        "소부장"
+      ]
+    }
+  ]
 }
