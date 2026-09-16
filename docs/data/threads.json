@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T05:51:46.432801",
+  "generated_at": "2026-09-16T11:19:32.478397",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "기획예산처·국민경제자문회의·국가과학기술자문회의",
+      "count": 2,
+      "first": "2026-09-10",
+      "last": "2026-09-16",
+      "max_score": 36,
+      "items": [
+        {
+          "title": "「기획예산처·국민경제자문회의·국가과학기술자문회의」 공동세미나 개최 안내 - 2045 중장기 국가발전전략과 다음 세대와의 동행 -",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286606",
+          "date": "2026-09-10",
+          "score": 0
+        },
+        {
+          "title": "「기획예산처·국민경제자문회의·국가과학기술자문회의」 공동세미나 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286958",
+          "date": "2026-09-16",
+          "score": 36
         }
       ]
     },
