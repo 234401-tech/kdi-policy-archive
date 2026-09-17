@@ -1,60 +1,59 @@
 {
-  "date": "2026-09-16",
-  "generated_at": "2026-09-16T10:29:26.447678+09:00",
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T10:32:40.579764+09:00",
   "window_hours": 24,
-  "item_count": 58,
+  "item_count": 78,
   "model": "rule-based",
   "bullets": [
-    "미래폐자원 내 핵심광물 확보, 기획형 규제특례로 지원한다 (관련: 이차전지, 에너지, 지원제도)",
-    "「2026년 BOK 지역경제 심포지엄」 개최 및 주요 내용 (관련: AI, 소부장, 지방우대)",
-    "재생에너지 보급 제도 15년만에 전면 개편 경쟁입찰 기반 장기고정가격 계약시장 일원화 (관련: 소부장, 에너지)"
+    "창업으로 에너지 대전환을 이끌어 갈 주인공을 찾습니다 (관련: 이차전지, 수소, AI)",
+    "섬의 숨결을 느끼며 가치를 발견하는 ‘무인도 LIVE 국민탐사단’이 간다! (관련: 포항)",
+    "「기획예산처·국민경제자문회의·국가과학기술자문회의」 공동세미나 개최 (관련: AI, 소부장)"
   ],
   "top": [
     {
-      "title": "미래폐자원 내 핵심광물 확보, 기획형 규제특례로 지원한다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286852",
-      "score": 47,
+      "title": "창업으로 에너지 대전환을 이끌어 갈 주인공을 찾습니다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286926",
+      "score": 75,
       "reasons": [
         "이차전지",
-        "에너지",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "「2026년 BOK 지역경제 심포지엄」 개최 및 주요 내용",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286864",
-      "score": 44,
-      "reasons": [
+        "수소",
         "AI",
-        "소부장",
-        "지방우대"
-      ]
-    },
-    {
-      "title": "재생에너지 보급 제도 15년만에 전면 개편 경쟁입찰 기반 장기고정가격 계약시장 일원화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286846",
-      "score": 35,
-      "reasons": [
-        "소부장",
         "에너지"
       ]
     },
     {
-      "title": "산불 대피길 찾고 반복 민원 예측...AI로 ‘한발 앞선 행정’ 추진",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286839",
-      "score": 33,
+      "title": "섬의 숨결을 느끼며 가치를 발견하는 ‘무인도 LIVE 국민탐사단’이 간다!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286946",
+      "score": 45,
       "reasons": [
-        "AI",
-        "지원제도"
+        "포항"
       ]
     },
     {
-      "title": "과기정통부, ‘30년대 전력 실증 달성을 위해 핵융합 선도국과 글로벌 협력 공고화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286875",
+      "title": "「기획예산처·국민경제자문회의·국가과학기술자문회의」 공동세미나 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286958",
+      "score": 36,
+      "reasons": [
+        "AI",
+        "소부장"
+      ]
+    },
+    {
+      "title": "추석 연휴 범정부 안전관리 총력 대응",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286927",
       "score": 33,
       "reasons": [
         "AI",
-        "지원제도"
+        "바이오"
+      ]
+    },
+    {
+      "title": "겨울철 가축전염병 위험 요인 집중 관리로 ‘26/’27 겨울철 특별방역대책 추진",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286899",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "바이오"
       ]
     }
   ]
