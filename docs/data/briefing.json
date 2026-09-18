@@ -1,59 +1,64 @@
 {
-  "date": "2026-09-17",
-  "generated_at": "2026-09-17T10:32:40.579764+09:00",
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T10:19:39.397003+09:00",
   "window_hours": 24,
-  "item_count": 78,
+  "item_count": 88,
   "model": "rule-based",
   "bullets": [
-    "창업으로 에너지 대전환을 이끌어 갈 주인공을 찾습니다 (관련: 이차전지, 수소, AI)",
-    "섬의 숨결을 느끼며 가치를 발견하는 ‘무인도 LIVE 국민탐사단’이 간다! (관련: 포항)",
-    "「기획예산처·국민경제자문회의·국가과학기술자문회의」 공동세미나 개최 (관련: AI, 소부장)"
+    "글로벌 소부장 기업, 대한민국에서 협력 기회 찾는다 (관련: 이차전지, AI, 소부장)",
+    "한미 에너지 안보 동맹 강화… 전기화 시대 ‘전력·원전·저탄소 기술’로 확장 (관련: 수소, 소부장, 에너지)",
+    "순환경제 기업 협력의 장이 열린다 (관련: 이차전지, 소부장, 지원제도)"
   ],
   "top": [
     {
-      "title": "창업으로 에너지 대전환을 이끌어 갈 주인공을 찾습니다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286926",
-      "score": 75,
+      "title": "글로벌 소부장 기업, 대한민국에서 협력 기회 찾는다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287045",
+      "score": 81,
       "reasons": [
         "이차전지",
-        "수소",
         "AI",
+        "소부장",
+        "바이오"
+      ]
+    },
+    {
+      "title": "한미 에너지 안보 동맹 강화… 전기화 시대 ‘전력·원전·저탄소 기술’로 확장",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287027",
+      "score": 55,
+      "reasons": [
+        "수소",
+        "소부장",
         "에너지"
       ]
     },
     {
-      "title": "섬의 숨결을 느끼며 가치를 발견하는 ‘무인도 LIVE 국민탐사단’이 간다!",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286946",
-      "score": 45,
+      "title": "순환경제 기업 협력의 장이 열린다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287036",
+      "score": 53,
       "reasons": [
-        "포항"
+        "이차전지",
+        "소부장",
+        "지원제도"
       ]
     },
     {
-      "title": "「기획예산처·국민경제자문회의·국가과학기술자문회의」 공동세미나 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286958",
-      "score": 36,
+      "title": "이호현 제2차관, 초고압차단기 미국 첫 생산 앞서 효성중공업 현지 합작법인 방문",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287080",
+      "score": 48,
       "reasons": [
         "AI",
-        "소부장"
+        "소부장",
+        "에너지"
       ]
     },
     {
-      "title": "추석 연휴 범정부 안전관리 총력 대응",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286927",
-      "score": 33,
+      "title": "기후부-국제에너지기구(IEA), 아시아 기후위기·에너지 안보 동시 해결 나선다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287076",
+      "score": 48,
       "reasons": [
         "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "겨울철 가축전염병 위험 요인 집중 관리로 ‘26/’27 겨울철 특별방역대책 추진",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286899",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "바이오"
+        "소부장",
+        "에너지"
       ]
     }
   ]
