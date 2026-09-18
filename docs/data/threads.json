@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T00:05:24.146341",
+  "generated_at": "2026-09-18T05:45:11.691410",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "2026개인정보미래포럼",
+      "count": 2,
+      "first": "2026-07-23",
+      "last": "2026-09-18",
+      "max_score": 18,
+      "items": [
+        {
+          "title": "「2026 개인정보 미래포럼」 제3차 전체회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284625",
+          "date": "2026-07-23",
+          "score": 18
+        },
+        {
+          "title": "「2026 개인정보 미래포럼」 제4차 전체회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287100",
+          "date": "2026-09-18",
+          "score": 0
         }
       ]
     },
