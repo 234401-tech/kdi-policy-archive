@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T04:31:17.814306",
+  "generated_at": "2026-09-22T09:48:14.159781",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "학원설립·운영및과외교습에관한법률시행령",
+      "count": 2,
+      "first": "2026-07-07",
+      "last": "2026-09-22",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「학원 설립·운영 및 과외교습에 관한 법률 시행령」 입법예고",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283898",
+          "date": "2026-07-07",
+          "score": 0
+        },
+        {
+          "title": "「학원 설립·운영 및 과외교습에 관한 법률 시행령」 일부개정령안 국무회의 통과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287298",
+          "date": "2026-09-22",
+          "score": 0
         }
       ]
     },
