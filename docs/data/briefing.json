@@ -1,9 +1,63 @@
 {
-  "date": "2026-09-21",
-  "generated_at": "2026-09-21T10:16:30.749763+09:00",
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T10:39:05.861864+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 103,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "지식재산처, 심사관·특별사법경찰 등 41명 채용...심사 전문성·수사역량↑ (관련: 이차전지, AI, 바이오)",
+    "과기정통부, 모험·도전적 경진대회를 통한 스타트업 초기 투자 지원! (관련: 이차전지, AI, 지원제도)",
+    "지방에 3,918억원 투자 확정... 새 일자리 429개 생긴다 (관련: 경북, 바이오, 지원제도)"
+  ],
+  "top": [
+    {
+      "title": "지식재산처, 심사관·특별사법경찰 등 41명 채용...심사 전문성·수사역량↑",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287201",
+      "score": 58,
+      "reasons": [
+        "이차전지",
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "과기정통부, 모험·도전적 경진대회를 통한 스타트업 초기 투자 지원!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287159",
+      "score": 53,
+      "reasons": [
+        "이차전지",
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "지방에 3,918억원 투자 확정... 새 일자리 429개 생긴다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287211",
+      "score": 47,
+      "reasons": [
+        "경북",
+        "바이오",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "전략경제자문단 반도체 현장방문",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287259",
+      "score": 46,
+      "reasons": [
+        "AI",
+        "소부장",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "2025년도국가온실가스잠정배출량 6억 8,571만톤",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287202",
+      "score": 34,
+      "reasons": [
+        "경북",
+        "에너지"
+      ]
+    }
+  ]
 }
