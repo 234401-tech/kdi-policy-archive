@@ -1,49 +1,19 @@
 {
-  "date": "2026-09-22",
-  "generated_at": "2026-09-22T10:39:05.861864+09:00",
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T10:33:48.858048+09:00",
   "window_hours": 24,
-  "item_count": 103,
+  "item_count": 71,
   "model": "rule-based",
   "bullets": [
-    "지식재산처, 심사관·특별사법경찰 등 41명 채용...심사 전문성·수사역량↑ (관련: 이차전지, AI, 바이오)",
-    "과기정통부, 모험·도전적 경진대회를 통한 스타트업 초기 투자 지원! (관련: 이차전지, AI, 지원제도)",
-    "지방에 3,918억원 투자 확정... 새 일자리 429개 생긴다 (관련: 경북, 바이오, 지원제도)"
+    "APEC 교통장관회의서 AI·스마트 모빌리티 미래협력 제안 나선다 (관련: AI, 소부장, 지원제도)",
+    "K-배터리, ‘선택과 집중’으로 세계 시장 주도권을 재탈환! (관련: 이차전지, 소부장)",
+    "제주 첨단과학기술단지, 전북 완주산단, 강원 문막산단 “청년이 모이는 첨단산단으로 거듭난다” (관련: AI, 바이오, 지원제도)"
   ],
   "top": [
     {
-      "title": "지식재산처, 심사관·특별사법경찰 등 41명 채용...심사 전문성·수사역량↑",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287201",
-      "score": 58,
-      "reasons": [
-        "이차전지",
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "과기정통부, 모험·도전적 경진대회를 통한 스타트업 초기 투자 지원!",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287159",
-      "score": 53,
-      "reasons": [
-        "이차전지",
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "지방에 3,918억원 투자 확정... 새 일자리 429개 생긴다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287211",
-      "score": 47,
-      "reasons": [
-        "경북",
-        "바이오",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "전략경제자문단 반도체 현장방문",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287259",
-      "score": 46,
+      "title": "APEC 교통장관회의서 AI·스마트 모빌리티 미래협력 제안 나선다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287313",
+      "score": 51,
       "reasons": [
         "AI",
         "소부장",
@@ -51,12 +21,40 @@
       ]
     },
     {
-      "title": "2025년도국가온실가스잠정배출량 6억 8,571만톤",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287202",
-      "score": 34,
+      "title": "K-배터리, ‘선택과 집중’으로 세계 시장 주도권을 재탈환!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287312",
+      "score": 48,
       "reasons": [
-        "경북",
-        "에너지"
+        "이차전지",
+        "소부장"
+      ]
+    },
+    {
+      "title": "제주 첨단과학기술단지, 전북 완주산단, 강원 문막산단 “청년이 모이는 첨단산단으로 거듭난다”",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287290",
+      "score": 43,
+      "reasons": [
+        "AI",
+        "바이오",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "통상교섭본부장, 아세안 관련 경제장관회의 참석",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287272",
+      "score": 36,
+      "reasons": [
+        "AI",
+        "소부장"
+      ]
+    },
+    {
+      "title": "추석연휴 및 4분기 수송용 수소 수급 상황 점검",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287296",
+      "score": 35,
+      "reasons": [
+        "수소",
+        "지원제도"
       ]
     }
   ]
