@@ -1,58 +1,9 @@
 {
-  "date": "2026-09-24",
-  "generated_at": "2026-09-24T10:29:53.518745+09:00",
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T10:39:00.354544+09:00",
   "window_hours": 24,
-  "item_count": 50,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "포항지진 아픔 위에 ‘지진안전 거점’ 세운다… 기후부·기상청·경북도·포항시 업무협약 체결 (관련: 포항, 경북)",
-    "금융위원장, 「피지컬 AI 지역거점 발전 포럼」 참석, 피지컬 AI 지역거점 지원 의지 강조 (관련: 경북, AI)",
-    "소부장 특화단지와 노후거점산단으로 전북의 성장엔진이 새롭게 출발한다 (관련: AI, 소부장)"
-  ],
-  "top": [
-    {
-      "title": "포항지진 아픔 위에 ‘지진안전 거점’ 세운다… 기후부·기상청·경북도·포항시 업무협약 체결",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287371",
-      "score": 77,
-      "reasons": [
-        "포항",
-        "경북"
-      ]
-    },
-    {
-      "title": "금융위원장, 「피지컬 AI 지역거점 발전 포럼」 참석, 피지컬 AI 지역거점 지원 의지 강조",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287382",
-      "score": 45,
-      "reasons": [
-        "경북",
-        "AI"
-      ]
-    },
-    {
-      "title": "소부장 특화단지와 노후거점산단으로 전북의 성장엔진이 새롭게 출발한다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287381",
-      "score": 41,
-      "reasons": [
-        "AI",
-        "소부장"
-      ]
-    },
-    {
-      "title": "안형준 국가데이터처장, 데이터 기술 기업 ‘빅밸류’ 방문",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287346",
-      "score": 28,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "인공지능 기반 방송콘텐츠, 글로벌 무대 공략",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287367",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
