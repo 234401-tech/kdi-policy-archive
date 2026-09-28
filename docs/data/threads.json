@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T06:37:13.649121",
+  "generated_at": "2026-09-28T15:15:03.913763",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "국가데이터기본법",
+      "count": 2,
+      "first": "2026-09-18",
+      "last": "2026-09-29",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「국가데이터기본법」 제정 본격 추진",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287106",
+          "date": "2026-09-18",
+          "score": 0
+        },
+        {
+          "title": "「국가데이터기본법」 관련 데이터분야 전문가 자문회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287462",
+          "date": "2026-09-29",
+          "score": 0
         }
       ]
     },
