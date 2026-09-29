@@ -1,9 +1,62 @@
 {
-  "date": "2026-09-28",
-  "generated_at": "2026-09-28T10:47:19.176884+09:00",
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T11:36:42.347094+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 72,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "한-타지키스탄 태양광 국제개발협력(ODA) 사업 준공식 개최 (관련: 이차전지, 소부장, 에너지)",
+    "전력망 유연성 높이는 에너지저장장치(ESS), 한국이 주도 (관련: 이차전지, 에너지)",
+    "인공지능(AI)으로 만드는 안전한 일상, 재난안전 분야 인공지능 전환 본격 시동 (관련: 경북, AI)"
+  ],
+  "top": [
+    {
+      "title": "한-타지키스탄 태양광 국제개발협력(ODA) 사업 준공식 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287415",
+      "score": 70,
+      "reasons": [
+        "이차전지",
+        "소부장",
+        "에너지",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "전력망 유연성 높이는 에너지저장장치(ESS), 한국이 주도",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287455",
+      "score": 47,
+      "reasons": [
+        "이차전지",
+        "에너지"
+      ]
+    },
+    {
+      "title": "인공지능(AI)으로 만드는 안전한 일상, 재난안전 분야 인공지능 전환 본격 시동",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287413",
+      "score": 45,
+      "reasons": [
+        "경북",
+        "AI"
+      ]
+    },
+    {
+      "title": "인공지능(AI) 도시·스마트 도시 석·박사 인재 키울 대학 4곳 선정",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287431",
+      "score": 41,
+      "reasons": [
+        "AI",
+        "지원제도",
+        "지방우대"
+      ]
+    },
+    {
+      "title": "국민·기업·정부가 함께 만드는 개인정보 보호 문화… 「2026 개인정보 보호주간」 운영",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287423",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    }
+  ]
 }
