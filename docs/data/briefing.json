@@ -1,38 +1,18 @@
 {
-  "date": "2026-09-29",
-  "generated_at": "2026-09-29T11:36:42.347094+09:00",
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T11:12:23.605625+09:00",
   "window_hours": 24,
-  "item_count": 72,
+  "item_count": 53,
   "model": "rule-based",
   "bullets": [
-    "한-타지키스탄 태양광 국제개발협력(ODA) 사업 준공식 개최 (관련: 이차전지, 소부장, 에너지)",
-    "전력망 유연성 높이는 에너지저장장치(ESS), 한국이 주도 (관련: 이차전지, 에너지)",
-    "인공지능(AI)으로 만드는 안전한 일상, 재난안전 분야 인공지능 전환 본격 시동 (관련: 경북, AI)"
+    "소상공인 가게 운영부터 지역 정착까지 맞춤형 AI 서비스가 돕는다 (관련: 경북, AI)",
+    "‘인터넷 상점에 반품된 물건, 인공지능이 검사한다’ ㈜리터놀, 지식재산 새싹기업 최우수상 차지 (관련: 수소, AI)",
+    "제14회 한-OECD 국제재정포럼 개최 (관련: AI, 소부장)"
   ],
   "top": [
     {
-      "title": "한-타지키스탄 태양광 국제개발협력(ODA) 사업 준공식 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287415",
-      "score": 70,
-      "reasons": [
-        "이차전지",
-        "소부장",
-        "에너지",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "전력망 유연성 높이는 에너지저장장치(ESS), 한국이 주도",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287455",
-      "score": 47,
-      "reasons": [
-        "이차전지",
-        "에너지"
-      ]
-    },
-    {
-      "title": "인공지능(AI)으로 만드는 안전한 일상, 재난안전 분야 인공지능 전환 본격 시동",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287413",
+      "title": "소상공인 가게 운영부터 지역 정착까지 맞춤형 AI 서비스가 돕는다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287494",
       "score": 45,
       "reasons": [
         "경북",
@@ -40,22 +20,39 @@
       ]
     },
     {
-      "title": "인공지능(AI) 도시·스마트 도시 석·박사 인재 키울 대학 4곳 선정",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287431",
-      "score": 41,
+      "title": "‘인터넷 상점에 반품된 물건, 인공지능이 검사한다’ ㈜리터놀, 지식재산 새싹기업 최우수상 차지",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287501",
+      "score": 43,
       "reasons": [
-        "AI",
-        "지원제도",
-        "지방우대"
+        "수소",
+        "AI"
       ]
     },
     {
-      "title": "국민·기업·정부가 함께 만드는 개인정보 보호 문화… 「2026 개인정보 보호주간」 운영",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287423",
-      "score": 28,
+      "title": "제14회 한-OECD 국제재정포럼 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287498",
+      "score": 36,
+      "reasons": [
+        "AI",
+        "소부장"
+      ]
+    },
+    {
+      "title": "국가자격시험 인공지능(AI) 활용 부정행위 대응 역량 강화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287518",
+      "score": 33,
       "reasons": [
         "AI",
         "지원제도"
+      ]
+    },
+    {
+      "title": "과기정통부, 대학 교육 AI 중심 전환 본격화 AI중심대학 18개교·AX대학원 15개교 출범",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287527",
+      "score": 31,
+      "reasons": [
+        "AI",
+        "지방우대"
       ]
     }
   ]
