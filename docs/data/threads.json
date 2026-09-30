@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T00:16:47.717550",
+  "generated_at": "2026-09-30T06:33:04.157813",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,45 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "개인투자용국채",
+      "count": 5,
+      "first": "2026-05-29",
+      "last": "2026-09-30",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
+          "date": "2026-05-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
+          "date": "2026-06-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
+          "date": "2026-07-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 9월 2,300억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285936",
+          "date": "2026-08-28",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 10월 2,300억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287582",
+          "date": "2026-09-30",
+          "score": 0
         }
       ]
     },
@@ -372,39 +411,6 @@
           "title": "「2026년 세제개편안」 정부안 확정",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286165",
           "date": "2026-09-01",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "개인투자용국채",
-      "count": 4,
-      "first": "2026-05-29",
-      "last": "2026-08-28",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
-          "date": "2026-05-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
-          "date": "2026-06-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
-          "date": "2026-07-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 9월 2,300억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285936",
-          "date": "2026-08-28",
           "score": 0
         }
       ]
