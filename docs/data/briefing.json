@@ -1,45 +1,40 @@
 {
-  "date": "2026-09-30",
-  "generated_at": "2026-09-30T11:12:23.605625+09:00",
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T11:14:19.914951+09:00",
   "window_hours": 24,
-  "item_count": 53,
+  "item_count": 94,
   "model": "rule-based",
   "bullets": [
-    "소상공인 가게 운영부터 지역 정착까지 맞춤형 AI 서비스가 돕는다 (관련: 경북, AI)",
-    "‘인터넷 상점에 반품된 물건, 인공지능이 검사한다’ ㈜리터놀, 지식재산 새싹기업 최우수상 차지 (관련: 수소, AI)",
-    "제14회 한-OECD 국제재정포럼 개최 (관련: AI, 소부장)"
+    "로봇(대구·경북), 방산(경남), 이차전지(전남) 첨단 특화단지를 지역 첨단산업의 신규 거점으로 육성 한성숙 국무총리 주재 「제9차 국가첨단전략산업위원회」 개최 (관련: 경북, 이차전지, AI)",
+    "기업의 신산업 진출 사업재편 승인 (관련: 이차전지, AI, 지원제도)",
+    "농식품부, 지능형 농기계 산업 도약을 위한 실증 기반 구축 본격화 (관련: AI, 지원제도)"
   ],
   "top": [
     {
-      "title": "소상공인 가게 운영부터 지역 정착까지 맞춤형 AI 서비스가 돕는다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287494",
-      "score": 45,
+      "title": "로봇(대구·경북), 방산(경남), 이차전지(전남) 첨단 특화단지를 지역 첨단산업의 신규 거점으로 육성 한성숙 국무총리 주재 「제9차 국가첨단전략산업위원회」 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287613",
+      "score": 100,
       "reasons": [
         "경북",
-        "AI"
-      ]
-    },
-    {
-      "title": "‘인터넷 상점에 반품된 물건, 인공지능이 검사한다’ ㈜리터놀, 지식재산 새싹기업 최우수상 차지",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287501",
-      "score": 43,
-      "reasons": [
-        "수소",
-        "AI"
-      ]
-    },
-    {
-      "title": "제14회 한-OECD 국제재정포럼 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287498",
-      "score": 36,
-      "reasons": [
+        "이차전지",
         "AI",
-        "소부장"
+        "소부장",
+        "지원제도"
       ]
     },
     {
-      "title": "국가자격시험 인공지능(AI) 활용 부정행위 대응 역량 강화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287518",
+      "title": "기업의 신산업 진출 사업재편 승인",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287588",
+      "score": 53,
+      "reasons": [
+        "이차전지",
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "농식품부, 지능형 농기계 산업 도약을 위한 실증 기반 구축 본격화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287589",
       "score": 33,
       "reasons": [
         "AI",
@@ -47,12 +42,21 @@
       ]
     },
     {
-      "title": "과기정통부, 대학 교육 AI 중심 전환 본격화 AI중심대학 18개교·AX대학원 15개교 출범",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287527",
-      "score": 31,
+      "title": "실제 주거공간에 고령친화기술 녹여낸다 복지부, 에이지테크 실증 현장 점검",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287600",
+      "score": 33,
       "reasons": [
         "AI",
-        "지방우대"
+        "지원제도"
+      ]
+    },
+    {
+      "title": "「글로벌 AI 허브」 입지 선정 공청회 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287632",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
       ]
     }
   ]
