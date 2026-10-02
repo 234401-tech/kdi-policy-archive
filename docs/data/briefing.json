@@ -1,61 +1,63 @@
 {
-  "date": "2026-10-01",
-  "generated_at": "2026-10-01T11:14:19.914951+09:00",
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T11:20:18.372039+09:00",
   "window_hours": 24,
-  "item_count": 94,
+  "item_count": 88,
   "model": "rule-based",
   "bullets": [
-    "로봇(대구·경북), 방산(경남), 이차전지(전남) 첨단 특화단지를 지역 첨단산업의 신규 거점으로 육성 한성숙 국무총리 주재 「제9차 국가첨단전략산업위원회」 개최 (관련: 경북, 이차전지, AI)",
-    "기업의 신산업 진출 사업재편 승인 (관련: 이차전지, AI, 지원제도)",
-    "농식품부, 지능형 농기계 산업 도약을 위한 실증 기반 구축 본격화 (관련: AI, 지원제도)"
+    "막힌 투자는 뚫고, 현장의 애로는 풉니다. (관련: 이차전지, 수소, 에너지)",
+    "과기정통부, 피지컬 AI 확산을 지원할 ‘무선전력전송 실환경 테스트베드’ 본격 가동 (관련: 경북, AI, 지원제도)",
+    "중기부-금융위, 모태펀드-국민성장펀드 제2차 이어달리기 합동 밋업(Meet-Up) 개최 (관련: AI, 바이오, 지원제도)"
   ],
   "top": [
     {
-      "title": "로봇(대구·경북), 방산(경남), 이차전지(전남) 첨단 특화단지를 지역 첨단산업의 신규 거점으로 육성 한성숙 국무총리 주재 「제9차 국가첨단전략산업위원회」 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287613",
-      "score": 100,
+      "title": "막힌 투자는 뚫고, 현장의 애로는 풉니다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287684",
+      "score": 67,
+      "reasons": [
+        "이차전지",
+        "수소",
+        "에너지",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "과기정통부, 피지컬 AI 확산을 지원할 ‘무선전력전송 실환경 테스트베드’ 본격 가동",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287640",
+      "score": 55,
       "reasons": [
         "경북",
-        "이차전지",
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "중기부-금융위, 모태펀드-국민성장펀드 제2차 이어달리기 합동 밋업(Meet-Up) 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287705",
+      "score": 48,
+      "reasons": [
+        "AI",
+        "바이오",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "한미 전략투자 프로젝트 추진 계획 발표",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287664",
+      "score": 48,
+      "reasons": [
         "AI",
         "소부장",
-        "지원제도"
+        "에너지"
       ]
     },
     {
-      "title": "기업의 신산업 진출 사업재편 승인",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287588",
-      "score": 53,
-      "reasons": [
-        "이차전지",
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "농식품부, 지능형 농기계 산업 도약을 위한 실증 기반 구축 본격화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287589",
-      "score": 33,
+      "title": "모태펀드와 국민성장펀드가 협력하여 첨단혁신기업의 지속성장을 지원하는 ‘이어달리기’를 이어갑니다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287725",
+      "score": 48,
       "reasons": [
         "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "실제 주거공간에 고령친화기술 녹여낸다 복지부, 에이지테크 실증 현장 점검",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287600",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "「글로벌 AI 허브」 입지 선정 공청회 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287632",
-      "score": 33,
-      "reasons": [
-        "AI",
+        "바이오",
         "지원제도"
       ]
     }
