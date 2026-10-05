@@ -1,65 +1,9 @@
 {
-  "date": "2026-10-02",
-  "generated_at": "2026-10-02T11:20:18.372039+09:00",
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T11:08:33.251756+09:00",
   "window_hours": 24,
-  "item_count": 88,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "막힌 투자는 뚫고, 현장의 애로는 풉니다. (관련: 이차전지, 수소, 에너지)",
-    "과기정통부, 피지컬 AI 확산을 지원할 ‘무선전력전송 실환경 테스트베드’ 본격 가동 (관련: 경북, AI, 지원제도)",
-    "중기부-금융위, 모태펀드-국민성장펀드 제2차 이어달리기 합동 밋업(Meet-Up) 개최 (관련: AI, 바이오, 지원제도)"
-  ],
-  "top": [
-    {
-      "title": "막힌 투자는 뚫고, 현장의 애로는 풉니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287684",
-      "score": 67,
-      "reasons": [
-        "이차전지",
-        "수소",
-        "에너지",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "과기정통부, 피지컬 AI 확산을 지원할 ‘무선전력전송 실환경 테스트베드’ 본격 가동",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287640",
-      "score": 55,
-      "reasons": [
-        "경북",
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "중기부-금융위, 모태펀드-국민성장펀드 제2차 이어달리기 합동 밋업(Meet-Up) 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287705",
-      "score": 48,
-      "reasons": [
-        "AI",
-        "바이오",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "한미 전략투자 프로젝트 추진 계획 발표",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287664",
-      "score": 48,
-      "reasons": [
-        "AI",
-        "소부장",
-        "에너지"
-      ]
-    },
-    {
-      "title": "모태펀드와 국민성장펀드가 협력하여 첨단혁신기업의 지속성장을 지원하는 ‘이어달리기’를 이어갑니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287725",
-      "score": 48,
-      "reasons": [
-        "AI",
-        "바이오",
-        "지원제도"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
