@@ -1,9 +1,56 @@
 {
-  "date": "2026-10-05",
-  "generated_at": "2026-10-05T11:08:33.251756+09:00",
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T12:09:01.271522+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 22,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "경북 예천군 소재 소(牛) 농장 예찰 검사에서 구제역 확인 (관련: 경북, 바이오)",
+    "한국농수산대학교, 한국임업진흥원과 청년 임업 창업 역량 강화에 나서 (관련: AI, 지원제도)",
+    "10월 부가세, 호우·홈플러스 피해기업 2개월 납부 연장 (관련: 경북)"
+  ],
+  "top": [
+    {
+      "title": "경북 예천군 소재 소(牛) 농장 예찰 검사에서 구제역 확인",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287796",
+      "score": 42,
+      "reasons": [
+        "경북",
+        "바이오"
+      ]
+    },
+    {
+      "title": "한국농수산대학교, 한국임업진흥원과 청년 임업 창업 역량 강화에 나서",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287799",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "10월 부가세, 호우·홈플러스 피해기업 2개월 납부 연장",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287805",
+      "score": 22,
+      "reasons": [
+        "경북"
+      ]
+    },
+    {
+      "title": "‘강풍 타고 확산하는 대형산불’ 한 총리, “가을철 산불조심기간 철저히 대비”",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287790",
+      "score": 22,
+      "reasons": [
+        "경북"
+      ]
+    },
+    {
+      "title": "배경훈 부총리, 세계 과학기술 리더들과 미래 과학기술 정책 방향 논의",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287798",
+      "score": 18,
+      "reasons": [
+        "AI"
+      ]
+    }
+  ]
 }
