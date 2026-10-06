@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T22:28:40.006814",
+  "generated_at": "2026-10-06T02:50:49.322656",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "가칭",
+      "count": 2,
+      "first": "2026-09-23",
+      "last": "2026-10-06",
+      "max_score": 15,
+      "items": [
+        {
+          "title": "「가칭」메가특구특별법 관련 원포인트 사회적 대화 제1차 실무협의체 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287349",
+          "date": "2026-09-23",
+          "score": 15
+        },
+        {
+          "title": "「가칭」메가특구특별법 관련 원포인트 사회적 대화 제2차 실무협의체 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287793",
+          "date": "2026-10-06",
+          "score": 15
         }
       ]
     },
