@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T01:22:11.412389",
+  "generated_at": "2026-10-07T08:29:31.207249",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "재해조사보고서",
+      "count": 2,
+      "first": "2026-05-27",
+      "last": "2026-10-07",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "중대재해 원인 조사 결과「재해조사보고서」 대국민 공개",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281679",
+          "date": "2026-05-27",
+          "score": 0
+        },
+        {
+          "title": "재해 예방의 핵심 참고자료 「재해조사보고서」 117건 추가 공개",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287857",
+          "date": "2026-10-07",
+          "score": 0
         }
       ]
     },
