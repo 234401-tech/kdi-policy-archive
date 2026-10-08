@@ -1,55 +1,56 @@
 {
-  "date": "2026-10-07",
-  "generated_at": "2026-10-07T11:30:07.586569+09:00",
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T11:45:55.986132+09:00",
   "window_hours": 24,
-  "item_count": 64,
+  "item_count": 49,
   "model": "rule-based",
   "bullets": [
-    "경북 예천군 소재 소(牛) 농장 예찰 검사에서 구제역 확인 (관련: 경북, 바이오)",
-    "‘디스플레이 산업’ 현장규제 개선으로 투자·기술혁신 뒷받침한다 (관련: AI, 에너지, 지원제도)",
-    "당신의 상상으로 대한민국 산업의 미래를 그립니다 〈5극3특 성장엔진 미래지도〉 AI 영상 공모전 개최 (관련: AI, 지원제도)"
+    "원전수출 시대 본격 추진 (관련: AI, 소부장, 에너지)",
+    "아세안+3 에너지장관회의, 역내 에너지 안보 공조와 전력망 협력 논의 (관련: AI, 소부장, 에너지)",
+    "국가정보자원관리원, 배터리 화재 대비 합동 소방훈련 실시 (관련: 이차전지)"
   ],
   "top": [
     {
-      "title": "경북 예천군 소재 소(牛) 농장 예찰 검사에서 구제역 확인",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287796",
-      "score": 42,
-      "reasons": [
-        "경북",
-        "바이오"
-      ]
-    },
-    {
-      "title": "‘디스플레이 산업’ 현장규제 개선으로 투자·기술혁신 뒷받침한다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287815",
-      "score": 40,
+      "title": "원전수출 시대 본격 추진",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287860",
+      "score": 63,
       "reasons": [
         "AI",
+        "소부장",
         "에너지",
         "지원제도"
       ]
     },
     {
-      "title": "당신의 상상으로 대한민국 산업의 미래를 그립니다 〈5극3특 성장엔진 미래지도〉 AI 영상 공모전 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287832",
-      "score": 38,
+      "title": "아세안+3 에너지장관회의, 역내 에너지 안보 공조와 전력망 협력 논의",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287883",
+      "score": 53,
       "reasons": [
         "AI",
-        "지원제도"
+        "소부장",
+        "에너지"
       ]
     },
     {
-      "title": "한-사우디 미래 첨단산업 비즈니스 협력 강화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287808",
-      "score": 33,
+      "title": "국가정보자원관리원, 배터리 화재 대비 합동 소방훈련 실시",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287889",
+      "score": 30,
       "reasons": [
-        "AI",
-        "바이오"
+        "이차전지"
       ]
     },
     {
-      "title": "한국농수산대학교, 한국임업진흥원과 청년 임업 창업 역량 강화에 나서",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287799",
+      "title": "탄소 감축을 넘어 신성장동력으로, 정부 1,000조원 투자로 K-GX 본격 가동",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287890",
+      "score": 30,
+      "reasons": [
+        "소부장",
+        "에너지"
+      ]
+    },
+    {
+      "title": "식약처, 중남미와 식품안전 신뢰 강화하고 K-푸드 교역 기반 확대",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287876",
       "score": 28,
       "reasons": [
         "AI",
