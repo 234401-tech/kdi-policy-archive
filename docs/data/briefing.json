@@ -1,60 +1,56 @@
 {
-  "date": "2026-10-08",
-  "generated_at": "2026-10-08T11:45:55.986132+09:00",
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T11:59:16.713337+09:00",
   "window_hours": 24,
-  "item_count": 49,
+  "item_count": 33,
   "model": "rule-based",
   "bullets": [
-    "원전수출 시대 본격 추진 (관련: AI, 소부장, 에너지)",
-    "아세안+3 에너지장관회의, 역내 에너지 안보 공조와 전력망 협력 논의 (관련: AI, 소부장, 에너지)",
-    "국가정보자원관리원, 배터리 화재 대비 합동 소방훈련 실시 (관련: 이차전지)"
+    "한-이집트, 청정에너지에서 전력 기반시설까지 협력 확대 (관련: 이차전지, 바이오, 에너지)",
+    "한국, 주요국과 구조적 과잉생산 및 생산능력 대응을 위한 공동성명 참여 (관련: 이차전지, 에너지)",
+    "반도체가 자라는 ‘시작점’까지 설계… 고집적·저전력 AI 반도체 구현의 새 길 (관련: AI)"
   ],
   "top": [
     {
-      "title": "원전수출 시대 본격 추진",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287860",
-      "score": 63,
+      "title": "한-이집트, 청정에너지에서 전력 기반시설까지 협력 확대",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287929",
+      "score": 52,
       "reasons": [
-        "AI",
-        "소부장",
-        "에너지",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "아세안+3 에너지장관회의, 역내 에너지 안보 공조와 전력망 협력 논의",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287883",
-      "score": 53,
-      "reasons": [
-        "AI",
-        "소부장",
+        "이차전지",
+        "바이오",
         "에너지"
       ]
     },
     {
-      "title": "국가정보자원관리원, 배터리 화재 대비 합동 소방훈련 실시",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287889",
-      "score": 30,
+      "title": "한국, 주요국과 구조적 과잉생산 및 생산능력 대응을 위한 공동성명 참여",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287939",
+      "score": 37,
       "reasons": [
-        "이차전지"
-      ]
-    },
-    {
-      "title": "탄소 감축을 넘어 신성장동력으로, 정부 1,000조원 투자로 K-GX 본격 가동",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287890",
-      "score": 30,
-      "reasons": [
-        "소부장",
+        "이차전지",
         "에너지"
       ]
     },
     {
-      "title": "식약처, 중남미와 식품안전 신뢰 강화하고 K-푸드 교역 기반 확대",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287876",
-      "score": 28,
+      "title": "반도체가 자라는 ‘시작점’까지 설계… 고집적·저전력 AI 반도체 구현의 새 길",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287903",
+      "score": 23,
       "reasons": [
-        "AI",
-        "지원제도"
+        "AI"
+      ]
+    },
+    {
+      "title": "AI의 위로가 사람을 대신할 수 없습니다「정신건강 목적 생성형 AI 이용 가이드라인」 발표",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287931",
+      "score": 23,
+      "reasons": [
+        "AI"
+      ]
+    },
+    {
+      "title": "“AI는 도구, 권리는 사람의 기여로”... 지재위, AI활용 지식재산권 안내서 5종 종합 점검",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287911",
+      "score": 23,
+      "reasons": [
+        "AI"
       ]
     }
   ]
