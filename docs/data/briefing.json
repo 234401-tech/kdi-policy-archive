@@ -1,57 +1,9 @@
 {
-  "date": "2026-10-09",
-  "generated_at": "2026-10-09T11:59:16.713337+09:00",
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T11:30:36.194651+09:00",
   "window_hours": 24,
-  "item_count": 33,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "한-이집트, 청정에너지에서 전력 기반시설까지 협력 확대 (관련: 이차전지, 바이오, 에너지)",
-    "한국, 주요국과 구조적 과잉생산 및 생산능력 대응을 위한 공동성명 참여 (관련: 이차전지, 에너지)",
-    "반도체가 자라는 ‘시작점’까지 설계… 고집적·저전력 AI 반도체 구현의 새 길 (관련: AI)"
-  ],
-  "top": [
-    {
-      "title": "한-이집트, 청정에너지에서 전력 기반시설까지 협력 확대",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287929",
-      "score": 52,
-      "reasons": [
-        "이차전지",
-        "바이오",
-        "에너지"
-      ]
-    },
-    {
-      "title": "한국, 주요국과 구조적 과잉생산 및 생산능력 대응을 위한 공동성명 참여",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287939",
-      "score": 37,
-      "reasons": [
-        "이차전지",
-        "에너지"
-      ]
-    },
-    {
-      "title": "반도체가 자라는 ‘시작점’까지 설계… 고집적·저전력 AI 반도체 구현의 새 길",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287903",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    },
-    {
-      "title": "AI의 위로가 사람을 대신할 수 없습니다「정신건강 목적 생성형 AI 이용 가이드라인」 발표",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287931",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    },
-    {
-      "title": "“AI는 도구, 권리는 사람의 기여로”... 지재위, AI활용 지식재산권 안내서 5종 종합 점검",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287911",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
