@@ -1,61 +1,57 @@
 {
-  "date": "2026-10-13",
-  "generated_at": "2026-10-13T12:40:24.540098+09:00",
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T11:00:16.320233+09:00",
   "window_hours": 24,
-  "item_count": 52,
+  "item_count": 44,
   "model": "rule-based",
   "bullets": [
-    "산업부장관, 권역별 현장행보 이어가며 성장엔진 육성에 속도낸다 (관련: 이차전지, AI, 바이오)",
-    "급변하는 글로벌 환경 대응 위해 AI·디지털 기반 신약 임상개발 혁신한다 (관련: AI, 바이오, 지원제도)",
-    "AI가 폐기물 종류 확인부터 배출 방법 안내까지 한번에! ‘AI 폐기물 처리 도우미’ 앱 실증 개시 (관련: AI, 지원제도)"
+    "「K Connect AI」 출범 (관련: AI, 지원제도)",
+    "배경훈 부총리, 피지컬 AI 얼라이언스와 현장 중심의 실질적 성과 창출 가속화 (관련: AI, 지원제도)",
+    "M.AX 확산 위한 규제 빗장 푼다 (관련: AI, 지원제도)"
   ],
   "top": [
     {
-      "title": "산업부장관, 권역별 현장행보 이어가며 성장엔진 육성에 속도낸다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287984",
-      "score": 68,
-      "reasons": [
-        "이차전지",
-        "AI",
-        "바이오",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "급변하는 글로벌 환경 대응 위해 AI·디지털 기반 신약 임상개발 혁신한다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287967",
-      "score": 53,
-      "reasons": [
-        "AI",
-        "바이오",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "AI가 폐기물 종류 확인부터 배출 방법 안내까지 한번에! ‘AI 폐기물 처리 도우미’ 앱 실증 개시",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287969",
-      "score": 38,
+      "title": "「K Connect AI」 출범",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288006",
+      "score": 33,
       "reasons": [
         "AI",
         "지원제도"
       ]
     },
     {
-      "title": "인공지능을 우리 일상의 곳곳에...2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287948",
-      "score": 38,
+      "title": "배경훈 부총리, 피지컬 AI 얼라이언스와 현장 중심의 실질적 성과 창출 가속화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288041",
+      "score": 33,
       "reasons": [
         "AI",
         "지원제도"
       ]
     },
     {
-      "title": "공급망의 취약한 고리를 선제적 보강하겠습니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287957",
-      "score": 35,
+      "title": "M.AX 확산 위한 규제 빗장 푼다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288038",
+      "score": 33,
       "reasons": [
-        "소부장",
-        "에너지"
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "화학물질 제도 이행 돕는다… 산업계 대상 권역별 설명회 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288007",
+      "score": 32,
+      "reasons": [
+        "경북",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "공급망은 안정적으로, 새만금 협력은 활발하게... 한중 통상당국, 공급망·산단 실무회의 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288026",
+      "score": 23,
+      "reasons": [
+        "소부장"
       ]
     }
   ]
