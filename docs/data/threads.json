@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T04:16:47.943630",
+  "generated_at": "2026-10-15T09:43:36.831112",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,39 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "월간재정동향",
+      "count": 4,
+      "first": "2026-06-11",
+      "last": "2026-10-15",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「월간 재정동향」 2026년 6월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282523",
+          "date": "2026-06-11",
+          "score": 0
+        },
+        {
+          "title": "「월간 재정동향」 2026년 7월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284010",
+          "date": "2026-07-09",
+          "score": 0
+        },
+        {
+          "title": "「월간 재정동향」 2026년 9월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286642",
+          "date": "2026-09-10",
+          "score": 0
+        },
+        {
+          "title": "「월간 재정동향」 2026년 10월호 발간",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288153",
+          "date": "2026-10-15",
+          "score": 0
         }
       ]
     },
@@ -417,33 +450,6 @@
           "title": "지역공동체 살리는 「사회연대경제기본법」 제정 성과에 3천만 원 특별성과포상금 수여",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286716",
           "date": "2026-09-11",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "월간재정동향",
-      "count": 3,
-      "first": "2026-06-11",
-      "last": "2026-09-10",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "「월간 재정동향」 2026년 6월호 발간",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282523",
-          "date": "2026-06-11",
-          "score": 0
-        },
-        {
-          "title": "「월간 재정동향」 2026년 7월호 발간",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284010",
-          "date": "2026-07-09",
-          "score": 0
-        },
-        {
-          "title": "「월간 재정동향」 2026년 9월호 발간",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286642",
-          "date": "2026-09-10",
           "score": 0
         }
       ]
