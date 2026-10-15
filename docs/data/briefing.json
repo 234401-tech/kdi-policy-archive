@@ -1,57 +1,62 @@
 {
-  "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:00:16.320233+09:00",
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T10:35:16.202967+09:00",
   "window_hours": 24,
-  "item_count": 44,
+  "item_count": 60,
   "model": "rule-based",
   "bullets": [
-    "「K Connect AI」 출범 (관련: AI, 지원제도)",
-    "배경훈 부총리, 피지컬 AI 얼라이언스와 현장 중심의 실질적 성과 창출 가속화 (관련: AI, 지원제도)",
-    "M.AX 확산 위한 규제 빗장 푼다 (관련: AI, 지원제도)"
+    "쓰레기도 에너지가 된다… 탄소중립 시대, 새로운 해법 찾는다 (관련: 포항, AI, 바이오)",
+    "산업통상부·식품의약품안전처, 바이오 산업 육성 위해 협력한다 (관련: AI, 소부장, 바이오)",
+    "‘AI·청정산업 혁신거점’으로 거듭나는 강원 강원권 3대 성장엔진 본격 가동! (관련: AI, 소부장, 바이오)"
   ],
   "top": [
     {
-      "title": "「K Connect AI」 출범",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288006",
-      "score": 33,
+      "title": "쓰레기도 에너지가 된다… 탄소중립 시대, 새로운 해법 찾는다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288061",
+      "score": 78,
+      "reasons": [
+        "포항",
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "산업통상부·식품의약품안전처, 바이오 산업 육성 위해 협력한다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288069",
+      "score": 66,
       "reasons": [
         "AI",
+        "소부장",
+        "바이오",
         "지원제도"
       ]
     },
     {
-      "title": "배경훈 부총리, 피지컬 AI 얼라이언스와 현장 중심의 실질적 성과 창출 가속화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288041",
-      "score": 33,
+      "title": "‘AI·청정산업 혁신거점’으로 거듭나는 강원 강원권 3대 성장엔진 본격 가동!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288104",
+      "score": 56,
       "reasons": [
         "AI",
-        "지원제도"
+        "소부장",
+        "바이오"
       ]
     },
     {
-      "title": "M.AX 확산 위한 규제 빗장 푼다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288038",
-      "score": 33,
+      "title": "‘AI가 불러올 바이오헬스 혁신의 확산’, 국제사회 리더들이 한 곳에 모인다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288105",
+      "score": 43,
       "reasons": [
         "AI",
-        "지원제도"
+        "바이오"
       ]
     },
     {
-      "title": "화학물질 제도 이행 돕는다… 산업계 대상 권역별 설명회 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288007",
-      "score": 32,
+      "title": "AI진단 맞춤형 화장품부터 메디컬 뷰티 서비스 글로벌 진출까지... ‘K-뷰티 서비스’ 전방위 지원",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288067",
+      "score": 38,
       "reasons": [
-        "경북",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "공급망은 안정적으로, 새만금 협력은 활발하게... 한중 통상당국, 공급망·산단 실무회의 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288026",
-      "score": 23,
-      "reasons": [
-        "소부장"
+        "AI",
+        "바이오"
       ]
     }
   ]
