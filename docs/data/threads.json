@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T01:00:56.188435",
+  "generated_at": "2026-10-19T05:58:39.231086",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "한반도평화공존센터",
+      "count": 2,
+      "first": "2026-06-30",
+      "last": "2026-10-19",
+      "max_score": 15,
+      "items": [
+        {
+          "title": "통일부, 「한반도 평화공존센터」 설계공모 추진",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283524",
+          "date": "2026-06-30",
+          "score": 15
+        },
+        {
+          "title": "「한반도 평화공존센터」 설계공모 당선작 선정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288244",
+          "date": "2026-10-19",
+          "score": 15
         }
       ]
     },
