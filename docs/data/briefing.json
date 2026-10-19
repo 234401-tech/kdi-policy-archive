@@ -1,60 +1,9 @@
 {
-  "date": "2026-10-16",
-  "generated_at": "2026-10-16T10:31:12.833363+09:00",
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T10:25:42.093832+09:00",
   "window_hours": 24,
-  "item_count": 47,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "조달청, 2026년 하반기 적극행정 우수사례 12건 선정 (관련: AI, 소부장, 에너지)",
-    "국가AI전략위, 복지부와 함께 국가 의료·바이오 AI 혁신을 위한 바이오 데이터 기증에 솔선수범 (관련: AI, 바이오)",
-    "건강검진 수검자 아니라도 국민 누구나 ‘국가통합바이오빅데이터’ 참여 가능해진다 (관련: AI, 바이오)"
-  ],
-  "top": [
-    {
-      "title": "조달청, 2026년 하반기 적극행정 우수사례 12건 선정",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288124",
-      "score": 48,
-      "reasons": [
-        "AI",
-        "소부장",
-        "에너지"
-      ]
-    },
-    {
-      "title": "국가AI전략위, 복지부와 함께 국가 의료·바이오 AI 혁신을 위한 바이오 데이터 기증에 솔선수범",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288136",
-      "score": 43,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "건강검진 수검자 아니라도 국민 누구나 ‘국가통합바이오빅데이터’ 참여 가능해진다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288142",
-      "score": 38,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "겨울철 가축전염병 예방을 위한 특별방역대책점검회의 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288160",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "국민성장펀드 초장기기술투자펀드(‘26년), 7개 운용사 선정",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288118",
-      "score": 30,
-      "reasons": [
-        "바이오",
-        "지원제도"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
