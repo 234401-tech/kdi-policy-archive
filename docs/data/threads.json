@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T23:30:46.659423",
+  "generated_at": "2026-10-20T04:30:27.622278",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "초·중등교육법시행령",
+      "count": 2,
+      "first": "2026-05-21",
+      "last": "2026-10-20",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「초·중등교육법 시행령」 일부개정령안 국무회의 통과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281425",
+          "date": "2026-05-21",
+          "score": 0
+        },
+        {
+          "title": "「초·중등교육법 시행령」 일부개정령안 국무회의 통과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288284",
+          "date": "2026-10-20",
+          "score": 0
         }
       ]
     },
