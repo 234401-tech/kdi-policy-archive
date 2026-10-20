@@ -1,9 +1,62 @@
 {
-  "date": "2026-10-19",
-  "generated_at": "2026-10-19T10:25:42.093832+09:00",
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20T10:56:25.393555+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 70,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "반도체 분야 상생 무역금융 2조원 출범, 대기업-소부장기업 상생협력 본격화 (관련: 소부장, 바이오, 에너지)",
+    "‘버려진 하수의 에너지원 활용’에서 ‘AI 정수장 국제표준 선도’까지 (관련: AI, 에너지, 지원제도)",
+    "한국 전고체 배터리 및 재사용 우주 발사체, 특허 증가율 세계 2위 (관련: 이차전지, 바이오)"
+  ],
+  "top": [
+    {
+      "title": "반도체 분야 상생 무역금융 2조원 출범, 대기업-소부장기업 상생협력 본격화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288265",
+      "score": 60,
+      "reasons": [
+        "소부장",
+        "바이오",
+        "에너지",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "‘버려진 하수의 에너지원 활용’에서 ‘AI 정수장 국제표준 선도’까지",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288240",
+      "score": 45,
+      "reasons": [
+        "AI",
+        "에너지",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "한국 전고체 배터리 및 재사용 우주 발사체, 특허 증가율 세계 2위",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288276",
+      "score": 45,
+      "reasons": [
+        "이차전지",
+        "바이오"
+      ]
+    },
+    {
+      "title": "이형훈 제2차관, 의료AI 본격 추진 대비 네이버 데이터센터 ‘각(GAK) 세종’ 방문",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288274",
+      "score": 38,
+      "reasons": [
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "식약처, 식의약 공공데이터·AI 활용 우수작 5건 선정",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288273",
+      "score": 38,
+      "reasons": [
+        "AI",
+        "바이오"
+      ]
+    }
+  ]
 }
