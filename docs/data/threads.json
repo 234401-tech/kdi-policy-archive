@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T23:10:22.145265",
+  "generated_at": "2026-10-23T04:26:00.441316",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,54 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "모집방식비경쟁인수",
+      "count": 3,
+      "first": "2026-06-19",
+      "last": "2026-10-23",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "‘26.6월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282948",
+          "date": "2026-06-19",
+          "score": 0
+        },
+        {
+          "title": "‘26.7월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284392",
+          "date": "2026-07-20",
+          "score": 0
+        },
+        {
+          "title": "‘26.10월 국고채 「모집 방식 비경쟁인수」 발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288461",
+          "date": "2026-10-23",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "선불식할부거래에서의소비자보호지침",
+      "count": 2,
+      "first": "2026-08-24",
+      "last": "2026-10-23",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「선불식 할부거래에서의 소비자보호 지침」 개정안 행정예고",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285710",
+          "date": "2026-08-24",
+          "score": 0
+        },
+        {
+          "title": "「선불식 할부거래에서의 소비자보호 지침」 개정·시행",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288462",
+          "date": "2026-10-23",
+          "score": 0
         }
       ]
     },
@@ -845,27 +893,6 @@
         {
           "title": "“청년의 취업성공 경험이 미래를 바꾼다” 「청년미래플러스」 열린 소통 간담회 개최",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284448",
-          "date": "2026-07-20",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "모집방식비경쟁인수",
-      "count": 2,
-      "first": "2026-06-19",
-      "last": "2026-07-20",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "‘26.6월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282948",
-          "date": "2026-06-19",
-          "score": 0
-        },
-        {
-          "title": "‘26.7월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284392",
           "date": "2026-07-20",
           "score": 0
         }
