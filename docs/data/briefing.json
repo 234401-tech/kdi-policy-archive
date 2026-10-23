@@ -1,57 +1,63 @@
 {
-  "date": "2026-10-22",
-  "generated_at": "2026-10-22T10:38:49.148605+09:00",
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T10:40:45.441885+09:00",
   "window_hours": 24,
-  "item_count": 51,
+  "item_count": 50,
   "model": "rule-based",
   "bullets": [
-    "AI 혁신 혜택의 공평한 접근 약속... 보건복지부·세계보건기구, 〈AI 헬스케어 서울선언문〉 공동 발표 (관련: AI, 바이오)",
-    "산업부, 사업재편기업 ‘투자 매력’ 알린다 (관련: 철강, AI)",
-    "해양환경측정망 자료 활용 논문 공모전 수상작 발표 (관련: 경북, 지원제도)"
+    "국가AI전략위, 포항서 ‘제조 현장부터 AI 데이터센터까지‘ 경북 AI 생태계 살펴 (관련: 포항, 경북, AI)",
+    "EU 산업가속화법 관련 유럽의회 아웃리치 (관련: 이차전지, 철강, 에너지)",
+    "7대 SEED, 분야별 이행전략 수립 본격화 (관련: 소부장, 바이오, 에너지)"
   ],
   "top": [
     {
-      "title": "AI 혁신 혜택의 공평한 접근 약속... 보건복지부·세계보건기구, 〈AI 헬스케어 서울선언문〉 공동 발표",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288343",
-      "score": 43,
+      "title": "국가AI전략위, 포항서 ‘제조 현장부터 AI 데이터센터까지‘ 경북 AI 생태계 살펴",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288431",
+      "score": 100,
       "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "산업부, 사업재편기업 ‘투자 매력’ 알린다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288371",
-      "score": 40,
-      "reasons": [
-        "철강",
-        "AI"
-      ]
-    },
-    {
-      "title": "해양환경측정망 자료 활용 논문 공모전 수상작 발표",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288356",
-      "score": 37,
-      "reasons": [
+        "포항",
         "경북",
+        "AI",
         "지원제도"
       ]
     },
     {
-      "title": "오늘의 호황을 내일의 초격차로, K-반도체 새로운 도약 다짐",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288367",
-      "score": 36,
+      "title": "EU 산업가속화법 관련 유럽의회 아웃리치",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288416",
+      "score": 59,
       "reasons": [
-        "AI",
-        "소부장"
+        "이차전지",
+        "철강",
+        "에너지"
       ]
     },
     {
-      "title": "피지컬 AI시대, 중소기업 혁신전략",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288354",
-      "score": 33,
+      "title": "7대 SEED, 분야별 이행전략 수립 본격화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288425",
+      "score": 55,
       "reasons": [
-        "AI",
+        "소부장",
+        "바이오",
+        "에너지",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "한-EU, 수출애로 해소 및 규제협력 등 주요 통상현안 논의",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288382",
+      "score": 47,
+      "reasons": [
+        "이차전지",
+        "에너지",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "최초의 지역 통합 모펀드, ‘대구·경북 통합 지역성장펀드’ 1,300억 원 규모로 출범",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288394",
+      "score": 42,
+      "reasons": [
+        "경북",
         "지원제도"
       ]
     }
