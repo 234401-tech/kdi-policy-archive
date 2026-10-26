@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T04:32:03.486601",
+  "generated_at": "2026-10-26T10:55:57.924022",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,39 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "모두의AI",
+      "count": 4,
+      "first": "2026-08-19",
+      "last": "2026-10-26",
+      "max_score": 38,
+      "items": [
+        {
+          "title": "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285504",
+          "date": "2026-08-19",
+          "score": 38
+        },
+        {
+          "title": "「모두의 AI」 프로젝트, 사업자 선정 결과 발표",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285955",
+          "date": "2026-08-29",
+          "score": 23
+        },
+        {
+          "title": "「모두의 AI」 프로젝트 착수 간담회 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286367",
+          "date": "2026-09-04",
+          "score": 23
+        },
+        {
+          "title": "「모두의 AI」 브랜드, 국민들이 직접 만든다",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288542",
+          "date": "2026-10-26",
+          "score": 33
         }
       ]
     },
@@ -625,33 +658,6 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286716",
           "date": "2026-09-11",
           "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "모두의AI",
-      "count": 3,
-      "first": "2026-08-19",
-      "last": "2026-09-04",
-      "max_score": 38,
-      "items": [
-        {
-          "title": "「모두의 AI」 프로젝트 참여 사업자 공모 접수 결과",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285504",
-          "date": "2026-08-19",
-          "score": 38
-        },
-        {
-          "title": "「모두의 AI」 프로젝트, 사업자 선정 결과 발표",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285955",
-          "date": "2026-08-29",
-          "score": 23
-        },
-        {
-          "title": "「모두의 AI」 프로젝트 착수 간담회 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286367",
-          "date": "2026-09-04",
-          "score": 23
         }
       ]
     },
