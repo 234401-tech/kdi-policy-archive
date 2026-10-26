@@ -1,65 +1,9 @@
 {
-  "date": "2026-10-23",
-  "generated_at": "2026-10-23T10:40:45.441885+09:00",
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T10:23:28.257235+09:00",
   "window_hours": 24,
-  "item_count": 50,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "국가AI전략위, 포항서 ‘제조 현장부터 AI 데이터센터까지‘ 경북 AI 생태계 살펴 (관련: 포항, 경북, AI)",
-    "EU 산업가속화법 관련 유럽의회 아웃리치 (관련: 이차전지, 철강, 에너지)",
-    "7대 SEED, 분야별 이행전략 수립 본격화 (관련: 소부장, 바이오, 에너지)"
-  ],
-  "top": [
-    {
-      "title": "국가AI전략위, 포항서 ‘제조 현장부터 AI 데이터센터까지‘ 경북 AI 생태계 살펴",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288431",
-      "score": 100,
-      "reasons": [
-        "포항",
-        "경북",
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "EU 산업가속화법 관련 유럽의회 아웃리치",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288416",
-      "score": 59,
-      "reasons": [
-        "이차전지",
-        "철강",
-        "에너지"
-      ]
-    },
-    {
-      "title": "7대 SEED, 분야별 이행전략 수립 본격화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288425",
-      "score": 55,
-      "reasons": [
-        "소부장",
-        "바이오",
-        "에너지",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "한-EU, 수출애로 해소 및 규제협력 등 주요 통상현안 논의",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288382",
-      "score": 47,
-      "reasons": [
-        "이차전지",
-        "에너지",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "최초의 지역 통합 모펀드, ‘대구·경북 통합 지역성장펀드’ 1,300억 원 규모로 출범",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288394",
-      "score": 42,
-      "reasons": [
-        "경북",
-        "지원제도"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
