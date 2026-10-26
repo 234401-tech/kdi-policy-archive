@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T00:02:47.968680",
+  "generated_at": "2026-10-26T04:32:03.486601",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,48 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "전국민AI경진대회",
+      "count": 2,
+      "first": "2026-05-21",
+      "last": "2026-10-26",
+      "max_score": 33,
+      "items": [
+        {
+          "title": "『전국민 AI 경진대회』, ‘AI 챔피언’·‘AI루키’ 성황리 개막, 총 1,124팀이 도전, 최고의 AI기술 개발 경쟁에 돌입",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281458",
+          "date": "2026-05-21",
+          "score": 33
+        },
+        {
+          "title": "아이들의 상상력이 AI를 만나는 첫 경험! 「전국민 AI 경진대회」, AI 창작대회 본선 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288491",
+          "date": "2026-10-26",
+          "score": 23
+        }
+      ]
+    },
+    {
+      "phrase": "지표금리개편방안(3.30일)",
+      "count": 2,
+      "first": "2026-10-26",
+      "last": "2026-10-26",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "민·관 합동으로 「지표금리 개편방안(3.30일)」을 차질 없이 추진하고 있습니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288500",
+          "date": "2026-10-26",
+          "score": 0
+        },
+        {
+          "title": "「지표금리 개편방안(3.30일)」 진행상황 점검 및 향후 계획",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288513",
+          "date": "2026-10-26",
+          "score": 0
         }
       ]
     },
