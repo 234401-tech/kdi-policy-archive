@@ -1,9 +1,59 @@
 {
-  "date": "2026-10-26",
-  "generated_at": "2026-10-26T10:23:28.257235+09:00",
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T11:11:11.313279+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 74,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "폴리텍대학, 부산 벡스코(BEXCO)서 동남권 청년 취업 지원 나선다 (관련: AI, 바이오)",
+    "6만 기술사, 재난재해 대응기술 실증을 주도한다 (관련: AI, 지원제도)",
+    "「모두의 AI」 브랜드, 국민들이 직접 만든다 (관련: AI, 지원제도)"
+  ],
+  "top": [
+    {
+      "title": "폴리텍대학, 부산 벡스코(BEXCO)서 동남권 청년 취업 지원 나선다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288510",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "6만 기술사, 재난재해 대응기술 실증을 주도한다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288532",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "「모두의 AI」 브랜드, 국민들이 직접 만든다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288542",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "“나에게 맞는 청년 지원 정책은?” 청년인턴이 정부24를 통해 살펴봤습니다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288506",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "“취업 준비도 똑똑하게” 청년 취뽀(취업 뽀개기) 돕는 공공서비스",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288520",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    }
+  ]
 }
