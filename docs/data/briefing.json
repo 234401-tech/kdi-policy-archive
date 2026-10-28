@@ -1,45 +1,37 @@
 {
-  "date": "2026-10-27",
-  "generated_at": "2026-10-27T11:11:11.313279+09:00",
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T11:26:13.031996+09:00",
   "window_hours": 24,
-  "item_count": 74,
+  "item_count": 45,
   "model": "rule-based",
   "bullets": [
-    "폴리텍대학, 부산 벡스코(BEXCO)서 동남권 청년 취업 지원 나선다 (관련: AI, 바이오)",
-    "6만 기술사, 재난재해 대응기술 실증을 주도한다 (관련: AI, 지원제도)",
-    "「모두의 AI」 브랜드, 국민들이 직접 만든다 (관련: AI, 지원제도)"
+    "K-원전, 글로벌 공급망에 올라탄다! (관련: 경북, 소부장, 에너지)",
+    "찻길 야생동물 출현, 인공지능으로 운전자에게 미리 알린다 (관련: 철강, AI)",
+    "양식업부터 제조업까지 스마트한 재정투자, 산업 혁신의 결실로 (관련: AI, 지원제도)"
   ],
   "top": [
     {
-      "title": "폴리텍대학, 부산 벡스코(BEXCO)서 동남권 청년 취업 지원 나선다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288510",
-      "score": 33,
+      "title": "K-원전, 글로벌 공급망에 올라탄다!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288578",
+      "score": 62,
       "reasons": [
-        "AI",
-        "바이오"
+        "경북",
+        "소부장",
+        "에너지"
       ]
     },
     {
-      "title": "6만 기술사, 재난재해 대응기술 실증을 주도한다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288532",
-      "score": 33,
+      "title": "찻길 야생동물 출현, 인공지능으로 운전자에게 미리 알린다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288553",
+      "score": 45,
       "reasons": [
-        "AI",
-        "지원제도"
+        "철강",
+        "AI"
       ]
     },
     {
-      "title": "「모두의 AI」 브랜드, 국민들이 직접 만든다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288542",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "“나에게 맞는 청년 지원 정책은?” 청년인턴이 정부24를 통해 살펴봤습니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288506",
+      "title": "양식업부터 제조업까지 스마트한 재정투자, 산업 혁신의 결실로",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288594",
       "score": 28,
       "reasons": [
         "AI",
@@ -47,12 +39,20 @@
       ]
     },
     {
-      "title": "“취업 준비도 똑똑하게” 청년 취뽀(취업 뽀개기) 돕는 공공서비스",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288520",
-      "score": 28,
+      "title": "‘26년 노후 산업단지 재생사업 공모 착수",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288579",
+      "score": 27,
       "reasons": [
-        "AI",
+        "에너지",
         "지원제도"
+      ]
+    },
+    {
+      "title": "청년의 꿈을 키우고 삶을 바꾸는 생애주기 맞춤형 지원 강화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288596",
+      "score": 18,
+      "reasons": [
+        "AI"
       ]
     }
   ]
