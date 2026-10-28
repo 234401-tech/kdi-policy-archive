@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T23:40:13.481526",
+  "generated_at": "2026-10-28T05:16:21.320086",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "2026국제한반도포럼",
+      "count": 2,
+      "first": "2026-06-19",
+      "last": "2026-10-28",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "시민사회와 함께 만드는 한반도 평화공존, 『2026 국제 한반도 포럼』 6.22.~23. 서울 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282961",
+          "date": "2026-06-19",
+          "score": 0
+        },
+        {
+          "title": "통일부, 「2026 국제 한반도 포럼」 일본세미나 개최(10.29.)",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288626",
+          "date": "2026-10-28",
+          "score": 0
         }
       ]
     },
