@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T02:21:30.210133",
+  "generated_at": "2026-10-29T09:44:52.140370",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,78 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "개인투자용국채",
+      "count": 6,
+      "first": "2026-05-29",
+      "last": "2026-10-29",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
+          "date": "2026-05-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
+          "date": "2026-06-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
+          "date": "2026-07-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 9월 2,300억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285936",
+          "date": "2026-08-28",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 10월 2,300억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287582",
+          "date": "2026-09-30",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 11월 2,000억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288743",
+          "date": "2026-10-29",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "생활인구",
+      "count": 3,
+      "first": "2026-05-28",
+      "last": "2026-10-29",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "’25년 4/4분기 『생활인구』 산정 결과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281708",
+          "date": "2026-05-28",
+          "score": 0
+        },
+        {
+          "title": "’26년 1/4분기 『생활인구』 산정 결과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284871",
+          "date": "2026-07-30",
+          "score": 0
+        },
+        {
+          "title": "’26년 2/4분기 『생활인구』 산정 결과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288758",
+          "date": "2026-10-29",
+          "score": 0
         }
       ]
     },
@@ -453,45 +525,6 @@
           "title": "한국은행, 「물가 상황 점검회의」 개최",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287745",
           "date": "2026-10-02",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "개인투자용국채",
-      "count": 5,
-      "first": "2026-05-29",
-      "last": "2026-09-30",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
-          "date": "2026-05-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
-          "date": "2026-06-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
-          "date": "2026-07-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 9월 2,300억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285936",
-          "date": "2026-08-28",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 10월 2,300억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287582",
-          "date": "2026-09-30",
           "score": 0
         }
       ]
@@ -943,27 +976,6 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284994",
           "date": "2026-08-03",
           "score": 15
-        }
-      ]
-    },
-    {
-      "phrase": "생활인구",
-      "count": 2,
-      "first": "2026-05-28",
-      "last": "2026-07-30",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "’25년 4/4분기 『생활인구』 산정 결과",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281708",
-          "date": "2026-05-28",
-          "score": 0
-        },
-        {
-          "title": "’26년 1/4분기 『생활인구』 산정 결과",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284871",
-          "date": "2026-07-30",
-          "score": 0
         }
       ]
     },
