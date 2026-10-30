@@ -1,64 +1,61 @@
 {
-  "date": "2026-10-29",
-  "generated_at": "2026-10-29T11:33:41.903887+09:00",
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T11:43:28.294595+09:00",
   "window_hours": 24,
-  "item_count": 86,
+  "item_count": 100,
   "model": "rule-based",
   "bullets": [
-    "산업부장관, 다시 찾은 대경권 구미에서 성장엔진과 M.AX 확산 속도 낸다 (관련: 경북, 이차전지, AI)",
-    "EU 산업가속화법 민관 TF, 대응체계 구축에서 현지 공동대응으로 (관련: 이차전지, 철강, 소부장)",
-    "세계를 잇는 바이오, 협력에서 사업화까지 (관련: AI, 소부장, 바이오)"
+    "조달청, 민간의 혁신기술로 공공현장의 해법 찾다 (관련: 이차전지, AI, 바이오)",
+    "K-제약바이오가 이끄는 글로벌 성장, 피지컬AI로 도약하는 중소제조현장 (관련: AI, 바이오, 지원제도)",
+    "사진 한 장으로 반려동물 건강 체크, 인공지능(AI)로 여는 펫헬스케어 시대 (관련: AI, 바이오, 지원제도)"
   ],
   "top": [
     {
-      "title": "산업부장관, 다시 찾은 대경권 구미에서 성장엔진과 M.AX 확산 속도 낸다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288673",
-      "score": 85,
+      "title": "조달청, 민간의 혁신기술로 공공현장의 해법 찾다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288710",
+      "score": 58,
       "reasons": [
-        "경북",
         "이차전지",
         "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "K-제약바이오가 이끄는 글로벌 성장, 피지컬AI로 도약하는 중소제조현장",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288771",
+      "score": 53,
+      "reasons": [
+        "AI",
+        "바이오",
         "지원제도"
       ]
     },
     {
-      "title": "EU 산업가속화법 민관 TF, 대응체계 구축에서 현지 공동대응으로",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288641",
-      "score": 77,
+      "title": "사진 한 장으로 반려동물 건강 체크, 인공지능(AI)로 여는 펫헬스케어 시대",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288751",
+      "score": 53,
+      "reasons": [
+        "AI",
+        "바이오",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "K-배터리, 경쟁력·자생력·협력 강화 다짐",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288750",
+      "score": 48,
       "reasons": [
         "이차전지",
+        "소부장"
+      ]
+    },
+    {
+      "title": "공학계 리더 초청 간담회, AI 시대 도약 위한 지혜 모아",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288767",
+      "score": 45,
+      "reasons": [
         "철강",
-        "소부장",
-        "에너지"
-      ]
-    },
-    {
-      "title": "세계를 잇는 바이오, 협력에서 사업화까지",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288634",
-      "score": 56,
-      "reasons": [
-        "AI",
-        "소부장",
-        "바이오"
-      ]
-    },
-    {
-      "title": "박홍근 장관, 전북·새만금 현장방문... “피지컬 AI 및 새만금 개발 지원을 통한 지역균형발전 및 미래 성장엔진 확충 적극 추진”",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288688",
-      "score": 41,
-      "reasons": [
-        "AI",
-        "지원제도",
-        "지방우대"
-      ]
-    },
-    {
-      "title": "식약처, 바이오의약품 원료물질 인증제도 현장과 함께 만든다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288679",
-      "score": 38,
-      "reasons": [
-        "소부장",
-        "바이오"
+        "AI"
       ]
     }
   ]
