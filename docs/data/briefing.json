@@ -1,62 +1,9 @@
 {
-  "date": "2026-10-30",
-  "generated_at": "2026-10-30T11:43:28.294595+09:00",
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T11:37:13.339601+09:00",
   "window_hours": 24,
-  "item_count": 100,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "조달청, 민간의 혁신기술로 공공현장의 해법 찾다 (관련: 이차전지, AI, 바이오)",
-    "K-제약바이오가 이끄는 글로벌 성장, 피지컬AI로 도약하는 중소제조현장 (관련: AI, 바이오, 지원제도)",
-    "사진 한 장으로 반려동물 건강 체크, 인공지능(AI)로 여는 펫헬스케어 시대 (관련: AI, 바이오, 지원제도)"
-  ],
-  "top": [
-    {
-      "title": "조달청, 민간의 혁신기술로 공공현장의 해법 찾다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288710",
-      "score": 58,
-      "reasons": [
-        "이차전지",
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "K-제약바이오가 이끄는 글로벌 성장, 피지컬AI로 도약하는 중소제조현장",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288771",
-      "score": 53,
-      "reasons": [
-        "AI",
-        "바이오",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "사진 한 장으로 반려동물 건강 체크, 인공지능(AI)로 여는 펫헬스케어 시대",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288751",
-      "score": 53,
-      "reasons": [
-        "AI",
-        "바이오",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "K-배터리, 경쟁력·자생력·협력 강화 다짐",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288750",
-      "score": 48,
-      "reasons": [
-        "이차전지",
-        "소부장"
-      ]
-    },
-    {
-      "title": "공학계 리더 초청 간담회, AI 시대 도약 위한 지혜 모아",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288767",
-      "score": 45,
-      "reasons": [
-        "철강",
-        "AI"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
