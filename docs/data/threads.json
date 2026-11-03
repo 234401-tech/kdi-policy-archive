@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T01:30:04.282054",
+  "generated_at": "2026-11-03T09:20:40.369585",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,51 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "물가상황점검회의",
+      "count": 6,
+      "first": "2026-06-02",
+      "last": "2026-11-03",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282093",
+          "date": "2026-06-02",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283688",
+          "date": "2026-07-02",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285050",
+          "date": "2026-08-04",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286191",
+          "date": "2026-09-02",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287745",
+          "date": "2026-10-02",
+          "score": 0
+        },
+        {
+          "title": "한국은행, 「물가 상황 점검회의」 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288967",
+          "date": "2026-11-03",
+          "score": 0
         }
       ]
     },
@@ -546,45 +591,6 @@
           "title": "재해 예방의 핵심 참고자료 「재해조사보고서」 117건 추가 공개",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287857",
           "date": "2026-10-07",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "물가상황점검회의",
-      "count": 5,
-      "first": "2026-06-02",
-      "last": "2026-10-02",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "한국은행, 「물가 상황 점검회의」 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282093",
-          "date": "2026-06-02",
-          "score": 0
-        },
-        {
-          "title": "한국은행, 「물가 상황 점검회의」 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283688",
-          "date": "2026-07-02",
-          "score": 0
-        },
-        {
-          "title": "한국은행, 「물가 상황 점검회의」 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285050",
-          "date": "2026-08-04",
-          "score": 0
-        },
-        {
-          "title": "한국은행, 「물가 상황 점검회의」 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286191",
-          "date": "2026-09-02",
-          "score": 0
-        },
-        {
-          "title": "한국은행, 「물가 상황 점검회의」 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287745",
-          "date": "2026-10-02",
           "score": 0
         }
       ]
