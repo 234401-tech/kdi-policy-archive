@@ -1,56 +1,56 @@
 {
-  "date": "2026-11-03",
-  "generated_at": "2026-11-03T12:57:27.141439+09:00",
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T12:03:47.273407+09:00",
   "window_hours": 24,
-  "item_count": 79,
+  "item_count": 67,
   "model": "rule-based",
   "bullets": [
-    "이소영 중기부 장관, 울산 대학창업부터 영주 지역상권까지 1박 2일 경상권 현장 행보 (관련: 경북, AI, 지원제도)",
-    "정상 경제외교 성과, 수출·수주 본계약까지 잇는다. (관련: 이차전지, 철강)",
-    "의료데이터 기반 바이오·AI 혁신 위해 ‘정부+의료계+학계’ 한자리에 (관련: AI, 바이오)"
+    "외국인투자기업, 한국 산업의 든든한 동반자 (관련: 이차전지, 소부장, 에너지)",
+    "대한민국 제조업 판 바꾼다... 산업부, 제조AI 4단계 확산전략 가동 (관련: AI, 소부장)",
+    "“연결을 넘어, AI가 만드는 새로운 가치” 「2026 AIoT Week Korea」 개막 (관련: AI, 바이오)"
   ],
   "top": [
     {
-      "title": "이소영 중기부 장관, 울산 대학창업부터 영주 지역상권까지 1박 2일 경상권 현장 행보",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288883",
-      "score": 50,
-      "reasons": [
-        "경북",
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "정상 경제외교 성과, 수출·수주 본계약까지 잇는다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288901",
-      "score": 47,
+      "title": "외국인투자기업, 한국 산업의 든든한 동반자",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288990",
+      "score": 55,
       "reasons": [
         "이차전지",
-        "철강"
+        "소부장",
+        "에너지"
       ]
     },
     {
-      "title": "의료데이터 기반 바이오·AI 혁신 위해 ‘정부+의료계+학계’ 한자리에",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288950",
-      "score": 43,
+      "title": "대한민국 제조업 판 바꾼다... 산업부, 제조AI 4단계 확산전략 가동",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289020",
+      "score": 41,
+      "reasons": [
+        "AI",
+        "소부장"
+      ]
+    },
+    {
+      "title": "“연결을 넘어, AI가 만드는 새로운 가치” 「2026 AIoT Week Korea」 개막",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288969",
+      "score": 38,
       "reasons": [
         "AI",
         "바이오"
       ]
     },
     {
-      "title": "제21회 생물다양성 세밀화·인공지능 이미지 공모전 수상작 41점 공개",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288902",
-      "score": 38,
+      "title": "글로벌 의약품 규제의 미래, 서울에서 논의한다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288972",
+      "score": 33,
       "reasons": [
         "AI",
-        "지원제도"
+        "바이오"
       ]
     },
     {
-      "title": "식약처, 첨단 신기술 기반 바이오의약품 가이드라인 현장 활용 지원",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288884",
-      "score": 38,
+      "title": "가축전염병의 선제적 차단과 확산방지를 위한 K-가축방역 개선대책 마련",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288959",
+      "score": 33,
       "reasons": [
         "AI",
         "바이오"
