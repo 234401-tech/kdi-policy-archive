@@ -1,59 +1,61 @@
 {
-  "date": "2026-11-04",
-  "generated_at": "2026-11-04T12:03:47.273407+09:00",
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T12:34:20.994536+09:00",
   "window_hours": 24,
-  "item_count": 67,
+  "item_count": 61,
   "model": "rule-based",
   "bullets": [
-    "외국인투자기업, 한국 산업의 든든한 동반자 (관련: 이차전지, 소부장, 에너지)",
-    "대한민국 제조업 판 바꾼다... 산업부, 제조AI 4단계 확산전략 가동 (관련: AI, 소부장)",
-    "“연결을 넘어, AI가 만드는 새로운 가치” 「2026 AIoT Week Korea」 개막 (관련: AI, 바이오)"
+    "대테러센터, 군·경찰·해경 저격수 합동 역량 강화훈련 실시 (관련: 포항, 경북)",
+    "과기정통부, 소프트웨어마이스터고등학교 세계적 인재 양성으로 4년연속 실리콘밸리 취업 (관련: 경북, AI, 지원제도)",
+    "한-프, 통상현안 및 첨단산업·기술 협력 논의 (관련: AI, 소부장, 지원제도)"
   ],
   "top": [
     {
-      "title": "외국인투자기업, 한국 산업의 든든한 동반자",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288990",
-      "score": 55,
+      "title": "대테러센터, 군·경찰·해경 저격수 합동 역량 강화훈련 실시",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289076",
+      "score": 67,
       "reasons": [
-        "이차전지",
-        "소부장",
-        "에너지"
+        "포항",
+        "경북"
       ]
     },
     {
-      "title": "대한민국 제조업 판 바꾼다... 산업부, 제조AI 4단계 확산전략 가동",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289020",
+      "title": "과기정통부, 소프트웨어마이스터고등학교 세계적 인재 양성으로 4년연속 실리콘밸리 취업",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289044",
+      "score": 50,
+      "reasons": [
+        "경북",
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "한-프, 통상현안 및 첨단산업·기술 협력 논의",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289055",
+      "score": 46,
+      "reasons": [
+        "AI",
+        "소부장",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "5극 3특, M.AX로 여는 새로운 투자기회 「인베스트 코리아 서밋(IKS) 2026」 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289038",
       "score": 41,
       "reasons": [
         "AI",
+        "지원제도",
+        "지방우대"
+      ]
+    },
+    {
+      "title": "산업부, APEC 외교통상합동각료회의서 실용적 협력과 기업친화적 통상환경 조성 강조",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289063",
+      "score": 36,
+      "reasons": [
+        "AI",
         "소부장"
-      ]
-    },
-    {
-      "title": "“연결을 넘어, AI가 만드는 새로운 가치” 「2026 AIoT Week Korea」 개막",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288969",
-      "score": 38,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "글로벌 의약품 규제의 미래, 서울에서 논의한다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288972",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "가축전염병의 선제적 차단과 확산방지를 위한 K-가축방역 개선대책 마련",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288959",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "바이오"
       ]
     }
   ]
