@@ -1,61 +1,58 @@
 {
-  "date": "2026-11-05",
-  "generated_at": "2026-11-05T12:34:20.994536+09:00",
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T12:29:16.010558+09:00",
   "window_hours": 24,
-  "item_count": 61,
+  "item_count": 44,
   "model": "rule-based",
   "bullets": [
-    "대테러센터, 군·경찰·해경 저격수 합동 역량 강화훈련 실시 (관련: 포항, 경북)",
-    "과기정통부, 소프트웨어마이스터고등학교 세계적 인재 양성으로 4년연속 실리콘밸리 취업 (관련: 경북, AI, 지원제도)",
-    "한-프, 통상현안 및 첨단산업·기술 협력 논의 (관련: AI, 소부장, 지원제도)"
+    "ICT 고급인재양성 연구센터 신규 개소 및 공동 현판증정식 개최 (관련: 포항, AI)",
+    "첨단 농기계 시대는 더 빠르게, 농작업 사고 위험은 더 낮게 ‘농업기계 검정기준’ 고시 개정 (관련: 이차전지, 수소)",
+    "2027년도 기초연구사업 2.91조 원 투자 총 과제 수 18,516개로 역대 최대 지원 (관련: AI, 지원제도)"
   ],
   "top": [
     {
-      "title": "대테러센터, 군·경찰·해경 저격수 합동 역량 강화훈련 실시",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289076",
-      "score": 67,
+      "title": "ICT 고급인재양성 연구센터 신규 개소 및 공동 현판증정식 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289139",
+      "score": 63,
       "reasons": [
         "포항",
-        "경북"
+        "AI"
       ]
     },
     {
-      "title": "과기정통부, 소프트웨어마이스터고등학교 세계적 인재 양성으로 4년연속 실리콘밸리 취업",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289044",
-      "score": 50,
+      "title": "첨단 농기계 시대는 더 빠르게, 농작업 사고 위험은 더 낮게 ‘농업기계 검정기준’ 고시 개정",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289115",
+      "score": 45,
       "reasons": [
-        "경북",
+        "이차전지",
+        "수소"
+      ]
+    },
+    {
+      "title": "2027년도 기초연구사업 2.91조 원 투자 총 과제 수 18,516개로 역대 최대 지원",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289133",
+      "score": 28,
+      "reasons": [
         "AI",
         "지원제도"
       ]
     },
     {
-      "title": "한-프, 통상현안 및 첨단산업·기술 협력 논의",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289055",
-      "score": 46,
+      "title": "지식재산으로 키운 지역 새싹기업, 투자유치로 잇는다!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289114",
+      "score": 28,
       "reasons": [
         "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "국내복귀 포럼, 기업과 지역을 잇는 투자유치 플랫폼으로",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289119",
+      "score": 28,
+      "reasons": [
         "소부장",
         "지원제도"
-      ]
-    },
-    {
-      "title": "5극 3특, M.AX로 여는 새로운 투자기회 「인베스트 코리아 서밋(IKS) 2026」 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289038",
-      "score": 41,
-      "reasons": [
-        "AI",
-        "지원제도",
-        "지방우대"
-      ]
-    },
-    {
-      "title": "산업부, APEC 외교통상합동각료회의서 실용적 협력과 기업친화적 통상환경 조성 강조",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289063",
-      "score": 36,
-      "reasons": [
-        "AI",
-        "소부장"
       ]
     }
   ]
