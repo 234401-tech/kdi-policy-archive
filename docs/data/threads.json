@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T00:00:27.164162",
+  "generated_at": "2026-11-06T06:14:26.718337",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "제3자부당개입문제해결TF",
+      "count": 2,
+      "first": "2026-06-26",
+      "last": "2026-11-06",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「제3자 부당개입 문제해결 TF」 6차 회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283343",
+          "date": "2026-06-26",
+          "score": 0
+        },
+        {
+          "title": "「제3자 부당개입 문제해결 TF」 7차 회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289146",
+          "date": "2026-11-06",
+          "score": 0
         }
       ]
     },
