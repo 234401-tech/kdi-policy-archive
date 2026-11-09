@@ -1,59 +1,9 @@
 {
-  "date": "2026-11-06",
-  "generated_at": "2026-11-06T12:29:16.010558+09:00",
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T11:47:03.502655+09:00",
   "window_hours": 24,
-  "item_count": 44,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "ICT 고급인재양성 연구센터 신규 개소 및 공동 현판증정식 개최 (관련: 포항, AI)",
-    "첨단 농기계 시대는 더 빠르게, 농작업 사고 위험은 더 낮게 ‘농업기계 검정기준’ 고시 개정 (관련: 이차전지, 수소)",
-    "2027년도 기초연구사업 2.91조 원 투자 총 과제 수 18,516개로 역대 최대 지원 (관련: AI, 지원제도)"
-  ],
-  "top": [
-    {
-      "title": "ICT 고급인재양성 연구센터 신규 개소 및 공동 현판증정식 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289139",
-      "score": 63,
-      "reasons": [
-        "포항",
-        "AI"
-      ]
-    },
-    {
-      "title": "첨단 농기계 시대는 더 빠르게, 농작업 사고 위험은 더 낮게 ‘농업기계 검정기준’ 고시 개정",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289115",
-      "score": 45,
-      "reasons": [
-        "이차전지",
-        "수소"
-      ]
-    },
-    {
-      "title": "2027년도 기초연구사업 2.91조 원 투자 총 과제 수 18,516개로 역대 최대 지원",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289133",
-      "score": 28,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "지식재산으로 키운 지역 새싹기업, 투자유치로 잇는다!",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289114",
-      "score": 28,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "국내복귀 포럼, 기업과 지역을 잇는 투자유치 플랫폼으로",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289119",
-      "score": 28,
-      "reasons": [
-        "소부장",
-        "지원제도"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
