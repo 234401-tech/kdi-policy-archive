@@ -1,9 +1,61 @@
 {
-  "date": "2026-11-09",
-  "generated_at": "2026-11-09T11:47:03.502655+09:00",
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T13:41:13.330723+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 76,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "헝가리 진출 배터리 기업, 친환경 파트너쉽 강화 (관련: 이차전지, 소부장)",
+    "‘2045, 농업·농촌의 미래를 그리다’ 전문가 세미나 개최 (관련: AI, 바이오, 지원제도)",
+    "가치소비부터 AI까지 식품 소비 판도 바뀐다! (관련: AI, 바이오)"
+  ],
+  "top": [
+    {
+      "title": "헝가리 진출 배터리 기업, 친환경 파트너쉽 강화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289277",
+      "score": 48,
+      "reasons": [
+        "이차전지",
+        "소부장"
+      ]
+    },
+    {
+      "title": "‘2045, 농업·농촌의 미래를 그리다’ 전문가 세미나 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289221",
+      "score": 43,
+      "reasons": [
+        "AI",
+        "바이오",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "가치소비부터 AI까지 식품 소비 판도 바뀐다!",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289222",
+      "score": 38,
+      "reasons": [
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "아시아 지역의 구제역 대응을 위해 국내외 전문가 한자리에",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289218",
+      "score": 37,
+      "reasons": [
+        "경북",
+        "바이오"
+      ]
+    },
+    {
+      "title": "농식품부, 제4차 농식품규제 합리화 전략회의 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289207",
+      "score": 37,
+      "reasons": [
+        "바이오",
+        "에너지",
+        "지원제도"
+      ]
+    }
+  ]
 }
