@@ -1,27 +1,27 @@
 {
-  "date": "2026-11-10",
-  "generated_at": "2026-11-10T13:41:13.330723+09:00",
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T11:51:49.142681+09:00",
   "window_hours": 24,
-  "item_count": 76,
+  "item_count": 51,
   "model": "rule-based",
   "bullets": [
-    "헝가리 진출 배터리 기업, 친환경 파트너쉽 강화 (관련: 이차전지, 소부장)",
-    "‘2045, 농업·농촌의 미래를 그리다’ 전문가 세미나 개최 (관련: AI, 바이오, 지원제도)",
-    "가치소비부터 AI까지 식품 소비 판도 바뀐다! (관련: AI, 바이오)"
+    "한국폴리텍대학, 산업이 원하는 학과를 먼저 만든다. (관련: 포항, AI)",
+    "성장·지역·민생을 위한 규제합리화 추진 (관련: AI, 바이오, 지원제도)",
+    "‘K-문샷 정책 세미나’ 개최, 국가 과학 난제 해결을 위한 과학 인공지능 혁신을 논의하다. (관련: AI)"
   ],
   "top": [
     {
-      "title": "헝가리 진출 배터리 기업, 친환경 파트너쉽 강화",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289277",
-      "score": 48,
+      "title": "한국폴리텍대학, 산업이 원하는 학과를 먼저 만든다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289295",
+      "score": 63,
       "reasons": [
-        "이차전지",
-        "소부장"
+        "포항",
+        "AI"
       ]
     },
     {
-      "title": "‘2045, 농업·농촌의 미래를 그리다’ 전문가 세미나 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289221",
+      "title": "성장·지역·민생을 위한 규제합리화 추진",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289287",
       "score": 43,
       "reasons": [
         "AI",
@@ -30,31 +30,27 @@
       ]
     },
     {
-      "title": "가치소비부터 AI까지 식품 소비 판도 바뀐다!",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289222",
-      "score": 38,
+      "title": "‘K-문샷 정책 세미나’ 개최, 국가 과학 난제 해결을 위한 과학 인공지능 혁신을 논의하다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289325",
+      "score": 23,
       "reasons": [
-        "AI",
-        "바이오"
+        "AI"
       ]
     },
     {
-      "title": "아시아 지역의 구제역 대응을 위해 국내외 전문가 한자리에",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289218",
-      "score": 37,
+      "title": "사회적기업의 새로운 지평, 국내외 경험에서 해법을 찾다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289319",
+      "score": 22,
       "reasons": [
-        "경북",
-        "바이오"
+        "경북"
       ]
     },
     {
-      "title": "농식품부, 제4차 농식품규제 합리화 전략회의 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289207",
-      "score": 37,
+      "title": "겨울철 위기가구, 정부가 먼저 찾아 온기 건넨다 「2026~2027년 겨울철 취약계층 보호대책」 마련",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289281",
+      "score": 18,
       "reasons": [
-        "바이오",
-        "에너지",
-        "지원제도"
+        "AI"
       ]
     }
   ]
