@@ -1,56 +1,61 @@
 {
-  "date": "2026-11-11",
-  "generated_at": "2026-11-11T11:51:49.142681+09:00",
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T12:56:23.041476+09:00",
   "window_hours": 24,
-  "item_count": 51,
+  "item_count": 76,
   "model": "rule-based",
   "bullets": [
-    "한국폴리텍대학, 산업이 원하는 학과를 먼저 만든다. (관련: 포항, AI)",
-    "성장·지역·민생을 위한 규제합리화 추진 (관련: AI, 바이오, 지원제도)",
-    "‘K-문샷 정책 세미나’ 개최, 국가 과학 난제 해결을 위한 과학 인공지능 혁신을 논의하다. (관련: AI)"
+    "고용노동부, 포항·서산 고용위기 선제대응지역 지정 연장 (관련: 포항, 경북, 철강)",
+    "주민주도 재생에너지 확산… 김성환 기후부 장관, 햇빛소득마을 현장 방문 (관련: 이차전지, 에너지, 지원제도)",
+    "“더 큰 성장, 더 따뜻한 민생”을 위해 국가적 역량 총동원 (관련: 이차전지, AI, 지방우대)"
   ],
   "top": [
     {
-      "title": "한국폴리텍대학, 산업이 원하는 학과를 먼저 만든다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289295",
-      "score": 63,
+      "title": "고용노동부, 포항·서산 고용위기 선제대응지역 지정 연장",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289407",
+      "score": 94,
       "reasons": [
         "포항",
-        "AI"
+        "경북",
+        "철강"
       ]
     },
     {
-      "title": "성장·지역·민생을 위한 규제합리화 추진",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289287",
-      "score": 43,
+      "title": "주민주도 재생에너지 확산… 김성환 기후부 장관, 햇빛소득마을 현장 방문",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289400",
+      "score": 52,
       "reasons": [
-        "AI",
-        "바이오",
+        "이차전지",
+        "에너지",
         "지원제도"
       ]
     },
     {
-      "title": "‘K-문샷 정책 세미나’ 개최, 국가 과학 난제 해결을 위한 과학 인공지능 혁신을 논의하다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289325",
-      "score": 23,
+      "title": "“더 큰 성장, 더 따뜻한 민생”을 위해 국가적 역량 총동원",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289338",
+      "score": 51,
       "reasons": [
+        "이차전지",
+        "AI",
+        "지방우대"
+      ]
+    },
+    {
+      "title": "영남권 메가프로젝트 신속 이행을 위해 기업·지방정부와 원팀으로 속도 높인다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289410",
+      "score": 45,
+      "reasons": [
+        "경북",
         "AI"
       ]
     },
     {
-      "title": "사회적기업의 새로운 지평, 국내외 경험에서 해법을 찾다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289319",
-      "score": 22,
+      "title": "세계적 인공지능바이오 강국 도약을 위한 소버린 바이오 전략 모색",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289382",
+      "score": 43,
       "reasons": [
-        "경북"
-      ]
-    },
-    {
-      "title": "겨울철 위기가구, 정부가 먼저 찾아 온기 건넨다 「2026~2027년 겨울철 취약계층 보호대책」 마련",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289281",
-      "score": 18,
-      "reasons": [
-        "AI"
+        "AI",
+        "바이오"
       ]
     }
   ]
