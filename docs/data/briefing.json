@@ -1,61 +1,58 @@
 {
-  "date": "2026-11-12",
-  "generated_at": "2026-11-12T12:56:23.041476+09:00",
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T12:27:30.958887+09:00",
   "window_hours": 24,
-  "item_count": 76,
+  "item_count": 62,
   "model": "rule-based",
   "bullets": [
-    "고용노동부, 포항·서산 고용위기 선제대응지역 지정 연장 (관련: 포항, 경북, 철강)",
-    "주민주도 재생에너지 확산… 김성환 기후부 장관, 햇빛소득마을 현장 방문 (관련: 이차전지, 에너지, 지원제도)",
-    "“더 큰 성장, 더 따뜻한 민생”을 위해 국가적 역량 총동원 (관련: 이차전지, AI, 지방우대)"
+    "“실험실의 상상, 세상의 비즈니스가 되다” 「2026 대한민국 딥테크 사업화 페스티벌」 개최 (관련: 소부장, 바이오, 에너지)",
+    "얇은 렌즈로 밝은 야외에서도 뚜렷하게, 일상 속 증강현실 안경에 한 걸음 (관련: 포항)",
+    "보고 느끼는 친환경 이동수단의 가능성… 기후부, 전기차 전시·체험 행사 개최 (관련: 이차전지, 지원제도)"
   ],
   "top": [
     {
-      "title": "고용노동부, 포항·서산 고용위기 선제대응지역 지정 연장",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289407",
-      "score": 94,
+      "title": "“실험실의 상상, 세상의 비즈니스가 되다” 「2026 대한민국 딥테크 사업화 페스티벌」 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289430",
+      "score": 45,
       "reasons": [
-        "포항",
-        "경북",
-        "철강"
+        "소부장",
+        "바이오",
+        "에너지"
       ]
     },
     {
-      "title": "주민주도 재생에너지 확산… 김성환 기후부 장관, 햇빛소득마을 현장 방문",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289400",
-      "score": 52,
+      "title": "얇은 렌즈로 밝은 야외에서도 뚜렷하게, 일상 속 증강현실 안경에 한 걸음",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289412",
+      "score": 45,
+      "reasons": [
+        "포항"
+      ]
+    },
+    {
+      "title": "보고 느끼는 친환경 이동수단의 가능성… 기후부, 전기차 전시·체험 행사 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289438",
+      "score": 35,
       "reasons": [
         "이차전지",
-        "에너지",
         "지원제도"
       ]
     },
     {
-      "title": "“더 큰 성장, 더 따뜻한 민생”을 위해 국가적 역량 총동원",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289338",
-      "score": 51,
+      "title": "K-온디바이스 AI반도체, ‘상생’으로 속도낸다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289446",
+      "score": 33,
       "reasons": [
-        "이차전지",
         "AI",
-        "지방우대"
+        "지원제도"
       ]
     },
     {
-      "title": "영남권 메가프로젝트 신속 이행을 위해 기업·지방정부와 원팀으로 속도 높인다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289410",
-      "score": 45,
-      "reasons": [
-        "경북",
-        "AI"
-      ]
-    },
-    {
-      "title": "세계적 인공지능바이오 강국 도약을 위한 소버린 바이오 전략 모색",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289382",
-      "score": 43,
+      "title": "민간 첨단기술과 국방의 연결, 제4회 미래 국방 기술교류회 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289466",
+      "score": 28,
       "reasons": [
         "AI",
-        "바이오"
+        "지원제도"
       ]
     }
   ]
