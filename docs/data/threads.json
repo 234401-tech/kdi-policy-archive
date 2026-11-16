@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T21:37:41.227341",
+  "generated_at": "2026-11-16T01:46:49.769927",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "초광역특구법관련원포인트사회적대화",
+      "count": 2,
+      "first": "2026-11-02",
+      "last": "2026-11-16",
+      "max_score": 15,
+      "items": [
+        {
+          "title": "「초광역특구법 관련 원포인트 사회적 대화」 제1차 운영협의체 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288887",
+          "date": "2026-11-02",
+          "score": 15
+        },
+        {
+          "title": "『초광역특구법 관련 원포인트 사회적 대화』제8차 실무협의체 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289545",
+          "date": "2026-11-16",
+          "score": 15
         }
       ]
     },
