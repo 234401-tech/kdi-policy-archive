@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T03:38:28.149275",
+  "generated_at": "2026-11-17T13:01:23.091882",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,33 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "고등교육법시행령",
+      "count": 3,
+      "first": "2026-07-14",
+      "last": "2026-11-17",
+      "max_score": 22,
+      "items": [
+        {
+          "title": "「고등교육법 시행령」 및 「지방대육성법 시행령」 일부개정령안 국무회의 통과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284233",
+          "date": "2026-07-14",
+          "score": 22
+        },
+        {
+          "title": "「고등교육법 시행령」 및 「대학 등록금에 관한 규칙」 입법예고",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288576",
+          "date": "2026-10-27",
+          "score": 0
+        },
+        {
+          "title": "「고등교육기관의 평가·인증 등에 관한 규정」 및 「고등교육법 시행령」 일부개정령안 국무회의 통과",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289686",
+          "date": "2026-11-17",
+          "score": 0
         }
       ]
     },
@@ -279,27 +306,6 @@
           "title": "통일부, 「2026 국제 한반도 포럼」 일본세미나 개최(10.29.)",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288626",
           "date": "2026-10-28",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "고등교육법시행령",
-      "count": 2,
-      "first": "2026-07-14",
-      "last": "2026-10-27",
-      "max_score": 22,
-      "items": [
-        {
-          "title": "「고등교육법 시행령」 및 「지방대육성법 시행령」 일부개정령안 국무회의 통과",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284233",
-          "date": "2026-07-14",
-          "score": 22
-        },
-        {
-          "title": "「고등교육법 시행령」 및 「대학 등록금에 관한 규칙」 입법예고",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288576",
-          "date": "2026-10-27",
           "score": 0
         }
       ]
