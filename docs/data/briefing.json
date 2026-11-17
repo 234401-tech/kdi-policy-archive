@@ -1,51 +1,52 @@
 {
-  "date": "2026-11-16",
-  "generated_at": "2026-11-16T11:53:35.233119+09:00",
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T14:08:11.285566+09:00",
   "window_hours": 24,
-  "item_count": 33,
+  "item_count": 67,
   "model": "rule-based",
   "bullets": [
-    "경북 경주 민간 조류학습장에 대한 정기 예찰 검사에서 H5형 조류인플루엔자 항원 확인 (관련: 경북)",
-    "대규모 전력수요의 합리적 분산을 위한 전력계통영향평가 제도 본격 시행 (관련: AI, 지방우대)",
-    "「제63회 세무사 시험 인공지능(AI) 활용 부정행위 관련 비상대책 회의」 개최 (관련: AI)"
+    "차세대 디스플레이 초격차 거점 첫삽을 뜨다 (관련: 소부장, 지원제도)",
+    "물고기의 생명 길인 어도(魚道)의 과거를 남기고 미래를 그린다 (관련: AI, 지원제도)",
+    "국민이 체감할 수 있는 정책 성과 33건 특별 포상 (관련: 이차전지)"
   ],
   "top": [
     {
-      "title": "경북 경주 민간 조류학습장에 대한 정기 예찰 검사에서 H5형 조류인플루엔자 항원 확인",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289558",
-      "score": 27,
+      "title": "차세대 디스플레이 초격차 거점 첫삽을 뜨다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289598",
+      "score": 28,
       "reasons": [
-        "경북"
+        "소부장",
+        "지원제도"
       ]
     },
     {
-      "title": "대규모 전력수요의 합리적 분산을 위한 전력계통영향평가 제도 본격 시행",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289572",
-      "score": 26,
+      "title": "물고기의 생명 길인 어도(魚道)의 과거를 남기고 미래를 그린다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289620",
+      "score": 28,
       "reasons": [
         "AI",
-        "지방우대"
+        "지원제도"
       ]
     },
     {
-      "title": "「제63회 세무사 시험 인공지능(AI) 활용 부정행위 관련 비상대책 회의」 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289559",
+      "title": "국민이 체감할 수 있는 정책 성과 33건 특별 포상",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289606",
+      "score": 25,
+      "reasons": [
+        "이차전지"
+      ]
+    },
+    {
+      "title": "AI·드론 등을 활용한 “국유재산 안전관리 체계 고도화” 추진",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289619",
       "score": 23,
       "reasons": [
         "AI"
       ]
     },
     {
-      "title": "검역본부, 고병원성 조류인플루엔자(AI) 위험주의보 발령",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289555",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    },
-    {
-      "title": "국세청 AI시스템 구축, 호미반도 국가해양생태공원 조성, 백령도 소형공항 건설사업 예타 등 통과 철도종합시험선로 순환선 구축사업 예타 대상 선정",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289549",
+      "title": "한성숙 총리, “AI 기술 악용 시험 부정행위” 범부처 역량 응집하여 강력 대응 지시",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289622",
       "score": 23,
       "reasons": [
         "AI"
