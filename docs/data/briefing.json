@@ -1,55 +1,57 @@
 {
-  "date": "2026-11-17",
-  "generated_at": "2026-11-17T14:08:11.285566+09:00",
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T13:35:36.207561+09:00",
   "window_hours": 24,
-  "item_count": 67,
+  "item_count": 55,
   "model": "rule-based",
   "bullets": [
-    "차세대 디스플레이 초격차 거점 첫삽을 뜨다 (관련: 소부장, 지원제도)",
-    "물고기의 생명 길인 어도(魚道)의 과거를 남기고 미래를 그린다 (관련: AI, 지원제도)",
-    "국민이 체감할 수 있는 정책 성과 33건 특별 포상 (관련: 이차전지)"
+    "폴리텍대학, 뿌리산업 빈 일자리 해결을 위해 네 번째 뿌리산업센터 개소 (관련: 포항)",
+    "식약처, AI 기반 바이오의약품 품질관리 최신 동향 워크숍 개최 (관련: AI, 바이오)",
+    "한·호주, 유엔기후변화 총회에서 탈탄소 협력 모범사례 제시… 파리협정 이행 선도 (관련: 수소, 소부장)"
   ],
   "top": [
     {
-      "title": "차세대 디스플레이 초격차 거점 첫삽을 뜨다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289598",
-      "score": 28,
+      "title": "폴리텍대학, 뿌리산업 빈 일자리 해결을 위해 네 번째 뿌리산업센터 개소",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289679",
+      "score": 45,
       "reasons": [
-        "소부장",
-        "지원제도"
+        "포항"
       ]
     },
     {
-      "title": "물고기의 생명 길인 어도(魚道)의 과거를 남기고 미래를 그린다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289620",
-      "score": 28,
+      "title": "식약처, AI 기반 바이오의약품 품질관리 최신 동향 워크숍 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289652",
+      "score": 43,
       "reasons": [
         "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "한·호주, 유엔기후변화 총회에서 탈탄소 협력 모범사례 제시… 파리협정 이행 선도",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289705",
+      "score": 38,
+      "reasons": [
+        "수소",
+        "소부장"
+      ]
+    },
+    {
+      "title": "국민의 일상을 바꾼 적극행정, 최고의 사례는?",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289657",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "바이오"
+      ]
+    },
+    {
+      "title": "대학규제혁신 우수사례 발표, 현장 중심의 혁신 성과 확산 기대",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289667",
+      "score": 32,
+      "reasons": [
+        "경북",
         "지원제도"
-      ]
-    },
-    {
-      "title": "국민이 체감할 수 있는 정책 성과 33건 특별 포상",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289606",
-      "score": 25,
-      "reasons": [
-        "이차전지"
-      ]
-    },
-    {
-      "title": "AI·드론 등을 활용한 “국유재산 안전관리 체계 고도화” 추진",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289619",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    },
-    {
-      "title": "한성숙 총리, “AI 기술 악용 시험 부정행위” 범부처 역량 응집하여 강력 대응 지시",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289622",
-      "score": 23,
-      "reasons": [
-        "AI"
       ]
     }
   ]
