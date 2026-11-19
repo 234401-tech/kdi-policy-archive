@@ -1,57 +1,58 @@
 {
-  "date": "2026-11-18",
-  "generated_at": "2026-11-18T13:35:36.207561+09:00",
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T13:17:12.908634+09:00",
   "window_hours": 24,
-  "item_count": 55,
+  "item_count": 53,
   "model": "rule-based",
   "bullets": [
-    "폴리텍대학, 뿌리산업 빈 일자리 해결을 위해 네 번째 뿌리산업센터 개소 (관련: 포항)",
-    "식약처, AI 기반 바이오의약품 품질관리 최신 동향 워크숍 개최 (관련: AI, 바이오)",
-    "한·호주, 유엔기후변화 총회에서 탈탄소 협력 모범사례 제시… 파리협정 이행 선도 (관련: 수소, 소부장)"
+    "지역·필수·공공 의료 AX 가속화 위해 의료 현장-헬스케어 AI 민간 투자 연결 지원 (관련: AI, 바이오, 지원제도)",
+    "방류수 수질관리도 인공지능으로 고도화 (관련: 이차전지, AI)",
+    "위치정보 산업의 미래, ‘2026 코리아 엘비에스 데이‘에서 함께 키운다 (관련: AI, 지원제도)"
   ],
   "top": [
     {
-      "title": "폴리텍대학, 뿌리산업 빈 일자리 해결을 위해 네 번째 뿌리산업센터 개소",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289679",
-      "score": 45,
-      "reasons": [
-        "포항"
-      ]
-    },
-    {
-      "title": "식약처, AI 기반 바이오의약품 품질관리 최신 동향 워크숍 개최",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289652",
-      "score": 43,
+      "title": "지역·필수·공공 의료 AX 가속화 위해 의료 현장-헬스케어 AI 민간 투자 연결 지원",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289707",
+      "score": 53,
       "reasons": [
         "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "한·호주, 유엔기후변화 총회에서 탈탄소 협력 모범사례 제시… 파리협정 이행 선도",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289705",
-      "score": 38,
-      "reasons": [
-        "수소",
-        "소부장"
-      ]
-    },
-    {
-      "title": "국민의 일상을 바꾼 적극행정, 최고의 사례는?",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289657",
-      "score": 33,
-      "reasons": [
-        "AI",
-        "바이오"
-      ]
-    },
-    {
-      "title": "대학규제혁신 우수사례 발표, 현장 중심의 혁신 성과 확산 기대",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289667",
-      "score": 32,
-      "reasons": [
-        "경북",
+        "바이오",
         "지원제도"
+      ]
+    },
+    {
+      "title": "방류수 수질관리도 인공지능으로 고도화",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289709",
+      "score": 48,
+      "reasons": [
+        "이차전지",
+        "AI"
+      ]
+    },
+    {
+      "title": "위치정보 산업의 미래, ‘2026 코리아 엘비에스 데이‘에서 함께 키운다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289715",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "전파산업의 성과와 미래를 한자리에, 「2026 전파방송산업 진흥주간」 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289733",
+      "score": 28,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "“인공지능(AI) 시대 직업훈련의 미래는?” 한국기술교육대, 개교 35주년 고용·평생직업능력개발 발전 전략 포럼 개최",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289749",
+      "score": 23,
+      "reasons": [
+        "AI"
       ]
     }
   ]
