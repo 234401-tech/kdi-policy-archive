@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:19:26.791844",
+  "generated_at": "2026-11-20T02:56:23.713860",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,39 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "모집방식비경쟁인수",
+      "count": 4,
+      "first": "2026-06-19",
+      "last": "2026-11-20",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "‘26.6월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282948",
+          "date": "2026-06-19",
+          "score": 0
+        },
+        {
+          "title": "‘26.7월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284392",
+          "date": "2026-07-20",
+          "score": 0
+        },
+        {
+          "title": "‘26.10월 국고채 「모집 방식 비경쟁인수」 발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288461",
+          "date": "2026-10-23",
+          "score": 0
+        },
+        {
+          "title": "‘26.11월 국고채 「모집 방식 비경쟁인수」 발행은 미실시 합니다.",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289832",
+          "date": "2026-11-20",
+          "score": 0
         }
       ]
     },
@@ -402,33 +435,6 @@
           "title": "「지표금리 개편방안(3.30일)」 진행상황 점검 및 향후 계획",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288513",
           "date": "2026-10-26",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "모집방식비경쟁인수",
-      "count": 3,
-      "first": "2026-06-19",
-      "last": "2026-10-23",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "‘26.6월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=282948",
-          "date": "2026-06-19",
-          "score": 0
-        },
-        {
-          "title": "‘26.7월 국고채 「모집 방식 비경쟁인수」발행은 미실시 합니다.",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284392",
-          "date": "2026-07-20",
-          "score": 0
-        },
-        {
-          "title": "‘26.10월 국고채 「모집 방식 비경쟁인수」 발행은 미실시 합니다.",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288461",
-          "date": "2026-10-23",
           "score": 0
         }
       ]
