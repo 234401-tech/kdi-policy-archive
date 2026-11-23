@@ -1,56 +1,9 @@
 {
-  "date": "2026-11-20",
-  "generated_at": "2026-11-20T13:04:31.106979+09:00",
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T12:50:14.440657+09:00",
   "window_hours": 24,
-  "item_count": 64,
+  "item_count": 0,
   "model": "rule-based",
-  "bullets": [
-    "공공 AI 대전환의 미래, 한중이 함께 그린다 (관련: 경북, AI)",
-    "핀테크 기업에 필요한 지원사업을 AI가 찾아드립니다. (관련: AI, 지원제도)",
-    "소형드론 배터리 국가표준 제정 추진 (관련: 이차전지)"
-  ],
-  "top": [
-    {
-      "title": "공공 AI 대전환의 미래, 한중이 함께 그린다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289825",
-      "score": 45,
-      "reasons": [
-        "경북",
-        "AI"
-      ]
-    },
-    {
-      "title": "핀테크 기업에 필요한 지원사업을 AI가 찾아드립니다.",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289816",
-      "score": 38,
-      "reasons": [
-        "AI",
-        "지원제도"
-      ]
-    },
-    {
-      "title": "소형드론 배터리 국가표준 제정 추진",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289815",
-      "score": 30,
-      "reasons": [
-        "이차전지"
-      ]
-    },
-    {
-      "title": "대·중소기업, AI로 연결하고 상생으로 도약한다",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289768",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    },
-    {
-      "title": "행안부·농식품부, 고병원성 AI 확산 차단을 위해 공동 총력 대응",
-      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289787",
-      "score": 23,
-      "reasons": [
-        "AI"
-      ]
-    }
-  ]
+  "bullets": [],
+  "top": []
 }
