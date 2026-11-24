@@ -1,9 +1,60 @@
 {
-  "date": "2026-11-23",
-  "generated_at": "2026-11-23T12:50:14.440657+09:00",
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T15:59:21.065003+09:00",
   "window_hours": 24,
-  "item_count": 0,
+  "item_count": 126,
   "model": "rule-based",
-  "bullets": [],
-  "top": []
+  "bullets": [
+    "작은 사업장 건강지킴이 「근로자건강센터」, 김포·포항에 새로 문 연다. (관련: 포항, 경북)",
+    "과기정통부, 인공지능 반도체 업계 현안 점검... 국제 협력·공급망 대응 모색 (관련: AI, 소부장, 지원제도)",
+    "인공지능·인간형 로봇부터 전기차까지, 미래 일상을 움직일 ‘차세대 이차전지’ 핵심 성과 한자리에 (관련: 이차전지, AI)"
+  ],
+  "top": [
+    {
+      "title": "작은 사업장 건강지킴이 「근로자건강센터」, 김포·포항에 새로 문 연다.",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289962",
+      "score": 72,
+      "reasons": [
+        "포항",
+        "경북"
+      ]
+    },
+    {
+      "title": "과기정통부, 인공지능 반도체 업계 현안 점검... 국제 협력·공급망 대응 모색",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289946",
+      "score": 56,
+      "reasons": [
+        "AI",
+        "소부장",
+        "지원제도"
+      ]
+    },
+    {
+      "title": "인공지능·인간형 로봇부터 전기차까지, 미래 일상을 움직일 ‘차세대 이차전지’ 핵심 성과 한자리에",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=290012",
+      "score": 53,
+      "reasons": [
+        "이차전지",
+        "AI"
+      ]
+    },
+    {
+      "title": "행안부-KT 손잡고 사회연대경제 현장에 AI 접목, 지역문제 함께 푼다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289969",
+      "score": 45,
+      "reasons": [
+        "경북",
+        "AI"
+      ]
+    },
+    {
+      "title": "인공지능(AI)과 로봇이 바꾸는 건설 현장, 안전하고 더 스마트한 미래를 열다",
+      "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=290027",
+      "score": 33,
+      "reasons": [
+        "AI",
+        "지원제도"
+      ]
+    }
+  ]
 }
