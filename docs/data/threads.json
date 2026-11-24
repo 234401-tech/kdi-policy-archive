@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T21:08:09.000111",
+  "generated_at": "2026-11-24T05:51:22.528859",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "양극화대응TF",
+      "count": 2,
+      "first": "2026-11-12",
+      "last": "2026-11-24",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「양극화 대응 TF」 총괄반 1차 회의 개최 모두의 성장으로 대전환을 위해 전 부처 역량 결집",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289426",
+          "date": "2026-11-12",
+          "score": 0
+        },
+        {
+          "title": "모두의 성장으로 대전환을 위해 전 부처 역량 결집 「양극화 대응 TF」 산업·기업반 1차 회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289977",
+          "date": "2026-11-24",
+          "score": 0
         }
       ]
     },
