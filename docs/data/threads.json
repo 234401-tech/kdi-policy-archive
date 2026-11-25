@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T02:11:00.701944",
+  "generated_at": "2026-11-25T12:31:12.052234",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,27 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "2026세계투자자주간",
+      "count": 2,
+      "first": "2026-11-16",
+      "last": "2026-11-25",
+      "max_score": 23,
+      "items": [
+        {
+          "title": "금융감독원,「2026 세계투자자주간」실시",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=289564",
+          "date": "2026-11-16",
+          "score": 18
+        },
+        {
+          "title": "AI 금융사기 대응역량 강화를 위한 「2026 세계투자자주간」개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=290126",
+          "date": "2026-11-25",
+          "score": 23
         }
       ]
     },
