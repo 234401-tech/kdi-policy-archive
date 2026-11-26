@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T04:51:43.923830",
+  "generated_at": "2026-11-26T14:55:23.865719",
   "threads": [
     {
       "phrase": "지역활성화투자펀드",
@@ -19,6 +19,105 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=286480",
           "date": "2026-09-08",
           "score": 65
+        }
+      ]
+    },
+    {
+      "phrase": "개인투자용국채",
+      "count": 7,
+      "first": "2026-05-29",
+      "last": "2026-11-26",
+      "max_score": 0,
+      "items": [
+        {
+          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
+          "date": "2026-05-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
+          "date": "2026-06-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
+          "date": "2026-07-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 9월 2,300억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285936",
+          "date": "2026-08-28",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 10월 2,300억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287582",
+          "date": "2026-09-30",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 11월 2,000억원 발행 예정",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288743",
+          "date": "2026-10-29",
+          "score": 0
+        },
+        {
+          "title": "「개인투자용 국채」 12월 발행 미실시",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=290217",
+          "date": "2026-11-26",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "phrase": "2026개인정보미래포럼",
+      "count": 3,
+      "first": "2026-07-23",
+      "last": "2026-11-26",
+      "max_score": 18,
+      "items": [
+        {
+          "title": "「2026 개인정보 미래포럼」 제3차 전체회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284625",
+          "date": "2026-07-23",
+          "score": 18
+        },
+        {
+          "title": "「2026 개인정보 미래포럼」 제4차 전체회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287100",
+          "date": "2026-09-18",
+          "score": 0
+        },
+        {
+          "title": "「2026 개인정보 미래포럼」 제5차 전체회의 개최",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=290270",
+          "date": "2026-11-26",
+          "score": 18
+        }
+      ]
+    },
+    {
+      "phrase": "경제전망",
+      "count": 2,
+      "first": "2026-08-27",
+      "last": "2026-11-26",
+      "max_score": 18,
+      "items": [
+        {
+          "title": "「경제전망」 (2026년8월)",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285904",
+          "date": "2026-08-27",
+          "score": 18
+        },
+        {
+          "title": "「경제전망」 (2026년11월)",
+          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=290243",
+          "date": "2026-11-26",
+          "score": 18
         }
       ]
     },
@@ -310,51 +409,6 @@
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288924",
           "date": "2026-11-02",
           "score": 37
-        }
-      ]
-    },
-    {
-      "phrase": "개인투자용국채",
-      "count": 6,
-      "first": "2026-05-29",
-      "last": "2026-10-29",
-      "max_score": 0,
-      "items": [
-        {
-          "title": "「개인투자용 국채」 6월 2,000억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=281870",
-          "date": "2026-05-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 7월 1,600억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=283448",
-          "date": "2026-06-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 8월 1,500억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284839",
-          "date": "2026-07-29",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 9월 2,300억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=285936",
-          "date": "2026-08-28",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 10월 2,300억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287582",
-          "date": "2026-09-30",
-          "score": 0
-        },
-        {
-          "title": "「개인투자용 국채」 11월 2,000억원 발행 예정",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=288743",
-          "date": "2026-10-29",
-          "score": 0
         }
       ]
     },
@@ -813,27 +867,6 @@
           "title": "「한국은행원화국제결제망」 시범운영 개시",
           "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287240",
           "date": "2026-09-21",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "phrase": "2026개인정보미래포럼",
-      "count": 2,
-      "first": "2026-07-23",
-      "last": "2026-09-18",
-      "max_score": 18,
-      "items": [
-        {
-          "title": "「2026 개인정보 미래포럼」 제3차 전체회의 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=284625",
-          "date": "2026-07-23",
-          "score": 18
-        },
-        {
-          "title": "「2026 개인정보 미래포럼」 제4차 전체회의 개최",
-          "link": "https://eiec.kdi.re.kr/policy/materialView.do?num=287100",
-          "date": "2026-09-18",
           "score": 0
         }
       ]
